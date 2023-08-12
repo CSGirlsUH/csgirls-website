@@ -1,5 +1,7 @@
 import react from "react";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 import "./App.css";
 
 function App() {
@@ -8,16 +10,19 @@ function App() {
   return (
     <>
       <div className="font-sans">
-        <div>
+        <section>
           <Navbar />
-        </div>
-        {/* Testing Stuff */}
+        </section>
 
-        <div className="card">
+        <section>
+          <Hero />
+        </section>
+
+        {/* <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>
             count is {count}
           </button>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -1,37 +1,54 @@
 import React, { useState } from "react";
-import { themify } from "react-icons/tfi";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   return (
     <>
-      <div className="flex flex-row ">
-        <ul className="">
-          <div className="w-full h-24 max-w-[1240px] mx-auto text-lg flex flex-row justify-between">
+      <div className="flex justify-between items-center max-w-[1694px] mx-auto">
+        {/* CSG Logo (Purple) */}
+        <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] ml-6 my-4" />
+        <ul>
+          {/* Nav Bar Links */}
+          <div className=" my-7 text-lg flex flex-row justify-between ">
             <li>
-              <a href="#" className="text-white p-4 hover:text-gray-300">
+              <a
+                href="#"
+                className="flex flex-column text-black p-4 hover:text-gray-500"
+              >
                 About
               </a>
             </li>
 
             <li>
-              <a href="#" className="text-white p-4">
+              <a
+                href="#"
+                className="flex flex-column text-black p-4 hover:text-gray-500"
+              >
                 Officers
               </a>
             </li>
 
             <li>
-              <a href="#" className="text-white p-4">
+              <a
+                href="#"
+                className="flex flex-column text-black p-4 hover:text-gray-500"
+              >
                 Events
               </a>
             </li>
 
             <li>
-              <a href="#" className="text-white p-4">
+              <a
+                href="#"
+                className="flex flex-column text-black p-4 hover:text-gray-500"
+              >
                 Contact Us
               </a>
             </li>
+            <button className=" flex h-12 w-24 ml-3 my-auto justify-center font-medium text-white p-2 bg-buttonpurple hover:bg-purple-400 rounded-lg">
+              <a href="#">Register</a>
+            </button>
           </div>
         </ul>
       </div>
