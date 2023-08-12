@@ -5,9 +5,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center max-w-[1694px] pr-6 pb-28 mx-auto">
+      <div className="flex justify-between items-center pr-6 pb-28 mr-[118px] ">
         {/* CSG Logo (Purple) */}
-        <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] ml-6 my-4" />
+        <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] my-4 ml-32" />
         <ul>
           {/* Nav Bar Links */}
           <div className=" my-7 text-lg flex flex-row justify-between ">
@@ -46,7 +46,7 @@ const Navbar = () => {
                 Contact Us
               </a>
             </li>
-            <button className=" flex h-12 w-24 ml-3 my-auto justify-center font-medium text-white p-2 bg-buttonpurple hover:bg-purple-400 rounded-lg">
+            <button className=" flex h-12 w-24 ml-3 my-auto justify-center font-medium text-black p-2 bg-buttonpurple hover:bg-purple-400 rounded-xl">
               <a href="#">Register</a>
             </button>
           </div>
