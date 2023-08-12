@@ -5,7 +5,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center max-w-[1694px] pr-6 mx-auto">
+      <div className="flex justify-between items-center max-w-[1694px] pr-6 pb-28 mx-auto">
         {/* CSG Logo (Purple) */}
         <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] ml-6 my-4" />
         <ul>
