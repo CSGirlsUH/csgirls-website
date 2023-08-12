@@ -5,7 +5,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center max-w-[1694px] mx-auto">
+      <div className="flex justify-between items-center max-w-[1694px] pr-6 mx-auto">
         {/* CSG Logo (Purple) */}
         <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] ml-6 my-4" />
         <ul>
@@ -38,10 +38,10 @@ const Navbar = () => {
               </a>
             </li>
 
-            <li>
+            <li className="min-w-[133px] max-h-[60px]">
               <a
                 href="#"
-                className="flex flex-column text-black p-4 hover:text-gray-500"
+                className="flex flex-column h-max-[60px] text-black p-4 hover:text-gray-500"
               >
                 Contact Us
               </a>
