@@ -11,6 +11,7 @@ export default {
       colors: {
         logopurple: "#663072",
         buttonpurple: "#C59ED1",
+        bggray: "#EDEDED",
       },
     },
   },
