@@ -5,10 +5,12 @@ const Hero = () => {
     <>
       <div className="flex flex-row justify-between">
         <div className="flex flex-col justify-between ml-48 mr-auto">
+          {/* Title Text */}
           <div className="font-firacode text-6xl text-left pb-4">
             <h1 className="inline-block text-logopurple">{">_"}</h1>
             <h1 className="inline-block text-black">Hello World!</h1>
           </div>
+          {/* Description Text */}
           <div className="text-[20px] text-left">
             <p className="flex w-[677px] pb-9">
               Founded in 2013, Computer Science Girls (CSGirls) is the first
