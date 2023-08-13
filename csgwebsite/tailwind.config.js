@@ -5,6 +5,7 @@ export default {
   theme: {
     fontFamily: {
       sans: ["Poppins", "sans-serif"],
+      firacode: ["Fira Code", "monospace"],
     },
     extend: {
       colors: {
