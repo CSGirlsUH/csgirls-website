@@ -1,6 +1,7 @@
 import react from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import OrgActions from "./components/OrgActions";
 
 import "./App.css";
 
@@ -16,6 +17,10 @@ function App() {
 
         <section>
           <Hero />
+        </section>
+
+        <section>
+          <OrgActions />
         </section>
 
         {/* <div className="card">
