@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <>
       <div className="flex flex-row justify-between pb-[70px]">
-        <div className="flex flex-col justify-between ml-48 mr-auto">
+        <div className="flex flex-col justify-between ml-[350px] mr-auto">
           {/* Title Text */}
           <div className="font-firacode text-6xl text-left pb-4">
             <h1 className="inline-block text-logopurple">{">_"}</h1>
@@ -34,7 +34,7 @@ const Hero = () => {
           </div>
         </div>
         {/* Hero Image */}
-        <div className=" flex justify-center min-w-[560px] h-[393px] bg-purple-300 mr-[400px] ml-20 rounded-xl">
+        <div className=" flex justify-center min-w-[560px] h-[393px] bg-purple-300 mr-[450px] ml-20 rounded-xl">
           <p className="flex items-center ">HERO IMAGE</p>
           {/* <img src="./hero.png" className="w-[1000px] h-[500px]" /> */}
         </div>

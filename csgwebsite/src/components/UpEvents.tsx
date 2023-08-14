@@ -1,7 +1,15 @@
 import React from "react";
 
 const UpEvents = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h1>Upcoming Events</h1>
+      {/* All Sliders Cards */}
+      <div>
+        <div></div>
+      </div>
+    </div>
+  );
 };
 
 export default UpEvents;
