@@ -2,6 +2,8 @@ import react from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import OrgActions from "./components/OrgActions";
+import UpEvents from "./components/UpEvents";
+import Carousel from "./components/Carousel";
 
 function App() {
   return (
@@ -17,6 +19,10 @@ function App() {
 
         <section>
           <OrgActions />
+        </section>
+
+        <section>
+          <UpEvents />
         </section>
       </div>
     </>
