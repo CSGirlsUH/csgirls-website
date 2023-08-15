@@ -8,7 +8,7 @@ import Carousel from "./components/Carousel";
 function App() {
   return (
     <>
-      <div className="font-sans  mx-auto">
+      <div className="font-poppins  mx-full">
         <section>
           <Navbar />
         </section>

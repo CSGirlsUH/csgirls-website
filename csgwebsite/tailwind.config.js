@@ -4,7 +4,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["Poppins", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
       firacode: ["Fira Code", "monospace"],
     },
     extend: {
