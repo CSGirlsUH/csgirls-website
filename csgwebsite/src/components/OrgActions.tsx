@@ -4,7 +4,7 @@ const OrgActions = () => {
   return (
     <div className="flex flex-row justify-between bg-bggray w-screen py-[45px]">
       {/* Subscribe to Our Newsletter */}
-      <div className="flex flex-col sm:ml-10 lg:ml-[200px]">
+      <div className="flex flex-col sm:ml-10 lg:ml-[200px] lg: justify-between">
         <h1 className="text-left text-4xl">Subscribe to Our Newsletter!</h1>
         <div>
           <p className="text-left text-xl w-[370px] max-h-[121px] pt-1">
