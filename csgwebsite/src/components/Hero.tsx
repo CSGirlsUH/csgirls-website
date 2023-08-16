@@ -1,13 +1,11 @@
-import React from "react";
-
 const Hero = () => {
   return (
     <>
       {/* TODO: Add sm: breakpiont to have padding on left */}
       <div className="flex flex-row justify-between pb-[70px]">
-        <div className="flex flex-col justify-between mx-auto pr-5">
+        <div className="flex flex-col mx-auto pr-5 mr-5">
           {/* Title Text */}
-          <div className="font-firacode text-6xl text-left">
+          <div className="font-firacode text-6xl text-left pb-5">
             <h1 className="inline-block text-logopurple">{">_"}</h1>
             <h1 className="inline-block text-black">Hello World!</h1>
           </div>
@@ -28,7 +26,7 @@ const Hero = () => {
               pursue a successful career in technology.
             </p>
             <div>
-              <button className="btn btn-primary">
+              <button className="btn btn-primary normal-case">
                 <a href="">Become a member!</a>
               </button>
             </div>

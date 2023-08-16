@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 const Navbar = () => {
   return (
     <>
@@ -39,12 +37,12 @@ const Navbar = () => {
             <li className="min-w-[133px] max-h-[60px]">
               <a
                 href="#"
-                className="flex flex-column h-max-[60px] text-black p-4 hover:text-gray-500"
+                className="flex flex-column h-max-[60px] text-black p-4 pr-7 hover:text-gray-500"
               >
                 Contact Us
               </a>
             </li>
-            <button className="btn btn-primary">
+            <button className="btn btn-primary normal-case mt-1">
               <a href="#">Register</a>
             </button>
           </div>
