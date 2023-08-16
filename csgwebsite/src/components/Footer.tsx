@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
         <div>
           <p>
-            {"© 2023 Computer Science Girls" + " | " + "Designed By: "}
+            {"© 2023-2024 Computer Science Girls" + " | " + "Designed By: "}
             <u>{name}</u>
           </p>
         </div>
