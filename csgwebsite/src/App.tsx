@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import OrgActions from "./components/OrgActions";
 import UpEvents from "./components/UpEvents";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,10 +24,10 @@ function App() {
         <section>
           <UpEvents />
         </section>
-        {/* 
+
         <section>
           <Footer />
-        </section> */}
+        </section>
       </div>
     </>
   );
