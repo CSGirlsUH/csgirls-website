@@ -1,17 +1,17 @@
-import React from "react";
+// import React from "react";
 
 const OrgActions = () => {
   return (
     <div className="flex flex-row justify-between bg-bggray w-screen py-[45px]">
       {/* Subscribe to Our Newsletter */}
-      <div className="flex flex-col sm:ml-10 lg:ml-[200px] lg: justify-between">
+      <div className="flex flex-col content-center ml-0 sm:ml-10 lg:ml-[200px] lg:justify-between">
         <h1 className="text-left text-4xl">Subscribe to Our Newsletter!</h1>
         <div>
           <p className="text-left text-xl w-[370px] max-h-[121px] pt-1">
             Words words words about the newsletter that IDK yet.
           </p>
 
-          <button className="flex justify-center items-center font-medium h-[42px] w-[126px] mt-2 bg-buttonpurple rounded-xl">
+          <button className="btn btn-primary normal-case mt-2">
             <a href="#">Subscribe!</a>
           </button>
         </div>
@@ -26,7 +26,7 @@ const OrgActions = () => {
             Words words words about donating that IDK yet.
           </p>
 
-          <button className="flex justify-center items-center font-medium h-[42px] w-[126px] mt-2 bg-buttonpurple rounded-xl">
+          <button className="btn btn-primary normal-case mt-2">
             <a href="#">Donate!</a>
           </button>
         </div>
@@ -40,14 +40,16 @@ const OrgActions = () => {
       </div>
 
       {/* Meet the Officers */}
-      <div className="flex flex-col mr-[250px] pl-2">
-        <h1 className="text-left text-4xl">Meet The Officers!</h1>
+      <div className="flex flex-col content-center mr-[250px] pl-2 ">
+        <h1 className="text-left text-4xl w-44 md:w-[370px]">
+          Meet The Officers!
+        </h1>
         <div>
           <p className="text-left text-xl w-[370px] max-h-[121px] pt-1">
             Words words words about how cool and awesome our officers are.
           </p>
 
-          <button className="flex justify-center items-center font-medium h-[42px] w-[126px] lg:mt-2 sm:mt-11 bg-buttonpurple rounded-xl">
+          <button className="btn btn-primary normal-case mt-1 md:mt-2">
             <a href="#">Learn More!</a>
           </button>
         </div>
