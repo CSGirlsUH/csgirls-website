@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className="font-poppins  mx-full">
+      <div className="font-poppins  mx-full overflow-hidden bg-white text-black">
         <section>
           <Navbar />
         </section>

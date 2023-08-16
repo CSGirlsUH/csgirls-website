@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
-
   return (
     <>
       <div className="flex justify-between items-center pr-6 pb-28 mr-[118px] ">
@@ -46,7 +44,7 @@ const Navbar = () => {
                 Contact Us
               </a>
             </li>
-            <button className=" flex h-12 w-24 ml-3 my-auto justify-center font-medium text-black p-2 bg-buttonpurple hover:bg-purple-400 rounded-xl">
+            <button className="btn btn-primary">
               <a href="#">Register</a>
             </button>
           </div>

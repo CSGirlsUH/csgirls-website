@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="flex flex-row justify-between pb-[70px]">
         <div className="flex flex-col justify-between mx-auto pr-5">
           {/* Title Text */}
-          <div className="font-firacode text-6xl text-left pb-4">
+          <div className="font-firacode text-6xl text-left">
             <h1 className="inline-block text-logopurple">{">_"}</h1>
             <h1 className="inline-block text-black">Hello World!</h1>
           </div>
@@ -28,14 +28,15 @@ const Hero = () => {
               pursue a successful career in technology.
             </p>
             <div>
-              <button className="flex h-[42px] w-[230px] text-[20px] my-auto justify-center font-medium text-black p-2 bg-buttonpurple hover:bg-purple-400 rounded-xl">
+              <button className="btn btn-primary">
                 <a href="">Become a member!</a>
               </button>
             </div>
           </div>
         </div>
+
         {/* Hero Image */}
-        <div className=" flex justify-center w-[560px] h-[393px] bg-purple-300 mx-auto ml-20 rounded-xl">
+        <div className=" flex justify-center w-[1200px] h-[500px] bg-purple-300 mx-auto ml-20 rounded-xl">
           <p className="flex items-center ">HERO IMAGE</p>
           {/* <img src="./hero.png" className="w-[1000px] h-[500px]" /> */}
         </div>
