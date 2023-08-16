@@ -47,7 +47,7 @@ const OrgActions = () => {
             Words words words about how cool and awesome our officers are.
           </p>
 
-          <button className="flex justify-center items-center font-medium h-[42px] w-[126px] mt-2 bg-buttonpurple rounded-xl">
+          <button className="flex justify-center items-center font-medium h-[42px] w-[126px] lg:mt-2 sm:mt-11 bg-buttonpurple rounded-xl">
             <a href="#">Learn More!</a>
           </button>
         </div>
