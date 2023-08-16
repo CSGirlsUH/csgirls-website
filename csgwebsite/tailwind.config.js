@@ -7,6 +7,11 @@ export default {
       poppins: ["Poppins", "sans-serif"],
       firacode: ["Fira Code", "monospace"],
     },
+    screens: {
+      sm: "1000px",
+      md: "1200px",
+      lg: "1400px",
+    },
     extend: {
       colors: {
         logopurple: "#663072",
