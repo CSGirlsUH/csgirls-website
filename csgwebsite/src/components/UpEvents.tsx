@@ -21,11 +21,19 @@ const UpEvents = () => {
           Upcoming Events
         </h1>
         {/* Events Carousel */}
-        <div className="p-4 flex items-center justify-start overflow-x-auto overflow-y-hidden hover:overflow-x-scroll">
-          <Card optional="ml-6" date={items[0][0]} items={items[0][1]}></Card>
-          {items.slice(1).map((item, index) => (
-            <Card key={index} date={item[0]} items={item[1]} />
-          ))}
+        <div className="carousel carousel-center max-w-full p-4 space-x-4 bg-white rounded-box">
+          <div className="carousel-item">
+            <div className="p-4 flex items-center justify-start overflow-x-auto overflow-y-hidden hover:overflow-x-scroll">
+              <Card
+                optional="ml-6"
+                date={items[0][0]}
+                items={items[0][1]}
+              ></Card>
+              {items.slice(1).map((item, index) => (
+                <Card key={index} date={item[0]} items={item[1]} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>

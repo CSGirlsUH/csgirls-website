@@ -3,7 +3,7 @@ const Hero = () => {
     <>
       {/* TODO: Add sm: breakpiont to have padding on left */}
       <div className="flex flex-row justify-between pb-[70px]">
-        <div className="flex flex-col mx-auto pr-5 mr-5">
+        <div className="flex flex-col mx-auto pr-5 ml-5">
           {/* Title Text */}
           <div className="font-firacode text-6xl text-left pb-5">
             <h1 className="inline-block text-logopurple">{">_"}</h1>
