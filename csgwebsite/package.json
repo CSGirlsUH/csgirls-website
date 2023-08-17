@@ -2,7 +2,7 @@
   "name": "csgwebsite",
   "private": true,
   "version": "0.1.0",
-  "homepage": "http://csgwebtest.com/",
+  "homepage": "https://sagect.github.io/csgirls-website/",
   "type": "module",
   "scripts": {
     "dev": "vite",
