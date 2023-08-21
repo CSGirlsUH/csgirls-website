@@ -11,11 +11,10 @@ function App() {
       <div className="font-poppins  mx-full overflow-hidden bg-white text-black">
         <section>
           <Navbar />
-        </section>
-
-        <section>
           <Hero />
         </section>
+
+        <section></section>
 
         <section>
           <OrgActions />
