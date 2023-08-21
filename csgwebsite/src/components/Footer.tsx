@@ -2,18 +2,21 @@ const Footer = () => {
   let name = "@SageCT";
   return (
     <>
-      <div className="flex flex-col place-items-center w-full max-h-[100px]">
+      <div className="flex flex-col text-[10px] place-items-center w-full max-h-[100px] border-t border-bordergray bg-bggray">
         <div className="flex flex-row justify-items-center justify-evenly">
           {/* Instagram svg */}
           <a href="#">
             <img
               src="./camera-square-svgrepo.svg"
-              className="h-[30px] w-[30px] mr-8"
+              className="h-[30px] w-[30px] mr-8 mt-2"
             />
           </a>
           {/* Discord svg */}
           <a href="#">
-            <img src="./discord-svgrepo.svg" className="  h-[35px] w-[35px]" />
+            <img
+              src="./discord-svgrepo.svg"
+              className="h-[35px] w-[35px] mt-2"
+            />
           </a>
         </div>
         <div>
