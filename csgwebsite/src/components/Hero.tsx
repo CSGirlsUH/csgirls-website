@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <>
       {/* TODO: Add sm: breakpiont to have padding on left */}
-      <div className="flex flex-row justify-between pb-[70px]">
+      <div className="flex flex-row justify-between pb-5 md:pb-[70px] md:pt-28">
         <div className="flex flex-col mx-auto px-5">
           {/* Title Text */}
           <div className="font-firacode text-2xl pt-5 pb-2 text-left md:text-6xl md:pb-5">
@@ -10,8 +10,8 @@ const Hero = () => {
             <h1 className="inline-block text-black">Hello World!</h1>
           </div>
           {/* Description Text */}
-          <div className="text-sm md:text-[20px] text-left">
-            <p className="flex max-w-[350px] md:w-[677px] pb-9">
+          <div className="text-sm md:text-xl text-left">
+            <p className="flex max-w-[350px] pb-5 md:max-w-[677px] md:pb-9">
               Founded in 2013, Computer Science Girls (CSGirls) is the first
               organization at the University of Houston that focuses on
               supporting women and their impact in the technology field through
@@ -20,7 +20,7 @@ const Hero = () => {
               their career and create opportunities for their success.
             </p>
 
-            <p className="flex md:w-[659px] pb-[22px] sm:px-12">
+            <p className="flex pb-3 md:w-[659px] md:min-h-[82px] md:pb-[22px]">
               We believe in encouraging and supporting women as well as
               underrepresented groups, within the University of Houston, to
               pursue a successful career in technology.
@@ -34,8 +34,8 @@ const Hero = () => {
         </div>
 
         {/* Hero Image */}
-        <div className=" hidden md:flex justify-center w-[1200px] h-[500px] bg-purple-300 mx-auto ml-20 rounded-xl">
-          <p className="hidden md:flex md:items-center ">HERO IMAGE</p>
+        <div className=" hidden lg:flex justify-center w-[1200px] h-[500px] bg-purple-300 mx-auto ml-20 rounded-xl">
+          <p className="hidden lg:flex md:items-center ">HERO IMAGE</p>
           {/* <img src="./hero.png" className="w-[1000px] h-[500px]" /> */}
         </div>
       </div>
