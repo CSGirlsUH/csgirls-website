@@ -2,7 +2,7 @@ const Footer = () => {
   let name = "@SageCT";
   return (
     <>
-      <div className="flex flex-col text-[10px] place-items-center w-full max-h-[100px] border-t border-bordergray bg-bggray">
+      <div className="flex flex-col text-[10px] md:text-base place-items-center w-full max-h-[100px] border-t border-bordergray bg-bggray">
         <div className="flex flex-row justify-items-center justify-evenly">
           {/* Instagram svg */}
           <a href="#">
