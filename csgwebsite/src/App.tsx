@@ -9,24 +9,15 @@ function App() {
   return (
     <>
       <div className="font-poppins  mx-full overflow-hidden bg-white text-black">
-        <section>
-          <Navbar />
-          <Hero />
-        </section>
+        <Navbar />
 
-        <section></section>
+        <Hero />
 
-        <section>
-          <OrgActions />
-        </section>
+        <OrgActions />
 
-        <section>
-          <UpEvents />
-        </section>
+        <UpEvents />
 
-        <section>
-          <Footer />
-        </section>
+        <Footer />
       </div>
     </>
   );
