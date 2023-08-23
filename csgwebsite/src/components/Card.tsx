@@ -10,7 +10,7 @@ function Card(props: CardProps) {
   return (
     <div
       className={
-        " carosuel-item bottom flex flex-col justify-center items-start min-w-[269px] min-h-[346px] mr-[51px] bg-bggray rounded-[20px]" +
+        "bottom flex flex-col justify-center items-start min-w-[269px] min-h-[346px] mr-[51px] bg-bggray rounded-[20px]" +
         " " +
         props.optional
       }

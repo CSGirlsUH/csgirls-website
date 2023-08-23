@@ -11,7 +11,7 @@ const Hero = () => {
           </div>
           {/* Description Text */}
           <div className="text-sm md:text-xl text-left">
-            <p className="flex max-w-[350px] pb-5 md:max-w-[677px] md:pb-9">
+            <p className="flex pb-5 md:max-w-[677px] md:pb-9">
               Founded in 2013, Computer Science Girls (CSGirls) is the first
               organization at the University of Houston that focuses on
               supporting women and their impact in the technology field through
