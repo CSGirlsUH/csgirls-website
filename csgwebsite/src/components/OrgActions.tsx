@@ -24,7 +24,7 @@ const OrgActions = () => {
 
           {/* Donate to Our Organization */}
 
-          <div className="flex flex-col content-center ">
+          <div className="flex flex-col content-center">
             <h1 className="text-left text-4xl">Donate to Our Organization!</h1>
             <div>
               <p className="text-left text-xl w-[370px] max-h-[121px] pt-1">

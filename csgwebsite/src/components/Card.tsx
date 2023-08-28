@@ -16,11 +16,11 @@ function Card(props: CardProps) {
       }
     >
       <h1 className="flex text-[36px] text-medium self-center">{props.date}</h1>
-      <ul className="list-group">
+      <ol className="list-group list-disc pl-6">
         {props.items.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }
