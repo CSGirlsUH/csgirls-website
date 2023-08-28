@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <>
       {/* TODO: Add sm: breakpiont to have padding on left */}
-      <div className="flex flex-row justify-between pb-5 md:pb-[70px] md:pt-28">
+      <div className="flex flex-row justify-between pb-5 md:pb-[70px] md:pt-28 md:pl-6">
         <div className="flex flex-col mx-auto px-5">
           {/* Title Text */}
           <div className="font-firacode text-2xl pt-5 pb-2 text-left md:text-6xl md:pb-5">
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
 
         {/* Hero Image */}
-        <div className=" hidden lg:flex justify-center w-[1200px] h-[500px] bg-purple-300 mx-auto ml-20 rounded-xl">
+        <div className=" hidden lg:flex justify-center w-[1200px] h-[500px] bg-purple-300 mx-auto md:mr-6 ml-20 rounded-xl">
           <p className="hidden lg:flex md:items-center ">HERO IMAGE</p>
           {/* <img src="./hero.png" className="w-[1000px] h-[500px]" /> */}
         </div>
