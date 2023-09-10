@@ -1,12 +1,6 @@
-import React from "react";
-
 interface CardProps {
-  title: string;
-  // If type == true, then it's a list (For org events).
-  // If type == false, then it's a paragraph (for org actions).
-  type: boolean;
-  pText?: string;
-  items?: string[];
+  date: string;
+  items: string[];
   optional?: string;
 }
 
@@ -20,9 +14,9 @@ function SmallCard(props: CardProps) {
       }
     >
       <h1 className="flex text-sm text-medium self-center px-3">
-        {props.title}
+        {props.date}
       </h1>
-      <p className="pl-3"></p>
+      <p className="pl-3">{}</p>
     </div>
   );
 }
