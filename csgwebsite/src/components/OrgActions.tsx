@@ -6,24 +6,24 @@ const OrgActions = () => {
     <>
       {/* Mobile View */}
       <div className="flex lg:hidden items-center justify-start overflow-x-visible overflow-y-hidden">
-        <div className="py-4 flex items-center justify-start">
+        <div className="py-4 flex items-center justify-start gap-3 mx-5">
           <SmallActions
             title="Subscribe to Our Newsletter!"
             pText="Words words words about the newsletter that IDK yet."
             bText="Subscribe!"
-            optional="mt-2"
+            optional="mt-1"
           />
           <SmallActions
             title="Donate to Our Organization!"
             pText="Words words words about donating that IDK yet."
             bText="Donate!"
-            optional="mt-2"
+            optional="mt-6"
           />
           <SmallActions
             title="Meet the Officers!"
             pText="Words words words about how cool and awesome our officers are."
             bText="Learn More!"
-            optional="mt-3"
+            optional="mt-8"
           />
         </div>
       </div>
@@ -32,7 +32,7 @@ const OrgActions = () => {
       <div className="hidden lg:flex">
         <div className="flex flex-row justify-between bg-bggray w-screen py-[45px]">
           {/* Subscribe to Our Newsletter */}
-          <div className="flex flex-col content-center ml-0 sm:ml-10 lg:ml-[200px] lg:justify-between">
+          <div className="flex flex-col content-center ml-0 sm:ml-10 lg:ml-10 lg:justify-between">
             <h1 className="text-left text-4xl">Subscribe to Our Newsletter!</h1>
             <div>
               <p className="text-left text-xl w-[370px] max-h-[121px] pt-1">
@@ -46,7 +46,6 @@ const OrgActions = () => {
           </div>
 
           {/* Donate to Our Organization */}
-
           <div className="flex flex-col content-center">
             <h1 className="text-left text-4xl">Donate to Our Organization!</h1>
             <div>
