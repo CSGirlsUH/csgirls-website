@@ -1,4 +1,4 @@
-import Card from "./Card";
+import BigCard from "./BigCard";
 
 const UpEvents = () => {
   const items: [string, string[]][] = [
@@ -23,9 +23,13 @@ const UpEvents = () => {
         {/* Events Carousel */}
         <div className="flex items-center justify-start overflow-x-auto overflow-y-hidden hover:overflow-x-scrolll">
           <div className="py-4 flex items-center justify-start">
-            <Card optional="ml-6" date={items[0][0]} items={items[0][1]}></Card>
+            <BigCard
+              optional="ml-6"
+              date={items[0][0]}
+              items={items[0][1]}
+            ></BigCard>
             {items.slice(1).map((item, index) => (
-              <Card key={index} date={item[0]} items={item[1]} />
+              <BigCard key={index} date={item[0]} items={item[1]} />
             ))}
           </div>
         </div>

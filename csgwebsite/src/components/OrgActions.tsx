@@ -1,12 +1,14 @@
 // import React from "react";
+import SmallCard from "./SmallCard";
 
 const OrgActions = () => {
   return (
     <>
       {/* Mobile View */}
+      <div className="flex lg:hidden"></div>
 
       {/* Desktop View */}
-      <div className="hidden md:visible">
+      <div className="hidden lg:flex">
         <div className="flex flex-row justify-between bg-bggray w-screen py-[45px]">
           {/* Subscribe to Our Newsletter */}
           <div className="flex flex-col content-center ml-0 sm:ml-10 lg:ml-[200px] lg:justify-between">
