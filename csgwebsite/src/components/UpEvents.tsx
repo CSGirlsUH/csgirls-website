@@ -1,4 +1,5 @@
 import BigCard from "./BigCard";
+import SmallEvents from "./SmallEvents";
 
 const UpEvents = () => {
   const items: [string, string[]][] = [
@@ -21,7 +22,7 @@ const UpEvents = () => {
           Upcoming Events
         </h1>
         {/* Events Carousel */}
-        <div className="flex items-center justify-start overflow-x-auto overflow-y-hidden hover:overflow-x-scrolll">
+        <div className="flex items-center justify-start overflow-x-auto overflow-y-hidden hover:overflow-x-scroll">
           <div className="py-4 flex items-center justify-start">
             <BigCard
               optional="ml-6"
