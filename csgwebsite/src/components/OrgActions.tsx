@@ -1,11 +1,32 @@
 // import React from "react";
-import SmallCard from "./SmallCard";
+import SmallActions from "./SmallActions";
 
 const OrgActions = () => {
   return (
     <>
       {/* Mobile View */}
-      <div className="flex lg:hidden"></div>
+      <div className="flex lg:hidden items-center justify-start overflow-x-visible overflow-y-hidden">
+        <div className="py-4 flex items-center justify-start">
+          <SmallActions
+            title="Subscribe to Our Newsletter!"
+            pText="Words words words about the newsletter that IDK yet."
+            bText="Subscribe!"
+            optional="mt-2"
+          />
+          <SmallActions
+            title="Donate to Our Organization!"
+            pText="Words words words about donating that IDK yet."
+            bText="Donate!"
+            optional="mt-2"
+          />
+          <SmallActions
+            title="Meet the Officers!"
+            pText="Words words words about how cool and awesome our officers are."
+            bText="Learn More!"
+            optional="mt-3"
+          />
+        </div>
+      </div>
 
       {/* Desktop View */}
       <div className="hidden lg:flex">
