@@ -5,7 +5,7 @@ const OrgActions = () => {
   return (
     <>
       {/* Mobile View */}
-      <div className="flex lg:hidden items-center justify-start overflow-x-visible overflow-y-hidden">
+      <div className="flex md:hidden items-center justify-start overflow-x-visible overflow-y-hidden">
         <div className="py-4 flex items-center justify-start gap-3 mx-5">
           <SmallActions
             title="Subscribe to Our Newsletter!"
@@ -29,7 +29,7 @@ const OrgActions = () => {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden lg:flex">
+      <div className="hidden md:flex">
         <div className="flex flex-row justify-between bg-bggray w-screen py-[45px]">
           {/* Subscribe to Our Newsletter */}
           <div className="flex flex-col content-center ml-0 sm:ml-10 lg:ml-10 lg:justify-between">

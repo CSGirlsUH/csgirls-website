@@ -1,25 +1,28 @@
-// import react from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import OrgActions from "./components/OrgActions";
-import UpEvents from "./components/UpEvents";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import "./index.css";
+import Home from "./pages/Home.tsx";
+import Officers from "./pages/Officers.tsx";
+import Register from "./pages/Register.tsx";
+import Events from "./pages/Events.tsx";
+import ContactUs from "./pages/ContactUs.tsx";
 
 function App() {
   return (
-    <>
-      <div className="font-poppins  mx-full overflow-hidden bg-white text-black">
-        <Navbar />
-
-        <Hero />
-
-        <OrgActions />
-
-        <UpEvents />
-
-        <Footer />
-      </div>
-    </>
+    <div>
+      <Router>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/officers" element={<Officers />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
