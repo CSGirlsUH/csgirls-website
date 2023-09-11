@@ -1,8 +1,8 @@
 {
   "name": "csgwebsite",
-  "private": true,
+  "private": false,
   "version": "0.1.0",
-  "homepage": "https://sagect.github.io/csgirls-website/",
+  "homepage": "",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,10 +13,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.46.1",
     "react-icons": "^4.10.1",
     "react-svg": "^16.1.21"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

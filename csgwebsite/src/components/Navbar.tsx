@@ -21,7 +21,7 @@ const Navbar = () => {
           <div className=" my-7 text-lg flex flex-row ">
             <li>
               <a
-                href="#"
+                href="/about"
                 className="flex flex-column text-black p-4 hover:text-gray-500"
               >
                 About
@@ -30,7 +30,7 @@ const Navbar = () => {
 
             <li>
               <a
-                href="#"
+                href="/officers"
                 className="flex flex-column text-black p-4 hover:text-gray-500"
               >
                 Officers
@@ -39,7 +39,7 @@ const Navbar = () => {
 
             <li>
               <a
-                href="#"
+                href="/events"
                 className="flex flex-column text-black p-4 hover:text-gray-500"
               >
                 Events
@@ -48,7 +48,7 @@ const Navbar = () => {
 
             <li className="min-w-[144px] max-h-[60px]">
               <a
-                href="#"
+                href="contactus"
                 className="flex flex-column text-black p-4 pr-7 hover:text-gray-500"
               >
                 Contact Us

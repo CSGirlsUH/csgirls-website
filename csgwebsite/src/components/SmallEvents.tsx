@@ -8,15 +8,19 @@ function SmallCard(props: CardProps) {
   return (
     <div
       className={
-        "bottom flex flex-col justify-center items-start min-w-[135px] min-h-[194px] mr-[14px] bg-bggray rounded-xl" +
+        "flex flex-col justify-start items-center align-top min-w-[195px] h-[194px] mr-[14px] bg-bggray rounded-[30px]" +
         " " +
         props.optional
       }
     >
-      <h1 className="flex text-sm text-medium self-center px-3">
-        {props.date}
-      </h1>
-      <p className="pl-3">{}</p>
+      <h1 className="flex text-2xl self-center px-3 pt-3 pb-1">{props.date}</h1>
+      <ol className="flex flex-col text-base gap-1 list-disc">
+        {props.items.map((item, index) => (
+          <li key={index} className="ml-6">
+            {item}
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }
