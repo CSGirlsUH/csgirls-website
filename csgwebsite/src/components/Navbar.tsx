@@ -48,7 +48,7 @@ const Navbar = () => {
 
             <li className="min-w-[144px] max-h-[60px]">
               <a
-                href="contactus"
+                href="/contactus"
                 className="flex flex-column text-black p-4 pr-7 hover:text-gray-500"
               >
                 Contact Us

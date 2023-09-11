@@ -27,7 +27,7 @@ const Hero = () => {
             </p>
             <div>
               <button className="btn btn-primary normal-case">
-                <a href="#">Become a member!</a>
+                <a href="/register">Become a member!</a>
               </button>
             </div>
           </div>

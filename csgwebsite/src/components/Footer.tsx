@@ -24,7 +24,9 @@ const Footer = () => {
             {"© 2023-2024 Computer Science Girls" +
               " | " +
               "Built and Designed By: "}
-            <u>{name}</u>
+            <a href="https://github.com/SageCT">
+              <u>{name}</u>
+            </a>
           </p>
         </div>
       </div>

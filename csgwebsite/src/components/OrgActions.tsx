@@ -77,7 +77,7 @@ const OrgActions = () => {
               </p>
 
               <button className="btn btn-primary normal-case mt-1 md:mt-2">
-                <a href="#">Learn More!</a>
+                <a href="/about">Learn More!</a>
               </button>
             </div>
           </div>
