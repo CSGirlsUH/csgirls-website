@@ -8,6 +8,11 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  const WEBLINKS = {
+    REGISTER:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdE_W4GMqEJ2l7SzaAbjuUQ-cBt2OkFfM_PQq2wZuInOxCFsA/viewform",
+  };
+
   return (
     <>
       <div className="flex justify-between items-center border-b border-bordergray md:border-0 md:pr-6 md:mr-[118px] ">
@@ -55,7 +60,7 @@ const Navbar = () => {
               </a>
             </li>
             <button className="btn btn-primary normal-case mt-1">
-              <a href="#">Register</a>
+              <a href={WEBLINKS.REGISTER}>Register</a>
             </button>
           </div>
         </ul>

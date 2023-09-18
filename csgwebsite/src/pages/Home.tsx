@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <>
-      <div className="font-poppins  mx-full overflow-hidden bg-white text-black">
+      <div className="font-poppins mx-full overflow-hidden bg-white text-black">
         <Navbar />
 
         <Hero />

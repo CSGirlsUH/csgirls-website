@@ -1,6 +1,13 @@
 // import React from "react";
 import SmallActions from "./SmallActions";
 
+const WEBLINKS = {
+  REGISTER:
+    "https://docs.google.com/forms/d/e/1FAIpQLSdE_W4GMqEJ2l7SzaAbjuUQ-cBt2OkFfM_PQq2wZuInOxCFsA/viewform",
+  DONATE: "https://www.paypal.com/paypalme/CSGirls",
+  OFFICERS: "/officers",
+};
+
 const OrgActions = () => {
   return (
     <>
@@ -40,7 +47,7 @@ const OrgActions = () => {
               </p>
 
               <button className="btn btn-primary normal-case mt-2">
-                <a href="#">Subscribe!</a>
+                <a href={WEBLINKS.REGISTER}>Subscribe!</a>
               </button>
             </div>
           </div>
@@ -54,7 +61,7 @@ const OrgActions = () => {
               </p>
 
               <button className="btn btn-primary normal-case mt-2">
-                <a href="#">Donate!</a>
+                <a href={WEBLINKS.DONATE}>Donate!</a>
               </button>
             </div>
             {/* Heart svg underneath Donate to Org */}
@@ -77,7 +84,7 @@ const OrgActions = () => {
               </p>
 
               <button className="btn btn-primary normal-case mt-1 md:mt-2">
-                <a href="/about">Learn More!</a>
+                <a href={WEBLINKS.OFFICERS}>Learn More!</a>
               </button>
             </div>
           </div>
