@@ -15,6 +15,9 @@ export default {
         bordergray: "#E4E4E4",
       },
     },
+    screens: {
+      md: "920px",
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
