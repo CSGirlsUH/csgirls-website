@@ -12,7 +12,7 @@ const OrgActions = () => {
   return (
     <>
       {/* Mobile View */}
-      <div className="flex flex-row mx-5 overflow-x-auto md:overflow-hidden">
+      <div className="md:hidden flex flex-row mx-5 overflow-x-auto md:overflow-hidden">
         <div className="flex flex-auto flex-row justify-around md:mx-5 py-5">
           <SmallActions
             title="Subscribe to Our Newsletter!"
@@ -36,10 +36,10 @@ const OrgActions = () => {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden md:flex">
-        <div className="flex flex-row bg-bggray w-screen py-[45px]">
+      <div className="hidden md:flex md:flex-row justify-around">
+        <div className="flex flex-1 justify-between bg-bggray w-screen py-[45px]">
           {/* Subscribe to Our Newsletter */}
-          <div className="flex flex-col ml-0 sm:ml-10 lg:ml-10 lg:justify-between">
+          <div className="flex flex-col ml-10 justify-between">
             <h1 className="text-left text-4xl">Subscribe to Our Newsletter!</h1>
             <div>
               <p className="text-left text-xl w-[370px] max-h-[121px] pt-1">
@@ -54,9 +54,11 @@ const OrgActions = () => {
 
           {/* Donate to Our Organization */}
           <div className="flex flex-col content-center">
-            <h1 className="text-left text-4xl">Donate to Our Organization!</h1>
+            <h1 className="text-left text-4xl min-w-[300px]">
+              Donate to Our Organization!
+            </h1>
             <div>
-              <p className="text-left text-xl w-[370px] max-h-[75px] pt-1">
+              <p className="text-left text-xl sm:w-[370px] lg:w-[370px] max-h-[121px] pt-1">
                 Words words words about donating that IDK yet.
               </p>
 
@@ -71,12 +73,12 @@ const OrgActions = () => {
           </div>
 
           {/* Meet the Officers */}
-          <div className="flex flex-col content-center mr-[250px] pl-2 ">
+          <div className="flex flex-col content-center pl-2 ">
             <h1 className="text-left text-4xl w-44 md:w-[370px]">
               Meet The Officers!
             </h1>
             <div>
-              <p className="text-left text-xl w-[370px] max-h-[121px] pt-1">
+              <p className="text-left text-xl max-w-[370px] max-h-[121px] pt-1">
                 Words words words about how cool and awesome our officers are.
               </p>
 

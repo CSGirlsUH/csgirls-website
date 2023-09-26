@@ -2,8 +2,8 @@ const Hero = () => {
   return (
     <>
       {/* TODO: Add sm: breakpiont to have padding on left */}
-      <div className="flex flex-row justify-center pb-5 mr-2 ml-2 md:pb-[70px] md:pt-28 md:pl-0 md:mr-10 overflow-x-auto">
-        <div className="flex flex-col mx-auto px-5">
+      <div className="flex flex-row justify-center pb-5 mr-2 ml-10 md:pb-[70px] md:pt-28 md:pl-0 md:mr-10 overflow-x-auto">
+        <div className="flex flex-col px-5">
           {/* Title Text */}
           <div className="font-firacode text-2xl pt-5 pb-2 ml-0 text-left md:text-6xl md:pb-5 ">
             <h1 className="inline-block text-logopurple">{">_"}</h1>
