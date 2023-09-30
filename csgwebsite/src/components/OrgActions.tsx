@@ -34,7 +34,7 @@ const OrgActions = () => {
           />
         </div>
       </div>
-
+      {/* TODO: FIX BUTTON ON DONATE ACTION */}
       {/* Desktop View */}
       <div className="hidden md:flex md:flex-row justify-around">
         <div className="flex flex-1 justify-between bg-bggray w-screen py-[45px]">
@@ -54,11 +54,9 @@ const OrgActions = () => {
 
           {/* Donate to Our Organization */}
           <div className="flex flex-col content-center">
-            <h1 className="text-left text-4xl min-w-[300px]">
-              Donate to Our Organization!
-            </h1>
+            <h1 className="text-left text-4xl">Donate to Our Organization!</h1>
             <div>
-              <p className="text-left text-xl sm:w-[370px] lg:w-[370px] max-h-[121px] pt-1">
+              <p className="text-left text-xl sm:w-[100px] lg:w-[370px] max-h-[300px] pt-1">
                 Words words words about donating that IDK yet.
               </p>
 
