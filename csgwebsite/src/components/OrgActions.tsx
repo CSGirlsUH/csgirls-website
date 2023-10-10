@@ -28,7 +28,7 @@ const OrgActions = () => {
           />
           <SmallActions
             title="Meet the Officers!"
-            pText="Words words words about how cool and awesome our officers are."
+            pText="Meet our current officers and committee members."
             bText="Learn More!"
             optional="mt-8"
           />
@@ -36,8 +36,8 @@ const OrgActions = () => {
       </div>
       {/* TODO: FIX BUTTON ON DONATE ACTION */}
       {/* Desktop View */}
-      <div className="hidden md:flex md:flex-row justify-around">
-        <div className="flex flex-1 justify-between bg-bggray w-screen py-[45px]">
+      <div className="hidden md:flex md:flex-row">
+        <div className="flex flex-1 justify-around bg-bggray w-screen py-[45px]">
           {/* Subscribe to Our Newsletter */}
           <div className="flex flex-col ml-10 justify-between">
             <h1 className="text-left text-4xl">Subscribe to Our Newsletter!</h1>
@@ -57,7 +57,8 @@ const OrgActions = () => {
             <h1 className="text-left text-4xl">Donate to Our Organization!</h1>
             <div>
               <p className="text-left text-xl sm:w-[100px] lg:w-[370px] max-h-[300px] pt-1">
-                Words words words about donating that IDK yet.
+                Donate to our organization to help us provide workshops,
+                networking opportunities, and a warm fuzzy feeling inside.
               </p>
 
               <button className="btn btn-primary normal-case mt-2">
@@ -77,7 +78,7 @@ const OrgActions = () => {
             </h1>
             <div>
               <p className="text-left text-xl max-w-[370px] max-h-[121px] pt-1">
-                Words words words about how cool and awesome our officers are.
+                Meet our current officers and committee members.
               </p>
 
               <button className="btn btn-primary normal-case mt-1 md:mt-2">

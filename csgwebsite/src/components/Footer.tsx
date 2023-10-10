@@ -3,6 +3,7 @@ const Footer = () => {
   const WEBLINKS = {
     INSTA: "https://www.instagram.com/csgirls_uh/",
     DISCORD: "https://discord.com/invite/KG3Eze4bQU",
+    LINKEDIN: "https://www.linkedin.com/company/csgirls-university-of-houston/",
     SCT_GITHUB: "https://github.com/SageCT",
   };
 

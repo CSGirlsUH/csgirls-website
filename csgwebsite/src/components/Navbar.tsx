@@ -53,7 +53,7 @@ const Navbar = () => {
 
             <li className="min-w-[144px] max-h-[60px]">
               <a
-                href="/contactus"
+                href="/contact"
                 className="flex flex-column text-black p-4 pr-7 hover:text-gray-500"
               >
                 Contact Us
@@ -82,22 +82,22 @@ const Navbar = () => {
           {/* <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] my-4 ml-32" /> */}
           <ul className="pt-24 uppercase">
             <li>
-              <a href="#" className="p-4">
+              <a href="/about" className="p-4">
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="p-4">
+              <a href="/officers" className="p-4">
                 Officers
               </a>
             </li>
             <li>
-              <a href="#" className="p-4">
+              <a href="/events" className="p-4">
                 Events
               </a>
             </li>
             <li className="">
-              <a href="#" className="p-4">
+              <a href="/contact" className="p-4">
                 Contact Us
               </a>
             </li>

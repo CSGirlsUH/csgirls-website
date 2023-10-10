@@ -8,7 +8,7 @@ import AboutMain from "../components/AboutMain";
 function About() {
   return (
     <>
-      <div>
+      <div className="font-poppins mx-auto my-auto h-screen overflow-hidden bg-white text-black">
         <Navbar />
         <AboutMain />
         <Footer />

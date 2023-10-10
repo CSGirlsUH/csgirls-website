@@ -1,7 +1,19 @@
 import React from "react";
 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import OfficerMain from "../components/OfficerMain";
+
 const Officers = () => {
-  return <div>Officers</div>;
+  return (
+    <>
+      <div className="font-poppins mx-auto my-auto h-screen overflow-hidden bg-white text-black">
+        <Navbar />
+        <OfficerMain />
+        <Footer />
+      </div>
+    </>
+  );
 };
 
 export default Officers;

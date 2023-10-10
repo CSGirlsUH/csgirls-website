@@ -21,6 +21,15 @@ function AboutMain() {
           and inclusive community for our members to promote fellowship.
         </p>
         {/* Why Should You Join CSG? */}
+        <h1>Why Should You Join CSGirls?</h1>
+        <p>As a member, you will...</p>
+        <ul>
+          <li>Gain access to our professional network</li>
+          <li>Receive exclusive internship and job opportunities</li>
+          <li>Attend our workshops and events</li>
+          <li>Participate in our mentorship program</li>
+          <li>Be a part of our community</li>
+        </ul>
         {/* Use card components to add features/perks of joining */}
       </div>
     </>
