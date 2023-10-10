@@ -1,5 +1,3 @@
-import react from "react";
-
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import OrgActions from "../components/OrgActions";
@@ -11,13 +9,9 @@ function Home() {
     <>
       <div className="font-poppins mx-full my-full overflow-hidden bg-white text-black">
         <Navbar />
-
         <Hero />
-
         <OrgActions />
-
         <UpEvents />
-
         <Footer />
       </div>
     </>
