@@ -1,6 +1,12 @@
 import React from "react";
 import SmallCard from "./SmallCard";
 
+const PICLINKS = {
+  SHIRTF: "./shirt-front.png",
+  SHIRTB: "./shirt-back.png",
+  BANNERPIC: "./fgm-image.jpg",
+};
+
 function AboutMain() {
   return (
     <>
@@ -41,13 +47,16 @@ function AboutMain() {
             <li>
               <SmallCard
                 title="Free T-shirt for Yearly Members!"
-                pText="or $18 dollars for non-members. Semester members can always upgrade to yearly for the free shirt for $10!"
-              >
-                Gain access to our professional network
-                <SmallCard />
-              </SmallCard>
+                pText="$18 dollars for non-members. Semester members can always upgrade to yearly and get the free shirt for $10!"
+                elongated={true}
+              />
             </li>
-            <li>Receive exclusive internship and job opportunities</li>
+            <li>
+              <SmallCard
+                title="Free T-Shirt for Yearly Members!"
+                pText=""
+              ></SmallCard>
+            </li>
             <li>Attend our workshops and events</li>
             <li>Participate in our mentorship program</li>
             <li>Be a part of our community</li>
