@@ -17,10 +17,12 @@ const Navbar = () => {
     <>
       <div className="flex justify-between items-center border-b border-bordergray md:border-0 md:pr-6 md:mr-[118px] ">
         {/* CSG Logo (Purple) */}
-        <img
-          src="./Purp_WhiteBG_Logo.png"
-          className="w-14 h-14 m-4 md:w-[113px] md:h-auto md:my-4 md:ml-32"
-        />
+        <a href="/home">
+          <img
+            src="./Purp_WhiteBG_Logo.png"
+            className="w-14 h-14 m-4 md:w-[113px] md:h-auto md:my-4 md:ml-32"
+          />
+        </a>
         <ul className="hidden md:flex">
           {/* Nav Bar Links */}
           <div className=" my-7 text-lg flex flex-row ">
