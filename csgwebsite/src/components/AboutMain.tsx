@@ -39,19 +39,21 @@ function AboutMain() {
             we strive to create a diverse and inclusive community for our
             members to promote fellowship.
           </p>
-          {/* Why Should You Join CSG? */}
-          <h1 className="flex flex-row justify-center text-2xl">
-            Why Should You Join CSGirls?
-          </h1>
+        </div>
+        {/* Why Should You Join CSG? */}
+        <h1 className="flex flex-row justify-center text-2xl">
+          Why Should You Join CSGirls?
+        </h1>
+        <div>
+          <div className="flex flex-row justify-center pt-6">
+            <SmallCard
+              title="Free T-shirt for Yearly Members!"
+              pText="$18 dollars for non-members. Semester members can always upgrade to yearly and get the free shirt for $10!"
+              elongated={true}
+            />
+          </div>
           <ul>
-            <li>
-              <SmallCard
-                title="Free T-shirt for Yearly Members!"
-                pText="$18 dollars for non-members. Semester members can always upgrade to yearly and get the free shirt for $10!"
-                elongated={true}
-              />
-            </li>
-            <li>
+            <li className="">
               <SmallCard
                 title="Free T-Shirt for Yearly Members!"
                 pText=""
@@ -61,8 +63,8 @@ function AboutMain() {
             <li>Participate in our mentorship program</li>
             <li>Be a part of our community</li>
           </ul>
-          {/* Use card components to add features/perks of joining */}
         </div>
+        {/* Use card components to add features/perks of joining */}
       </div>
     </>
   );
