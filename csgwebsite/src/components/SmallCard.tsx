@@ -21,17 +21,17 @@ const SmallCard = (props: CardProps) => {
           <div className="flex flex-row justify-around pt-3">
             {/* Placeholders for shirt images */}
             {/* <div className="bg-buttonpurple w-[157px] h-[170px] rounded-[20px]" /> */}
-            <div className="bg-buttonpurple w-[157px] h-[170px] rounded-[20px]" />
+            {/* <div className="bg-buttonpurple w-[157px] h-[170px] rounded-[20px]" /> */}
             <img
               src={props.image1}
               className="w-[157px] h-[170px] rounded-[20px]"
               alt="2023 T-Shirt Front"
             />
-            {/* <img
+            <img
               src={props.image2}
-              className="w-[200px] h-[200px] mt-4"
-              alt="2023 T-Shirt Back"
-            /> */}
+              className="w-[157px] h-[170px] rounded-[20px]"
+              alt="2023 T-Shirt Front"
+            />
           </div>
         </div>
       ) : (
