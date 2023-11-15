@@ -12,9 +12,9 @@ function AboutMain() {
     <>
       {/* Mobile Variant */}
       <div className="overflow-y-auto">
-        {/* Group Image */}
+        {/* Banner Image */}
         <div className="w-screen h-[242px] bg-slate-600"></div>
-        {/* <img src="./group-image.jpg" className="w-screen h-[242]" /> */}
+        {/* <img src={PICLINKS.BANNERPIC} className="w-screen h-[242]" /> */}
 
         {/* Title Text */}
         <h1 className="flex flex-row font-poppins text-2xl py-4 justify-center ">
@@ -55,13 +55,28 @@ function AboutMain() {
           <ul>
             <li className="">
               <SmallCard
-                title="Free T-Shirt for Yearly Members!"
-                pText=""
+                title="Gain Hands on Experience!"
+                pText="Get insight on technical and behavioral skills needed to land a job"
+                elongated={false}
               ></SmallCard>
             </li>
-            <li>Attend our workshops and events</li>
-            <li>Participate in our mentorship program</li>
-            <li>Be a part of our community</li>
+            <li className="">
+              <SmallCard
+                title="Huge Networking Opportunities!"
+                pText="Connect with recruiters and other peers in STEM fields"
+                elongated={false}
+              ></SmallCard>
+            </li>
+            <li className="">
+              <SmallCard
+                title="Participate in Fun Social Events!"
+                pText="Attend our socials with free food and snacks provided"
+                elongated={false}
+              ></SmallCard>
+            </li>
+            <li className="">
+              <SmallCard title="" pText="" elongated={false}></SmallCard>
+            </li>
           </ul>
         </div>
         {/* Use card components to add features/perks of joining */}
