@@ -2,9 +2,9 @@ import React from "react";
 import SmallCard from "./SmallCard";
 
 const PICLINKS = {
-  SHIRTF: "./shirt-front.png",
-  SHIRTB: "./shirt-back.png",
-  BANNERPIC: "./fgm-image.jpg",
+  SHIRTF: "./Photos/front_shirt.png",
+  SHIRTB: "./Photos/back_shirt.png",
+  BANNERPIC: "./Photos/CSG_FGM1.jpg",
 };
 
 function AboutMain() {
@@ -13,8 +13,7 @@ function AboutMain() {
       {/* Mobile Variant */}
       <div className="overflow-y-auto">
         {/* Banner Image */}
-        <div className="w-screen h-[242px] bg-slate-600"></div>
-        {/* <img src={PICLINKS.BANNERPIC} className="w-screen h-[242]" /> */}
+        <img src={PICLINKS.BANNERPIC} className="w-screen" />
 
         {/* Title Text */}
         <h1 className="flex flex-row font-poppins text-2xl py-4 justify-center ">
@@ -50,6 +49,8 @@ function AboutMain() {
               title="Free T-shirt for Yearly Members!"
               pText="$18 dollars for non-members. Semester members can always upgrade to yearly and get the free shirt for $10!"
               elongated={true}
+              image1={PICLINKS.SHIRTF}
+              image2={PICLINKS.SHIRTB}
             />
           </div>
           <ul>
