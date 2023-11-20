@@ -11,6 +11,7 @@ const SmallCard = (props: CardProps) => {
     <>
       {/* Change style of the div depending on if elongated is true/false */}
       {props.elongated ? (
+        // Elognated Card
         <div className="w-[372px] h-[312px] bg-bggray rounded-[30px]">
           <h1 className="flex flex-row text-[20px] font-poppins justify-center pt-2">
             {props.title}
@@ -34,8 +35,20 @@ const SmallCard = (props: CardProps) => {
             />
           </div>
         </div>
+      ) : // If Small Card empty use placeholder div
+      props.title === "" && props.pText === "" ? (
+        <div className="w-44 h-44 bg-bggray rounded-[30px]">
+          <div className="flex flex-row  shrink-0 w-32">
+            <img src="./heart-svgrepo.svg" className=" opacity-25" />
+          </div>
+        </div>
       ) : (
-        <div className="w-32 h-32 bg-bggray rounded-[30px]"></div>
+        <div className="w-44 h-44 bg-bggray rounded-[30px]">
+          <h1 className="text-[20px] text-left font-medium font-poppins justify-center pt-2 ml-4">
+            {props.title}
+          </h1>
+          <p className="ml-4 mr-1 text-sm text-left">{props.pText}</p>
+        </div>
       )}
     </>
   );
