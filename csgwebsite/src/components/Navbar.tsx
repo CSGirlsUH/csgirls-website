@@ -11,6 +11,7 @@ const Navbar = () => {
   const WEBLINKS = {
     REGISTER:
       "https://docs.google.com/forms/d/e/1FAIpQLSdE_W4GMqEJ2l7SzaAbjuUQ-cBt2OkFfM_PQq2wZuInOxCFsA/viewform",
+    CONTACT: "https://linktr.ee/csgirls",
   };
 
   return (
@@ -55,7 +56,7 @@ const Navbar = () => {
 
             <li className="min-w-[144px] max-h-[60px]">
               <a
-                href="/contact"
+                href={WEBLINKS.CONTACT}
                 className="flex flex-column text-black p-4 pr-7 hover:text-gray-500"
               >
                 Contact Us

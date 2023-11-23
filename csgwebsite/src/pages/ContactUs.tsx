@@ -2,14 +2,14 @@ import React from "react";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import AboutMain from "../components/AboutMain";
+import ContactMain from "../components/ContactMain";
 
 const ContactUs = () => {
   return (
     <>
       <div className="font-poppins mx-auto my-auto h-screen overflow-hidden bg-white text-black">
         <Navbar />
-        <AboutMain />
+        <ContactMain />
         <Footer />
       </div>
     </>

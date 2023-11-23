@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
+import Hero from "../components/LandingHero";
 import OrgActions from "../components/OrgActions";
-import UpEvents from "../components/UpEvents";
+import UpcomingEvents from "../components/UpEvents";
 import Footer from "../components/Footer";
 
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
         <Navbar />
         <Hero />
         <OrgActions />
-        <UpEvents />
+        <UpcomingEvents />
         <Footer />
       </div>
     </>
