@@ -42,8 +42,8 @@ const OrgActions = () => {
           <div className="flex flex-col ml-10 justify-between">
             <h1 className="text-left text-4xl">Subscribe to Our Newsletter!</h1>
             <div>
-              <p className="text-left text-xl w-[370px] max-h-[121px] pt-1">
-                Words words words about the newsletter that IDK yet.
+              <p className="text-left text-xl max-w-[370px] mt-1">
+                Get monthly updates on what's happening with CSG.
               </p>
 
               <button className="btn btn-primary normal-case mt-2">
@@ -56,7 +56,7 @@ const OrgActions = () => {
           <div className="flex flex-col content-center">
             <h1 className="text-left text-4xl">Donate to Our Organization!</h1>
             <div>
-              <p className="text-left text-xl sm:w-[100px] lg:w-[370px] max-h-[300px] pt-1">
+              <p className="text-left text-xl sm:w-[100px] md:max-w-[600px] max-h-[300px] pt-1">
                 Donate to our organization to help us provide workshops,
                 networking opportunities, and a warm fuzzy feeling inside.
               </p>

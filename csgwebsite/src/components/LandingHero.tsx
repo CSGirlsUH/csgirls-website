@@ -34,9 +34,12 @@ const Hero = () => {
         </div>
 
         {/* Hero Image */}
-        <div className=" hidden lg:flex justify-center w-[1200px] h-[500px] bg-purple-300 mx-auto md:mr-6 md:ml-10 rounded-xl">
-          <p className="hidden lg:flex md:items-center ">HERO IMAGE</p>
-          {/* <img src="./hero.png" className="w-[1000px] h-[500px]" /> */}
+        <div className=" hidden md:flex justify-center w-[1200px] h-[500px] bg-purple-300 mx-auto md:mr-6 md:ml-10 rounded-xl">
+          <p className=" md:flex md:items-center ">HERO IMAGE</p>
+          {/* <img
+            src="./Photos/Random_Meeting.jpg"
+            className="w-[1000px] h-[500px]"
+          /> */}
         </div>
       </div>
     </>

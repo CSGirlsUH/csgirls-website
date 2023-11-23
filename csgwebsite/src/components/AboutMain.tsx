@@ -49,6 +49,7 @@ function AboutMain() {
             title="Free T-shirt for Yearly Members!"
             pText="$18 dollars for non-members. Semester members can always upgrade to yearly and get the free shirt for $10!"
             elongated={true}
+            heart={true}
             image1={PICLINKS.SHIRTF}
             image2={PICLINKS.SHIRTB}
           />
@@ -60,26 +61,30 @@ function AboutMain() {
             <div className="">
               <SmallCard
                 title="Gain Hands on Experience!"
-                pText="Get insight on technical and behavioral skills needed to land a job"
+                pText="Get insight on technical and behavioral skills needed to land a job."
                 elongated={false}
               ></SmallCard>
             </div>
             <div className="">
               <SmallCard
-                title="Networking Opportunities!"
-                pText="Connect with recruiters and other peers in STEM fields"
+                title="Big Networking Opportunities!"
+                pText="Connect with recruiters and other peers in STEM fields."
                 elongated={false}
               ></SmallCard>
             </div>
             <div className="">
               <SmallCard
                 title="Join Our in Fun Social Events!"
-                pText="Attend our socials with free food and snacks provided"
+                pText="Attend our socials with free food and snacks provided."
                 elongated={false}
               ></SmallCard>
             </div>
             <div className="">
-              <SmallCard title="" pText="" elongated={false}></SmallCard>
+              <SmallCard
+                title="Get internship info first!"
+                pText="We post information on our discord server about the ins and outs of the upcoming internship season."
+                elongated={false}
+              ></SmallCard>
             </div>
           </div>
         </section>
