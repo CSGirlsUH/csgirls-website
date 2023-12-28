@@ -10,7 +10,7 @@ function AboutMain() {
   return (
     <>
       {/* Mobile Variant */}
-      <div className="overflow-y-auto">
+      <div className="overflow-y-auto md:hidden">
         {/* Banner Image */}
         <img src={PICLINKS.BANNERPIC} className="w-screen" />
 
@@ -89,6 +89,45 @@ function AboutMain() {
           </div>
         </section>
         {/* Use card components to add features/perks of joining */}
+      </div>
+      {/* Desktop Variant */}
+      <div className="flex flex-col overflow-y-auto md:visible">
+        <div className="flex flex-row justify-between mx-20">
+          <div className="flex flex-col">
+            {/* Title Text */}
+            <h1 className="flex flex-row font-poppins text-left text-6xl justify-left">
+              About Us!
+            </h1>
+            {/* Main Text */}
+            <div className="flex flex-col w-[730px] h-[300px] justify-center">
+              <p className="pb-6">
+                In August 2013, Computer Science Girls (CSGirls) was created as
+                a platform for students to meet, discuss, and celebrate their
+                love for computer science. Today, CSGirls is known for
+                cultivating bright, talented professionals and upholding
+                relationships with top employers in the country.
+              </p>
+              <p className="pb-6">
+                CSGirls was founded on the principles of promoting a safe
+                environment for students and recognizing excellence within the
+                technology community at the University of Houston. Our main
+                objective is to guide women in technology; however, we welcome
+                people from all backgrounds. In line with our university's
+                values, we strive to create a diverse and inclusive community
+                for our members to promote fellowship.
+              </p>
+            </div>
+          </div>
+          {/* Hero Image */}
+          <img
+            src={PICLINKS.BANNERPIC}
+            className="flex justify-between w-[944px] h-[477px] rounded-[20px]"
+          />
+        </div>
+        {/* Why Join CSGirls? */}
+        <h1 className="flex flex-row justify-center text-6xl pt-20">
+          Why Should You Join CSGirls?
+        </h1>
       </div>
     </>
   );
