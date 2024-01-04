@@ -7,7 +7,7 @@ interface CardProps {
   image2?: string;
 }
 
-const SmallCard = (props: CardProps) => {
+const MobileAboutCard = (props: CardProps) => {
   return (
     <>
       {/* Change style of the div depending on if elongated is true/false */}
@@ -58,4 +58,4 @@ const SmallCard = (props: CardProps) => {
   );
 };
 
-export default SmallCard;
+export default MobileAboutCard;

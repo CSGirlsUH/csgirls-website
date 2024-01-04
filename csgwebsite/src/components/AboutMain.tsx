@@ -1,4 +1,4 @@
-import SmallCard from "./SmallCard";
+import MobileAboutCard from "./MobileAboutCard";
 import BigCard from "./DesktopAboutCard";
 
 const PICLINKS = {
@@ -46,7 +46,7 @@ function AboutMain() {
 
         {/* Elognated Card for T-Shirts */}
         <div className="flex flex-row justify-center pt-6">
-          <SmallCard
+          <MobileAboutCard
             title="Free T-shirt for Yearly Members!"
             pText="$18 dollars for non-members. Semester members can always upgrade to yearly and get the free shirt for $10!"
             elongated={true}
@@ -60,46 +60,47 @@ function AboutMain() {
         <section>
           <div className="flex flex-row flex-wrap gap-5 justify-center py-5">
             <div className="">
-              <SmallCard
+              <MobileAboutCard
                 title="Gain Hands on Experience!"
                 pText="Get insight on technical and behavioral skills needed to land a job."
                 elongated={false}
-              ></SmallCard>
+              ></MobileAboutCard>
             </div>
             <div className="">
-              <SmallCard
+              <MobileAboutCard
                 title="Big Networking Opportunities!"
                 pText="Connect with recruiters and other peers in STEM fields."
                 elongated={false}
-              ></SmallCard>
+              ></MobileAboutCard>
             </div>
             <div className="">
-              <SmallCard
+              <MobileAboutCard
                 title="Join Our in Fun Social Events!"
                 pText="Attend our socials with free food and snacks provided."
                 elongated={false}
-              ></SmallCard>
+              ></MobileAboutCard>
             </div>
             <div className="">
-              <SmallCard
+              <MobileAboutCard
                 title="Get internship info first!"
                 pText="We post information on our discord server about the ins and outs of the upcoming internship season."
                 elongated={false}
-              ></SmallCard>
+              ></MobileAboutCard>
             </div>
           </div>
         </section>
       </div>
+
       {/* Desktop Variant */}
       <div className="hidden md:flex flex-col overflow-y-auto md:visible">
-        <div className="flex flex-row justify-between mx-20">
+        <div className="flex flex-row justify-between mx-20 pt-16">
           <div className="flex flex-col">
             {/* Title Text */}
             <h1 className="flex flex-row font-poppins text-left text-6xl justify-left">
               About Us!
             </h1>
             {/* Main Text */}
-            <div className="flex flex-col w-[730px] h-[300px] justify-center">
+            <div className="flex flex-col w-[730px] h-[450px] justify-center text-[20px]">
               <p className="pb-6">
                 In August 2013, Computer Science Girls (CSGirls) was created as
                 a platform for students to meet, discuss, and celebrate their
