@@ -2,6 +2,7 @@ import BigCard from "./BigCard";
 import SmallEventsCard from "./SmallEventsCard";
 
 const UpEvents = () => {
+  // TODO: Create integration with Google Calendar API to auto generate this list
   const items: [string, string[]][] = [
     ["Oct 17", ["Lunch with Tim Apple", "Free T-Shirts for members!"]],
     ["Oct 18", ["Lunch with Tim Apple", "Free T-Shirts for members!"]],
@@ -17,7 +18,7 @@ const UpEvents = () => {
 
   return (
     <>
-      {/* Mobile */}
+      {/* Mobile Variant */}
       {/* Upcoming Events Text */}
       <div className="flex flex-col md:hidden">
         <h1 className="flex mx-auto text-2xl py-2">Upcoming Events</h1>
@@ -36,7 +37,7 @@ const UpEvents = () => {
         </div>
       </div>
 
-      {/* Desktop */}
+      {/* Desktop Variant */}
       <div className="hidden md:flex md:flex-col">
         <div className="flex pt-[23px]">
           <h1 className="flex mx-auto text-4xl pb-1">Upcoming Events</h1>
