@@ -16,7 +16,7 @@ function OfficerMain() {
   return (
     <>
       {/* Mobile Variant */}
-      <div className="visible md:hidden flex flex-col">
+      <section className="visible md:hidden flex flex-col">
         <img
           src={PICLINKS.BANNER}
           alt="2023-2024 Officer Team at First General Meeting"
@@ -24,7 +24,10 @@ function OfficerMain() {
         <h1 className="font-poppins flex flex-row justify-center text-2xl">
           Meet the Officers!
         </h1>
-      </div>
+      </section>
+
+      {/* Mobile Officer Cards */}
+      <div></div>
 
       {/* Desktop Variant */}
     </>
