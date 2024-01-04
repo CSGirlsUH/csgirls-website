@@ -16,6 +16,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Desktop Variant */}
       <div className="flex justify-between items-center border-b border-bordergray md:border-0 md:pr-6 md:mr-[118px] ">
         {/* CSG Logo (Purple) */}
         <a href="/home">
@@ -68,6 +69,7 @@ const Navbar = () => {
           </div>
         </ul>
 
+        {/* Mobile Variant */}
         <div onClick={handleNav} className="display block mr-8 md:hidden">
           {!nav ? (
             <AiOutlineClose size={30} onClick={handleNav} />
@@ -100,8 +102,13 @@ const Navbar = () => {
               </a>
             </li>
             <li className="">
-              <a href="/contact" className="p-4">
+              <a href={WEBLINKS.CONTACT} className="p-4">
                 Contact Us
+              </a>
+            </li>
+            <li className="">
+              <a href={WEBLINKS.REGISTER} className="p-4">
+                Register
               </a>
             </li>
           </ul>

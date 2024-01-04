@@ -4,8 +4,6 @@ import "./index.css";
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 import Officers from "./pages/Officers.tsx";
-import Register from "./pages/Register.tsx";
-import ContactUs from "./pages/ContactUs.tsx";
 
 function App() {
   return (
@@ -16,8 +14,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/officers" element={<Officers />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </Router>

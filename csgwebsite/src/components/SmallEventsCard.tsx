@@ -4,7 +4,7 @@ interface CardProps {
   optional?: string;
 }
 
-function SmallCard(props: CardProps) {
+function SmallEventsCard(props: CardProps) {
   return (
     <div
       className={
@@ -25,4 +25,4 @@ function SmallCard(props: CardProps) {
   );
 }
 
-export default SmallCard;
+export default SmallEventsCard;

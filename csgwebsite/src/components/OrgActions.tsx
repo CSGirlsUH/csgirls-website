@@ -1,5 +1,5 @@
 // import React from "react";
-import SmallActions from "./SmallActions";
+import SmallActions from "./MobileActions";
 
 const WEBLINKS = {
   REGISTER:
