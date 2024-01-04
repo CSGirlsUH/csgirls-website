@@ -1,4 +1,5 @@
 import SmallCard from "./SmallCard";
+import BigCard from "./DesktopAboutCard";
 
 const PICLINKS = {
   SHIRTF: "./Photos/front_shirt.png",
@@ -88,10 +89,9 @@ function AboutMain() {
             </div>
           </div>
         </section>
-        {/* Use card components to add features/perks of joining */}
       </div>
       {/* Desktop Variant */}
-      <div className="flex flex-col overflow-y-auto md:visible">
+      <div className="hidden md:flex flex-col overflow-y-auto md:visible">
         <div className="flex flex-row justify-between mx-20">
           <div className="flex flex-col">
             {/* Title Text */}
@@ -128,6 +128,31 @@ function AboutMain() {
         <h1 className="flex flex-row justify-center text-6xl pt-20">
           Why Should You Join CSGirls?
         </h1>
+        {/* Big Cards for information */}
+        <section className="flex flex-wrap justify-between ">
+          {/* T-shirt Information */}
+          <BigCard
+            title="Free T-Shirt for Yearly Members!"
+            pText="$18 dollars for non-members. Semester members can always upgrade to a yearly membership to get the free shirt for only $10 additional dollars."
+            image1={PICLINKS.SHIRTF}
+            image2={PICLINKS.SHIRTB}
+          />
+
+          <BigCard
+            title="Gain Hands on Experience!"
+            pText="Get insight on technical and behavioral skills needed to land a job.*Learn techincal skills used within the tech industry.*Get a better understanding of upcoming course material through our workshops."
+          />
+
+          <BigCard
+            title="Huge Networking Opportunities!"
+            pText="Attend our socials with food and snacks provided.*Connect with recruiters and get valuable career advice from professionals."
+          />
+
+          <BigCard
+            title="Participate in Our Mentorship Program!"
+            pText="Launched in Spring 2023 this program is intended to enhance student's experience navigating the challenging coursework and job market.*As an underclassman, connect with mentors and upperclassmen who can help guide you to success in your major and career through our mentorship program.*As an upperclassman, become a mentor and help guide underclassmen to success in their major and careers."
+          />
+        </section>
       </div>
     </>
   );
