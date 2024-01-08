@@ -1,7 +1,16 @@
+interface CardProps {
+  position: string;
+  name: string;
+  discord: string;
+  linkedin: string;
+  email: string;
+}
+
 const OfficerCard = () => {
   return (
     <>
-      <div className=""></div>
+      {/* Mobile Variant */}
+      <div className="flex flex-col w-269 h-346 bg-bggray"></div>
     </>
   );
 };
