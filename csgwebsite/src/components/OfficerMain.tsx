@@ -12,6 +12,81 @@ const PICLINKS = {
   WEBMASTER: "./Photos/CSG_Webmaster_2023.jpg",
 };
 
+const officerProfiles = {
+  president: {
+    name: "Rebecca Santos",
+    discord: "eckybae",
+    linkedin: "https://www.linkedin.com/in/rebeccasantos106/",
+    email: "rebeccamsantos7@gmail.com",
+    pic: PICLINKS.PRESIDENT,
+  },
+  vp_ext: {
+    name: "Carolyn Heron",
+    discord: "carisimo",
+    linkedin: "https://www.linkedin.com/in/ana-c-heron/",
+    email: "ana.heron02@gmail.com",
+    pic: PICLINKS.VP_EXT,
+  },
+  vp_int: {
+    name: "Chelsea Nguyen",
+    discord: "sheepsgardenn",
+    linkedin: "https://www.linkedin.com/in/cngu/",
+    // TODO: ADD CHELSEA EMAIL
+    email: "#",
+    pic: PICLINKS.VP_INT,
+  },
+  marketing_dir: {
+    name: "Kaitlin Wood",
+    discord: "kaminji",
+    linkedin: "https://www.linkedin.com/in/kaitlinwood03/",
+    email: "wood.kaitlin3@gmail.com",
+    pic: PICLINKS.MARKETING_DIR,
+  },
+  prof_dev_chair1: {
+    name: "Daisy Gonzalez",
+    discord: "flowerspasms",
+    linkedin: "https://www.linkedin.com/in/daigza09/",
+    email: "daisy.gonzalez0214.dg@gmail.com",
+    pic: PICLINKS.PROF_DEV_CHAIR1,
+  },
+  prof_dev_chair2: {
+    name: "Maria Thomas",
+    discord: "straw6286",
+    linkedin: "https://www.linkedin.com/in/maria-le-thomas/",
+    email: "mlthomas4@uh.edu",
+    pic: PICLINKS.PROF_DEV_CHAIR2,
+  },
+  ment_chair1: {
+    name: "Reem Alkhalily",
+    discord: "jynxae",
+    linkedin: "https://www.linkedin.com/in/reem-alkhalily-9a9152250/",
+    email: "realkhalily@hotmail.com",
+    pic: PICLINKS.MENT_CHAIR1,
+  },
+  ment_chair2: {
+    name: "Lisa Zuniga",
+    discord: "zuuni#8270",
+    linkedin: "https://www.linkedin.com/in/lisa-zuniga/",
+    // TODO: ADD LISA EMAIL
+    email: "#",
+    pic: PICLINKS.MENT_CHAIR2,
+  },
+  secy: {
+    name: "Neha Joshi",
+    discord: "neyhuh",
+    linkedin: "https://www.linkedin.com/in/nehakjoshi/",
+    email: "nehaykj@gmail.com",
+    pic: PICLINKS.SECY,
+  },
+  webmaster: {
+    name: "Sage Turner",
+    discord: "sayj",
+    linkedin: "https://www.linkedin.com/in/sageturn01/",
+    email: "sageturn01@gmail.com",
+    pic: PICLINKS.WEBMASTER,
+  },
+};
+
 function OfficerMain() {
   return (
     <>
