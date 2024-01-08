@@ -14,14 +14,14 @@ const Footer = () => {
           {/* Instagram svg */}
           <a href={WEBLINKS.INSTA}>
             <img
-              src="./camera-square-svgrepo.svg"
+              src="./icons/camera-square-svgrepo.svg"
               className="h-[30px] w-[30px] mr-8 mt-2"
             />
           </a>
           {/* Discord svg */}
           <a href={WEBLINKS.DISCORD}>
             <img
-              src="./discord-svgrepo.svg"
+              src="./icons/discord-svgrepo.svg"
               className="h-[35px] w-[35px] mt-2"
             />
           </a>

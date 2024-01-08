@@ -21,7 +21,7 @@ const Navbar = () => {
         {/* CSG Logo (Purple) */}
         <a href="/home">
           <img
-            src="./Purp_WhiteBG_Logo.png"
+            src="./icons/Purp_WhiteBG_Logo.png"
             className="w-14 h-14 m-4 md:w-[113px] md:h-auto md:my-4 md:ml-32"
           />
         </a>

@@ -11,13 +11,25 @@ const OfficerCard = (props: CardProps) => {
   return (
     <>
       {/* Mobile Variant */}
-      <div className="flex flex-col w-[269px] h-[346px] bg-blue-800 rounded-[20px] ">
+      <div className="flex flex-col self-center w-[269px] h-[346px] bg-bggray rounded-[20px] ">
         {/* Title */}
-        <h1 className=""></h1>
-        <h1 className="flex flex-row text-[20px] font-firacode justify-center pt-2">
-          {props.position}
-        </h1>
-        <h1>{props.name}</h1>
+        <div className="text-center">
+          <h1 className="inline-block text-logopurple text-2xl">{">"}</h1>{" "}
+          <h1 className="inline-block text-xl font-firacode justify-center pt-2">
+            {props.position}
+          </h1>
+        </div>
+        {/* Image */}
+        {/* TEMPORARY */}
+        <img
+          src={props.pic}
+          className="w-[174px] h-[177px] mx-auto rounded-[20px] mt-4"
+          alt="2023-2024 Webmaster Sage Turner"
+        />
+        {/* <div className=" w-[174px] h-[177px] mx-auto bg-buttonpurple rounded-[20px]"></div> */}
+        {/* Name */}
+        <h1 className="text-center">{props.name}</h1>
+        {/* Contact Information */}
       </div>
     </>
   );
