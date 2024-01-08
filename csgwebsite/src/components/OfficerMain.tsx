@@ -11,7 +11,7 @@ const PICLINKS = {
   MENT_CHAIR1: "./Photos/CSG_Mentorship_Chair1_2023.jpg",
   MENT_CHAIR2: "./Photos/CSG_Mentorship_Chair2_2023.jpg",
   SECY: "./Photos/CSG_Secretary_2023.jpg",
-  WEBMASTER: "./Photos/CSG_Webmaster_2023.jpg",
+  WEBMASTER: "./Photos/OfficerPics/CSG_Webmaster_2023.jpg",
 };
 
 const OFFICERS = {
@@ -33,8 +33,7 @@ const OFFICERS = {
     name: "Chelsea Nguyen",
     discord: "https://discord.com/users/sheepsgardenn",
     linkedin: "https://www.linkedin.com/in/cngu/",
-    // TODO: ADD CHELSEA EMAIL
-    email: "#",
+    email: "cngu02@gmail.com",
     pic: PICLINKS.VP_INT,
   },
   marketing_dir: {
@@ -104,7 +103,7 @@ function OfficerMain() {
       </section>
 
       {/* Mobile Officer Cards */}
-      <section className="visible">
+      <section className="flex flex-col justify-center">
         <OfficerCard
           position="Webmaster"
           name={OFFICERS.webmaster.name}
