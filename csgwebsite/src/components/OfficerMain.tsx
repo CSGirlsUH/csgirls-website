@@ -11,7 +11,7 @@ const PICLINKS = {
   MENT_CHAIR1: "./Photos/CSG_Mentorship_Chair1_2023.jpg",
   MENT_CHAIR2: "./Photos/CSG_Mentorship_Chair2_2023.jpg",
   SECY: "./Photos/CSG_Secretary_2023.jpg",
-  WEBMASTER: "./Photos/OfficerPics/CSG_Webmaster_2023.jpg",
+  WEBMASTER: "./Photos/OfficerPics/Sage_WebM.jpeg",
 };
 
 const OFFICERS = {
@@ -92,26 +92,93 @@ function OfficerMain() {
   return (
     <>
       {/* Mobile Variant */}
-      <section className="visible md:hidden flex flex-col">
-        <img
-          src={PICLINKS.BANNER}
-          alt="2023-2024 Officer Team at First General Meeting"
-        />
-        <h1 className="font-poppins flex flex-row justify-center text-2xl">
-          Meet the Officers!
-        </h1>
-      </section>
+      <section className="visible md:hidden flex flex-col overflow-y-auto">
+        <div className="">
+          <img
+            src={PICLINKS.BANNER}
+            className="w-full h-[200px] object-cover"
+            alt="2023-2024 Officer Team at First General Meeting"
+          />
+          <h1 className="font-poppins flex flex-row justify-center py-6 text-2xl">
+            Meet the Officers!
+          </h1>
+        </div>
 
-      {/* Mobile Officer Cards */}
-      <section className="flex flex-col justify-center">
-        <OfficerCard
-          position="Webmaster"
-          name={OFFICERS.webmaster.name}
-          discord={OFFICERS.webmaster.discord}
-          linkedin={OFFICERS.webmaster.linkedin}
-          email={OFFICERS.webmaster.email}
-          pic={PICLINKS.WEBMASTER}
-        />
+        {/* Mobile Officer Cards */}
+        <section className="flex flex-col justify-center gap-10">
+          <OfficerCard
+            position="Webmaster"
+            name={OFFICERS.webmaster.name}
+            discord={OFFICERS.webmaster.discord}
+            linkedin={OFFICERS.webmaster.linkedin}
+            email={OFFICERS.webmaster.email}
+            pic={PICLINKS.WEBMASTER}
+          />
+          <OfficerCard
+            position="Webmaster"
+            name={OFFICERS.webmaster.name}
+            discord={OFFICERS.webmaster.discord}
+            linkedin={OFFICERS.webmaster.linkedin}
+            email={OFFICERS.webmaster.email}
+            pic={PICLINKS.WEBMASTER}
+          />
+          <OfficerCard
+            position="Webmaster"
+            name={OFFICERS.webmaster.name}
+            discord={OFFICERS.webmaster.discord}
+            linkedin={OFFICERS.webmaster.linkedin}
+            email={OFFICERS.webmaster.email}
+            pic={PICLINKS.WEBMASTER}
+          />
+          <OfficerCard
+            position="Webmaster"
+            name={OFFICERS.webmaster.name}
+            discord={OFFICERS.webmaster.discord}
+            linkedin={OFFICERS.webmaster.linkedin}
+            email={OFFICERS.webmaster.email}
+            pic={PICLINKS.WEBMASTER}
+          />
+          <OfficerCard
+            position="Webmaster"
+            name={OFFICERS.webmaster.name}
+            discord={OFFICERS.webmaster.discord}
+            linkedin={OFFICERS.webmaster.linkedin}
+            email={OFFICERS.webmaster.email}
+            pic={PICLINKS.WEBMASTER}
+          />
+          <OfficerCard
+            position="Webmaster"
+            name={OFFICERS.webmaster.name}
+            discord={OFFICERS.webmaster.discord}
+            linkedin={OFFICERS.webmaster.linkedin}
+            email={OFFICERS.webmaster.email}
+            pic={PICLINKS.WEBMASTER}
+          />
+          <OfficerCard
+            position="Webmaster"
+            name={OFFICERS.webmaster.name}
+            discord={OFFICERS.webmaster.discord}
+            linkedin={OFFICERS.webmaster.linkedin}
+            email={OFFICERS.webmaster.email}
+            pic={PICLINKS.WEBMASTER}
+          />
+          <OfficerCard
+            position="Webmaster"
+            name={OFFICERS.webmaster.name}
+            discord={OFFICERS.webmaster.discord}
+            linkedin={OFFICERS.webmaster.linkedin}
+            email={OFFICERS.webmaster.email}
+            pic={PICLINKS.WEBMASTER}
+          />
+          <OfficerCard
+            position="Webmaster"
+            name={OFFICERS.webmaster.name}
+            discord={OFFICERS.webmaster.discord}
+            linkedin={OFFICERS.webmaster.linkedin}
+            email={OFFICERS.webmaster.email}
+            pic={PICLINKS.WEBMASTER}
+          />
+        </section>
       </section>
 
       {/* Desktop Variant */}
