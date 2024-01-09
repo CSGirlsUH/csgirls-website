@@ -12,11 +12,11 @@ const OfficerCard = (props: CardProps) => {
     <>
       {/* Mobile Variant */}
       <div className="flex flex-col self-center w-[269px] h-[335px] bg-bggray rounded-[20px] ">
-        {/* Title */}
+        {/* Name */}
         <div className="text-center">
           <h1 className="inline-block text-logopurple text-2xl">{">"}</h1>{" "}
           <h1 className="inline-block text-xl font-firacode justify-center pt-2">
-            {props.position}
+            {props.name}
           </h1>
         </div>
 
@@ -26,8 +26,8 @@ const OfficerCard = (props: CardProps) => {
           className="w-[174px] h-[177px] mx-auto rounded-[20px] mt-4 object-cover"
           alt={"2023-2024" + " " + props.position + " " + props.name}
         />
-        {/* Name */}
-        <h1 className="text-center">{props.name}</h1>
+        {/* Title */}
+        <h1 className="text-center pt-2 font-medium">{props.position}</h1>
         {/* Contact Information */}
         <div className="flex flex-row justify-center pl-5 pt-4 gap-8">
           {/* Discord */}
