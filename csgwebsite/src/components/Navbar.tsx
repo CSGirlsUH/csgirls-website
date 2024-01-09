@@ -85,29 +85,29 @@ const Navbar = () => {
           }
         >
           {/* <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] my-4 ml-32" /> */}
-          <ul className="pt-24 uppercase">
+          <ul className="flex flex-col pt-24 uppercase">
             <li>
-              <a href="/about" className="p-4">
+              <a href="/about" className="m-4">
                 About
               </a>
             </li>
             <li>
-              <a href="/officers" className="p-4">
+              <a href="/officers" className="m-4">
                 Officers
               </a>
             </li>
             <li>
-              <a href="/events" className="p-4">
+              <a href="/events" className="m-4">
                 Events
               </a>
             </li>
-            <li className="">
-              <a href={WEBLINKS.CONTACT} className="p-4">
+            <li>
+              <a href={WEBLINKS.CONTACT} className="m-4">
                 Contact Us
               </a>
             </li>
-            <li className="">
-              <a href={WEBLINKS.REGISTER} className="p-4">
+            <li>
+              <a href={WEBLINKS.REGISTER} className="m-4">
                 Register
               </a>
             </li>
