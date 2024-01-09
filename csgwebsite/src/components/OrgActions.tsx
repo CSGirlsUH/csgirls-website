@@ -67,7 +67,7 @@ const OrgActions = () => {
             </div>
             {/* Heart svg underneath Donate to Org */}
             <div className="absolute mx-[130px] -my-5 shrink-0 w-[200px] h-[200px]">
-              <img src="./heart-svgrepo.svg" className=" opacity-25" />
+              <img src="./icons/heart-svgrepo.svg" className=" opacity-25" />
             </div>
           </div>
 
