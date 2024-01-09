@@ -100,12 +100,12 @@ function OfficerMain() {
             alt="2023-2024 Officer Team at First General Meeting"
           />
           <h1 className="font-poppins flex flex-row justify-center py-6 text-2xl">
-            Meet the Officers!
+            Meet the 2023-2024 Officers!
           </h1>
         </div>
 
         {/* Mobile Officer Cards */}
-        <section className="flex flex-col justify-center gap-10">
+        <section className="flex flex-col justify-center gap-10 pb-10">
           <OfficerCard
             position="Webmaster"
             name={OFFICERS.webmaster.name}
