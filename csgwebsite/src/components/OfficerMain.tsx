@@ -1,19 +1,21 @@
 import OfficerCard from "./OfficerCard";
 
+// All pictures used on the page are stored in this object
 const PICLINKS = {
   BANNER: "./Photos/CSG_Officers_Together.jpg",
-  PRESIDENT: "./Photos/CSG_President_2023.jpg",
-  VP_EXT: "./Photos/CSG_VP_External_2023.jpg",
-  VP_INT: "./Photos/CSG_VP_Internal_2023.jpg",
-  MARKETING_DIR: "./Photos/CSG_Marketing_Director_2023.jpg",
-  PROF_DEV_CHAIR1: "./Photos/CSG_Prof_Dev_Chair1_2023.jpg",
-  PROF_DEV_CHAIR2: "./Photos/CSG_Prof_Dev_Chair2_2023.jpg",
-  MENT_CHAIR1: "./Photos/CSG_Mentorship_Chair1_2023.jpg",
-  MENT_CHAIR2: "./Photos/CSG_Mentorship_Chair2_2023.jpg",
-  SECY: "./Photos/CSG_Secretary_2023.jpg",
+  PRESIDENT: "./Photos/OfficerPics/Becky_Pres.JPG",
+  VP_EXT: "./Photos/OfficerPics/Caro_VPExternal.jpg",
+  VP_INT: "./Photos/OfficerPics/Chelsea_VPInternal.png",
+  MARKETING_DIR: "./Photos/OfficerPics/Kaitlin_MarkDir.jpg",
+  PROF_DEV_CHAIR1: "./Photos/OfficerPics/Daisy_ProfDevChair.jpg",
+  PROF_DEV_CHAIR2: "./Photos/OfficerPics/Maria_ProfDevChair.jpg",
+  MENT_CHAIR1: "./Photos/OfficerPics/Reem_MentorChair.jpg",
+  MENT_CHAIR2: "./Photos/OfficerPics/nick_haha.jpg",
+  SECY: "./Photos/OfficerPics/Neha_Secy.jpeg",
   WEBMASTER: "./Photos/OfficerPics/Sage_WebM.jpeg",
 };
 
+// All officer information is stored in this object
 const OFFICERS = {
   president: {
     name: "Rebecca Santos",
@@ -68,8 +70,7 @@ const OFFICERS = {
     name: "Lisa Zuniga",
     discord: "https://discord.com/users/zuuni#8270",
     linkedin: "https://www.linkedin.com/in/lisa-zuniga/",
-    // TODO: ADD LISA EMAIL
-    email: "#",
+    email: "lisamzuni143@gmail.com",
     pic: PICLINKS.MENT_CHAIR2,
   },
   secy: {
@@ -107,68 +108,76 @@ function OfficerMain() {
         {/* Mobile Officer Cards */}
         <section className="flex flex-col justify-center gap-10 pb-10">
           <OfficerCard
-            position="Webmaster"
-            name={OFFICERS.webmaster.name}
-            discord={OFFICERS.webmaster.discord}
-            linkedin={OFFICERS.webmaster.linkedin}
-            email={OFFICERS.webmaster.email}
-            pic={PICLINKS.WEBMASTER}
+            position="President"
+            name={OFFICERS.president.name}
+            discord={OFFICERS.president.discord}
+            linkedin={OFFICERS.president.linkedin}
+            email={OFFICERS.president.email}
+            pic={PICLINKS.PRESIDENT}
           />
           <OfficerCard
-            position="Webmaster"
-            name={OFFICERS.webmaster.name}
-            discord={OFFICERS.webmaster.discord}
-            linkedin={OFFICERS.webmaster.linkedin}
-            email={OFFICERS.webmaster.email}
-            pic={PICLINKS.WEBMASTER}
+            position="VP External"
+            name={OFFICERS.vp_ext.name}
+            discord={OFFICERS.vp_ext.discord}
+            linkedin={OFFICERS.vp_ext.linkedin}
+            email={OFFICERS.vp_ext.email}
+            pic={PICLINKS.VP_EXT}
           />
           <OfficerCard
-            position="Webmaster"
-            name={OFFICERS.webmaster.name}
-            discord={OFFICERS.webmaster.discord}
-            linkedin={OFFICERS.webmaster.linkedin}
-            email={OFFICERS.webmaster.email}
-            pic={PICLINKS.WEBMASTER}
+            position="VP Internal"
+            name={OFFICERS.vp_int.name}
+            discord={OFFICERS.vp_int.discord}
+            linkedin={OFFICERS.vp_int.linkedin}
+            email={OFFICERS.vp_int.email}
+            pic={PICLINKS.VP_INT}
           />
           <OfficerCard
-            position="Webmaster"
-            name={OFFICERS.webmaster.name}
-            discord={OFFICERS.webmaster.discord}
-            linkedin={OFFICERS.webmaster.linkedin}
-            email={OFFICERS.webmaster.email}
-            pic={PICLINKS.WEBMASTER}
+            position="Prof. Development Chair"
+            name={OFFICERS.prof_dev_chair1.name}
+            discord={OFFICERS.prof_dev_chair1.discord}
+            linkedin={OFFICERS.prof_dev_chair1.linkedin}
+            email={OFFICERS.prof_dev_chair1.email}
+            pic={PICLINKS.PROF_DEV_CHAIR1}
           />
           <OfficerCard
-            position="Webmaster"
-            name={OFFICERS.webmaster.name}
-            discord={OFFICERS.webmaster.discord}
-            linkedin={OFFICERS.webmaster.linkedin}
-            email={OFFICERS.webmaster.email}
-            pic={PICLINKS.WEBMASTER}
+            position="Prof. Development Chair"
+            name={OFFICERS.prof_dev_chair2.name}
+            discord={OFFICERS.prof_dev_chair2.discord}
+            linkedin={OFFICERS.prof_dev_chair2.linkedin}
+            email={OFFICERS.prof_dev_chair2.email}
+            pic={PICLINKS.PROF_DEV_CHAIR2}
           />
           <OfficerCard
-            position="Webmaster"
-            name={OFFICERS.webmaster.name}
-            discord={OFFICERS.webmaster.discord}
-            linkedin={OFFICERS.webmaster.linkedin}
-            email={OFFICERS.webmaster.email}
-            pic={PICLINKS.WEBMASTER}
+            position="Mentorship Chair"
+            name={OFFICERS.ment_chair1.name}
+            discord={OFFICERS.ment_chair1.discord}
+            linkedin={OFFICERS.ment_chair1.linkedin}
+            email={OFFICERS.ment_chair1.email}
+            pic={PICLINKS.MENT_CHAIR1}
           />
           <OfficerCard
-            position="Webmaster"
-            name={OFFICERS.webmaster.name}
-            discord={OFFICERS.webmaster.discord}
-            linkedin={OFFICERS.webmaster.linkedin}
-            email={OFFICERS.webmaster.email}
-            pic={PICLINKS.WEBMASTER}
+            position="Mentorship Chair"
+            name={OFFICERS.ment_chair2.name}
+            discord={OFFICERS.ment_chair2.discord}
+            linkedin={OFFICERS.ment_chair2.linkedin}
+            email={OFFICERS.ment_chair2.email}
+            pic={PICLINKS.MENT_CHAIR2}
           />
           <OfficerCard
-            position="Webmaster"
-            name={OFFICERS.webmaster.name}
-            discord={OFFICERS.webmaster.discord}
-            linkedin={OFFICERS.webmaster.linkedin}
-            email={OFFICERS.webmaster.email}
-            pic={PICLINKS.WEBMASTER}
+            position="Secretary"
+            name={OFFICERS.secy.name}
+            discord={OFFICERS.secy.discord}
+            linkedin={OFFICERS.secy.linkedin}
+            email={OFFICERS.secy.email}
+            pic={PICLINKS.SECY}
+          />
+          <OfficerCard
+            position="Director of Marketing"
+            name={OFFICERS.marketing_dir.name}
+            discord={OFFICERS.marketing_dir.discord}
+            linkedin={OFFICERS.marketing_dir.linkedin}
+            email={OFFICERS.marketing_dir.email}
+            pic={PICLINKS.MARKETING_DIR}
           />
           <OfficerCard
             position="Webmaster"
