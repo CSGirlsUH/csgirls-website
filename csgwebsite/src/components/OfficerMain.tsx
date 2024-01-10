@@ -199,7 +199,7 @@ function OfficerMain() {
           className="w-[1573px] h-[524px] mx-auto object-cover rounded-[20px]"
         ></img>
         {/* Desktop Officer Cards */}
-        <section className="flex flex-col justify-center gap-10 pb-10">
+        <section className="flex flex-row flex-wrap justify-center gap-10 py-10">
           <OfficerCard
             position="President"
             name={OFFICERS.president.name}

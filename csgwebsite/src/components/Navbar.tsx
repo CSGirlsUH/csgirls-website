@@ -30,6 +30,14 @@ const Navbar = () => {
           <div className=" my-7 text-lg flex flex-row ">
             <li>
               <a
+                href="/home"
+                className="flex flex-column text-black p-4 hover:text-gray-500"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
                 href="/about"
                 className="flex flex-column text-black p-4 hover:text-gray-500"
               >
