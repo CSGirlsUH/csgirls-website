@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BigCard from "./BigCard";
 import SmallEventsCard from "./SmallEventsCard";
 
@@ -15,6 +16,9 @@ const UpEvents = () => {
     ["Oct 25", ["Lunch with Tim Apple", "Free T-Shirts for members!"]],
     ["Oct 26", ["Lunch with Tim Apple", "Free T-Shirts for members!"]],
   ];
+  useEffect(() => {
+    /* global google */
+  }, []);
 
   return (
     <>
