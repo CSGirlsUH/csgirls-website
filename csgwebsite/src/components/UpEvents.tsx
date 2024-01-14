@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
 import BigCard from "./BigCard";
 import SmallEventsCard from "./SmallEventsCard";
@@ -11,8 +11,6 @@ const UpEvents = () => {
   const CALENDAR_ID =
     "https://calendar.google.com/calendar/embed?src=csgirls.org_qnctmv1tm3sh26b9reci44gcf8%40group.calendar.google.com&ctz=America%2FChicago";
   const [events, setEvents] = useState([]);
-
-  gapi.client.init((apiKey = API_KEY));
 
   const items: [string, string[]][] = [
     ["Oct 17", ["Lunch with Tim Apple", "Free T-Shirts for members!"]],
@@ -27,6 +25,25 @@ const UpEvents = () => {
     ["Oct 26", ["Lunch with Tim Apple", "Free T-Shirts for members!"]],
   ];
 
+  const eventItems = events.map((event) => {
+    // Formatting date
+    let startDate = new Date(event.start.dateTime);
+    startDate.setHours(0, 0, 0, 0);
+    let startDateStr = startDate.toDateString();
+
+    // Formatting time
+    let hours = startDate.getHours();
+    let minutes = startDate.getMinutes();
+
+    return {
+      id: event.id,
+      title: event.summary,
+      description: event.description || "N/A",
+      date: startDateStr,
+      time: hours + ":" + minutes,
+    };
+  });
+
   useEffect(() => {
     /* global google */
     const fetchEvents = async () => {
@@ -37,15 +54,29 @@ const UpEvents = () => {
     fetchEvents();
   }, []);
 
-  const getEvents = async (calendarID: string, apiKey: string): Promise<> => {
+  const getEvents = async (calendarID: string, apiKey: string) => {
     try {
-      gapi.client.init({ apiKey: apiKey });
+      // Initialize Google API Client with API key
+      gapi.client.init({
+        apiKey: apiKey,
+        clientId: CLIENT_ID,
+        discoveryDocs: [
+          "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest",
+        ],
+        // access to Google Calendar API for read only events
+        scope: "https://www.googleapis.com/auth/calendar.events.readonly",
+      });
 
-      const response = await gapi.client.init({ apiKey: apiKey }).then(
-        gapi.client.request({
-          path: `https://www.googleapis.com/calendar/v3/calendars/${calendarID}/events`,
-        })
-      );
+      // Make API request to Google Calendar API
+      const response = await gapi.client.calendar.events.list({
+        calendarID: calendarID,
+        timeMin: new Date().toISOString(),
+        showDeleted: false,
+        maxResults: 25,
+        orderBy: "startTime",
+      });
+
+      // Return events
       return response.result.items;
     } catch (error) {
       console.log("Failed to fetch events", error);
@@ -55,8 +86,15 @@ const UpEvents = () => {
 
   return (
     <>
-      {/*  TESTING */}
-      {console.log(events[0].summary)}
+      {
+        /* GOOGLE CALENDAR API TESTING */
+
+        <SmallEventsCard
+          optional="ml-6"
+          date={items[0][0]}
+          items={items[0][1]}
+        />
+      }
 
       {/* Mobile Variant */}
       {/* Upcoming Events Text */}
