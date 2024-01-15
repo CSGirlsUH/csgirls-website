@@ -6,7 +6,7 @@ interface CardProps {
   optional?: string;
 }
 
-function Card(props: CardProps) {
+function BigEventsCard(props: CardProps) {
   return (
     <>
       {/* Change style of the div depending on if elongated is true/false */}
@@ -33,4 +33,4 @@ function Card(props: CardProps) {
   );
 }
 
-export default Card;
+export default BigEventsCard;
