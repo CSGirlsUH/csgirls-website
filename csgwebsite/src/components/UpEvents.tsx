@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
-import BigCard from "./BigCard";
+import BigEventsCard from "./BigEventsCard";
 import SmallEventsCard from "./SmallEventsCard";
 
 const UpEvents = () => {
-  // TODO: Create integration with Google Calendar API to auto generate this list
+  // ? Integration with Google Calendar API to auto generate this list
 
   // Google Calendar API variables
   const CLIENT_ID =
@@ -29,28 +29,6 @@ const UpEvents = () => {
     ["Oct 26", ["Lunch with Tim Apple", "Free T-Shirts for members!"]],
   ];
 
-  // const eventItems =
-  //   events && events.length > 0
-  //     ? events.map((event) => {
-  //         // Formatting date
-  //         let startDate = new Date(event.start.dateTime);
-  //         startDate.setHours(0, 0, 0, 0);
-  //         let startDateStr = startDate.toDateString();
-
-  //         // Formatting time
-  //         let hours = startDate.getHours();
-  //         let minutes = startDate.getMinutes();
-
-  //         return {
-  //           id: event.id,
-  //           title: event.summary,
-  //           description: event.description || "N/A",
-  //           date: startDateStr,
-  //           time: hours + ":" + minutes,
-  //         };
-  //       })
-  //     : [];
-
   useEffect(() => {
     gapi.load("client:auth2", async () => {
       gapi.client
@@ -64,7 +42,7 @@ const UpEvents = () => {
         })
         .then(() => {
           const fetchEvents = async () => {
-            const events = await getEvents(TESTING_CALENDAR_ID, API_KEY);
+            const events = await getEvents(TESTING_CALENDAR_ID);
             setEvents(events);
           };
 
@@ -73,10 +51,7 @@ const UpEvents = () => {
     });
   }, []);
 
-  const getEvents = async (
-    calendarID: string,
-    apiKey: string
-  ): Promise<any[]> => {
+  const getEvents = async (calendarID: string): Promise<any[]> => {
     try {
       console.log("Fetching events");
 
@@ -84,8 +59,8 @@ const UpEvents = () => {
       const response = await gapi.client.calendar.events.list({
         calendarId: calendarID,
         showDeleted: false,
-        maxResults: 25,
-        // orderBy: "startTime",
+        maxResults: 10,
+        timeMin: "2023-11-15T02:28:18+00:00",
       });
       console.log(new Date().toISOString());
       console.log(response);
@@ -98,20 +73,88 @@ const UpEvents = () => {
     }
   };
 
+  function convertTime(dateTime: string) {
+    const date = new Date(dateTime);
+    let hours = date.getHours();
+    const minutes = date.getMinutes();
+    const dayPeriod = hours >= 12 ? "PM" : "AM";
+
+    // Convert to 12-hour format
+    hours = hours % 12;
+    // Convert '0' to '12'
+    hours = hours ? hours : 12;
+    // Add leading zero to single digit minutes
+    const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+
+    // ? If the API returns a date-time format (dateTime: '2024-01-16T10:00:00-06:00')
+    // ? convert it into a string of time with AM/PM here
+
+    return `${hours}:${formattedMinutes} ${dayPeriod}`;
+  }
+
+  function convertDate(dateTime: string, isDateTime = false) {
+    const MONTHS = {
+      0: "Jan",
+      1: "Feb",
+      2: "Mar",
+      3: "Apr",
+      4: "May",
+      5: "June",
+      6: "July",
+      7: "Aug",
+      8: "Sept",
+      9: "Oct",
+      10: "Nov",
+      11: "Dec",
+    };
+
+    // ? If the API returns a date-time format (dateTime: '2024-01-16T10:00:00-06:00')
+    // ? convert it into a string of month and day here
+    if (isDateTime) {
+      const date = new Date(dateTime);
+      let month = MONTHS[date.getMonth()];
+      let day = date.getDate();
+
+      return `${month} ${day}`;
+    }
+
+    // ? If the API returns a date format (date: '2024-01-16')
+    // ? convert it into a string of month and day here
+    let slicedDate = dateTime.split("-");
+    let month = MONTHS[parseInt(slicedDate[1]) - 1];
+    let day = slicedDate[2];
+
+    return `${month} ${day}`;
+  }
+
+  const eventItems =
+    events && events.length > 0
+      ? events.map((event) => {
+          let formattedDate = "N/A";
+          let formattedTime = "N/A";
+
+          // If the data is in the format of a date-time, then we have to reformat
+          event.start.dateTime
+            ? ((formattedDate = convertDate(event.start.dateTime, true)),
+              (formattedTime = convertTime(event.start.dateTime)))
+            : (formattedDate = convertDate(event.start.date));
+
+          return {
+            id: event.id,
+            title: event.summary,
+            description: event.description || "N/A",
+            date: formattedDate,
+            time: formattedTime,
+          };
+        })
+      : [];
+
+  eventItems.reverse();
+
+  console.log(eventItems);
+
   return (
     <>
-      {
-        /* GOOGLE CALENDAR API TESTING */
-        // events && events.length > 0 && (
-        //   <SmallEventsCard
-        //     optional="ml-6"
-        //     date={events[0].date}
-        //     items={items[0][1]}
-        //   />
-        // )
-        // console.log(events)
-      }
-
       {/* Mobile Variant */}
       {/* Upcoming Events Text */}
       <div className="flex flex-col md:hidden">
@@ -141,9 +184,15 @@ const UpEvents = () => {
         {/* Events Carousel */}
         <div className="flex items-center justify-start overflow-x-scroll overflow-y-hidden ">
           <div className="py-4 flex items-center justify-start">
-            <BigCard optional="ml-6" date={items[0][0]} items={items[0][1]} />
-            {items.slice(1).map((item, index) => (
-              <BigCard key={index} date={item[0]} items={item[1]} />
+            {eventItems && eventItems.length > 0 && (
+              <BigEventsCard
+                optional="ml-6"
+                date={eventItems[0].date}
+                items={[eventItems[0].title]}
+              />
+            )}
+            {eventItems.slice(1).map((item, index) => (
+              <BigEventsCard key={index} date={item.date} items={item.title} />
             ))}
           </div>
         </div>
