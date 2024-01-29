@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
 import BigEventsCard from "./BigEventsCard";
 import SmallEventsCard from "./SmallEventsCard";
-import { set } from "react-hook-form";
 
 const UpEvents = () => {
   // ? Integration with Google Calendar API to auto generate this list
@@ -31,7 +30,7 @@ const UpEvents = () => {
         })
         .then(() => {
           const fetchEvents = async () => {
-            const events = await getEvents(TESTING_CALENDAR_ID);
+            const events = await getEvents(CALENDAR_ID);
             setEvents(events);
           };
 
@@ -50,7 +49,6 @@ const UpEvents = () => {
         showDeleted: false,
         maxResults: 10,
         timeMin: new Date().toISOString(),
-        // ! PLACEHOLDER TIME FOR TESTING, REMOVE FOR PRODUCTION
       });
       console.log(new Date().toISOString());
       console.log(response);
