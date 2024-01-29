@@ -3,14 +3,11 @@ import Hero from "../components/LandingHero";
 import OrgActions from "../components/OrgActions";
 import UpcomingEvents from "../components/UpEvents";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 interface HomeProps {
   event?: boolean;
 }
-
-Home.defaultProps = {
-  event: false,
-};
 
 function scrollToBottom() {
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
@@ -18,6 +15,12 @@ function scrollToBottom() {
 }
 
 function Home({ event }: HomeProps) {
+  useEffect(() => {
+    if (event) {
+      scrollToBottom();
+    }
+  }, [event]);
+
   return (
     <>
       <div className="font-poppins mx-full my-full overflow-hidden bg-white text-black">

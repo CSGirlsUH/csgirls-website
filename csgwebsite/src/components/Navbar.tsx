@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Home from "../pages/Home";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -15,15 +16,11 @@ const Navbar = () => {
     CONTACT: "https://linktr.ee/csgirls",
   };
 
-  const bottomRef = useRef<HTMLDivElement>(null);
-
   function scrollToBottom() {
     // Check if page is on home page
-    if (window.location.pathname !== "/home") {
-      <Home event={true} />;
-    }
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-    console.log("scrolling");
+    if (window.location.pathname === "/home")
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    else window.location.href = "/events";
   }
 
   return (
@@ -68,6 +65,7 @@ const Navbar = () => {
 
             <li>
               <a
+                href="#"
                 onClick={scrollToBottom}
                 className="flex flex-column text-black p-4 hover:text-gray-500"
               >
