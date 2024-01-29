@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Home from "../pages/Home";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -17,6 +18,10 @@ const Navbar = () => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   function scrollToBottom() {
+    // Check if page is on home page
+    if (window.location.pathname !== "/home") {
+      <Home event={true} />;
+    }
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
     console.log("scrolling");
   }
