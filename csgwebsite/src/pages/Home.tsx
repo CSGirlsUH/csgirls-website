@@ -4,7 +4,20 @@ import OrgActions from "../components/OrgActions";
 import UpcomingEvents from "../components/UpEvents";
 import Footer from "../components/Footer";
 
-function Home() {
+interface HomeProps {
+  event?: boolean;
+}
+
+Home.defaultProps = {
+  event: false,
+};
+
+function scrollToBottom() {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  console.log("scrolling");
+}
+
+function Home({ event }: HomeProps) {
   return (
     <>
       <div className="font-poppins mx-full my-full overflow-hidden bg-white text-black">
@@ -13,6 +26,7 @@ function Home() {
         <OrgActions />
         <UpcomingEvents />
         <Footer />
+        {event ? scrollToBottom() : null}
       </div>
     </>
   );

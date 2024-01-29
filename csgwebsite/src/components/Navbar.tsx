@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
@@ -13,6 +13,13 @@ const Navbar = () => {
       "https://docs.google.com/forms/d/e/1FAIpQLSdE_W4GMqEJ2l7SzaAbjuUQ-cBt2OkFfM_PQq2wZuInOxCFsA/viewform",
     CONTACT: "https://linktr.ee/csgirls",
   };
+
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  function scrollToBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    console.log("scrolling");
+  }
 
   return (
     <>
@@ -56,7 +63,7 @@ const Navbar = () => {
 
             <li>
               <a
-                href="/events"
+                onClick={scrollToBottom}
                 className="flex flex-column text-black p-4 hover:text-gray-500"
               >
                 Events
