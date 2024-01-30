@@ -117,8 +117,22 @@ const UpEvents = () => {
     return `${month} ${day}`;
   }
 
+  function convertYear(date: string | Date): number {
+    let year = 0;
+    if (typeof date === "string") {
+      let slicedDate = date.split("-");
+      year = parseInt(slicedDate[0]);
+
+      return year;
+    }
+
+    if (date instanceof Date) year = date.getFullYear();
+
+    return year;
+  }
+
   function sortEvents(toSort: any[]) {
-    const MONTHSREV: { [key: string]: number } = {
+    const MONTHS: { [key: string]: number } = {
       Jan: 0,
       Feb: 1,
       Mar: 2,
@@ -141,14 +155,16 @@ const UpEvents = () => {
       ? events.map((event) => {
           let formattedDate = "N/A";
           let formattedTime = "N/A";
-          let year = 0;
+          let formattedYear = 0;
 
           // If the data is in the format of a date-time, then we have to reformat
           // Gets reformatted to -> "Jan 16" and "10:00 AM"
           event.start.dateTime
             ? ((formattedDate = convertDate(event.start.dateTime, true)),
-              (formattedTime = convertTime(event.start.dateTime)))
-            : (formattedDate = convertDate(event.start.date));
+              (formattedTime = convertTime(event.start.dateTime)),
+              (formattedYear = convertYear(new Date(event.start.dateTime))))
+            : ((formattedDate = convertDate(event.start.date)),
+              (formattedYear = convertYear(event.start.date)));
 
           return {
             id: event.id,
@@ -156,14 +172,13 @@ const UpEvents = () => {
             description: event.description || "N/A",
             date: formattedDate,
             time: formattedTime,
-            year: year,
-            hello: "hello",
+            year: formattedYear,
           };
         })
       : [];
 
-  // eventItems.reverse();
-  if (!isLoading) console.log(events[0].start.date);
+  // let eventsSorted = sort(eventItems);
+  if (!isLoading) console.log(eventItems);
 
   return (
     <>
