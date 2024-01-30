@@ -12,9 +12,9 @@ const UpEvents = () => {
   const API_KEY = "AIzaSyDz3SG5Wx_AxMGtrMpRWRjfKkqEzwdzmXI";
   const CALENDAR_ID =
     "csgirls.org_qnctmv1tm3sh26b9reci44gcf8@group.calendar.google.com";
-  const TESTING_CALENDAR_ID =
-    "a9019437cc41150804219b9139aaa6707fe341f3432b67d96271d85d30ad29e7@group.calendar.google.com";
+  // const TESTING_CALENDAR_ID = "a9019437cc41150804219b9139aaa6707fe341f3432b67d96271d85d30ad29e7@group.calendar.google.com";
   const [events, setEvents] = useState([]);
+  // Waits for API fetch to complete
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const UpEvents = () => {
   }
 
   function convertDate(dateTime: string, isDateTime = false) {
-    const MONTHS = {
+    const MONTHS: { [key: number]: string } = {
       0: "Jan",
       1: "Feb",
       2: "Mar",
@@ -112,22 +112,47 @@ const UpEvents = () => {
     // ? convert it into a string of month and day here
     let slicedDate = dateTime.split("-");
     let month = MONTHS[parseInt(slicedDate[1]) - 1];
-    let day = slicedDate[2];
+    let day = parseInt(slicedDate[2]);
 
     return `${month} ${day}`;
   }
+
+  function sortEvents(toSort: any[]) {
+    const MONTHSREV: { [key: string ]: number } = {
+      "Jan" :0,
+      "Feb" :1,
+      "Mar" :2,
+      "Apr" :3,
+      "May" :4,
+      "Jun" :5,
+      "Jul" :6,
+      "Aug" :7,
+      "Sep" :8,
+      "Oct" :9,
+      "Nov" :10,
+      "Dec" :11,
+    };
+
+
+
+  }
+
+  if (!isLoading) console.log(events);
 
   const eventItems =
     events && events.length > 0
       ? events.map((event) => {
           let formattedDate = "N/A";
           let formattedTime = "N/A";
+          let year = 0; 
 
           // If the data is in the format of a date-time, then we have to reformat
+          // Gets reformatted to -> "Jan 16" and "10:00 AM"
           event.start.dateTime
             ? ((formattedDate = convertDate(event.start.dateTime, true)),
               (formattedTime = convertTime(event.start.dateTime)))
             : (formattedDate = convertDate(event.start.date));
+          
 
           return {
             id: event.id,
@@ -135,11 +160,13 @@ const UpEvents = () => {
             description: event.description || "N/A",
             date: formattedDate,
             time: formattedTime,
+            year: 
           };
         })
       : [];
 
-  eventItems.reverse();
+  // eventItems.reverse();
+  if (!isLoading) console.log(events[0].start.date);
 
   return (
     <>
