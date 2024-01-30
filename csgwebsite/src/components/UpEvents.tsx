@@ -118,23 +118,20 @@ const UpEvents = () => {
   }
 
   function sortEvents(toSort: any[]) {
-    const MONTHSREV: { [key: string ]: number } = {
-      "Jan" :0,
-      "Feb" :1,
-      "Mar" :2,
-      "Apr" :3,
-      "May" :4,
-      "Jun" :5,
-      "Jul" :6,
-      "Aug" :7,
-      "Sep" :8,
-      "Oct" :9,
-      "Nov" :10,
-      "Dec" :11,
+    const MONTHSREV: { [key: string]: number } = {
+      Jan: 0,
+      Feb: 1,
+      Mar: 2,
+      Apr: 3,
+      May: 4,
+      Jun: 5,
+      Jul: 6,
+      Aug: 7,
+      Sep: 8,
+      Oct: 9,
+      Nov: 10,
+      Dec: 11,
     };
-
-
-
   }
 
   if (!isLoading) console.log(events);
@@ -144,7 +141,7 @@ const UpEvents = () => {
       ? events.map((event) => {
           let formattedDate = "N/A";
           let formattedTime = "N/A";
-          let year = 0; 
+          let year = 0;
 
           // If the data is in the format of a date-time, then we have to reformat
           // Gets reformatted to -> "Jan 16" and "10:00 AM"
@@ -152,7 +149,6 @@ const UpEvents = () => {
             ? ((formattedDate = convertDate(event.start.dateTime, true)),
               (formattedTime = convertTime(event.start.dateTime)))
             : (formattedDate = convertDate(event.start.date));
-          
 
           return {
             id: event.id,
@@ -160,7 +156,8 @@ const UpEvents = () => {
             description: event.description || "N/A",
             date: formattedDate,
             time: formattedTime,
-            year: 
+            year: year,
+            hello: "hello",
           };
         })
       : [];
