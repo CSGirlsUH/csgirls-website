@@ -125,13 +125,11 @@ const UpEvents = () => {
 
       return year;
     }
-
     if (date instanceof Date) year = date.getFullYear();
-
     return year;
   }
 
-  function sortEvents(toSort: any[]) {
+  function sort(toSort: any[]) {
     const MONTHS: { [key: string]: number } = {
       Jan: 0,
       Feb: 1,
@@ -146,6 +144,23 @@ const UpEvents = () => {
       Nov: 10,
       Dec: 11,
     };
+    return toSort.sort((a, b) => {
+      if (a.year < b.year) return -1;
+      else if (a.year > b.year) return 1;
+      else if (a.year == b.year) {
+        // If years are the same compare months
+        if (MONTHS[a.date.slice(0, 3)] < MONTHS[b.date.slice(0, 3)]) return -1;
+        else if (MONTHS[a.date.slice(0, 3)] > MONTHS[b.date.slice(0, 3)])
+          return 1;
+        else if (MONTHS[a.date.slice(0, 3)] == MONTHS[b.date.slice(0, 3)]) {
+          // If months are the same compare days
+          if (parseInt(a.date.slice(4)) < parseInt(b.date.slice(4))) return -1;
+          else if (parseInt(a.date.slice(4)) > parseInt(b.date.slice(4)))
+            return 1;
+        }
+      }
+      return 0;
+    });
   }
 
   if (!isLoading) console.log(events);
@@ -177,8 +192,8 @@ const UpEvents = () => {
         })
       : [];
 
-  // let eventsSorted = sort(eventItems);
-  if (!isLoading) console.log(eventItems);
+  let eventsSorted = sort(eventItems);
+  if (!isLoading) console.log(eventsSorted);
 
   return (
     <>
