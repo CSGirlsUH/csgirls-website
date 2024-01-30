@@ -163,8 +163,6 @@ const UpEvents = () => {
     });
   }
 
-  if (!isLoading) console.log(events);
-
   const eventItems =
     events && events.length > 0
       ? events.map((event) => {
@@ -192,8 +190,7 @@ const UpEvents = () => {
         })
       : [];
 
-  let eventsSorted = sort(eventItems);
-  if (!isLoading) console.log(eventsSorted);
+  sort(eventItems);
 
   return (
     <>
