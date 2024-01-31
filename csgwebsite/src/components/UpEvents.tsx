@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
 import BigEventsCard from "./BigEventsCard";
 import SmallEventsCard from "./SmallEventsCard";
-import { set } from "react-hook-form";
 
 const UpEvents = () => {
   // ? Integration with Google Calendar API to auto generate this list

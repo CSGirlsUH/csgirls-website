@@ -188,7 +188,7 @@ function OfficerMain() {
         </section>
       </div>
 
-      {/* Desktop Variant */}
+      {/* Desktop Officer Cards */}
       <div className="hidden md:flex flex-col overflow-y-auto">
         <h1 className="text-center font-normal text-6xl py-6">
           Meet The 2023-2024 Officers!
