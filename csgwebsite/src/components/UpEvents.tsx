@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
 import BigEventsCard from "./BigEventsCard";
 import SmallEventsCard from "./SmallEventsCard";
+import { set } from "react-hook-form";
 
 const UpEvents = () => {
   // ? Integration with Google Calendar API to auto generate this list
@@ -12,7 +13,6 @@ const UpEvents = () => {
   const API_KEY = "AIzaSyDz3SG5Wx_AxMGtrMpRWRjfKkqEzwdzmXI";
   const CALENDAR_ID =
     "csgirls.org_qnctmv1tm3sh26b9reci44gcf8@group.calendar.google.com";
-  // const TESTING_CALENDAR_ID = "a9019437cc41150804219b9139aaa6707fe341f3432b67d96271d85d30ad29e7@group.calendar.google.com";
   const [events, setEvents] = useState([]);
   // Waits for API fetch to complete
   const [isLoading, setIsLoading] = useState(true);
@@ -41,8 +41,6 @@ const UpEvents = () => {
 
   const getEvents = async (calendarID: string): Promise<any[]> => {
     try {
-      console.log("Fetching events");
-
       // Make API request to Google Calendar API
       const response = await gapi.client.calendar.events.list({
         calendarId: calendarID,
@@ -50,8 +48,6 @@ const UpEvents = () => {
         maxResults: 10,
         timeMin: new Date().toISOString(),
       });
-      console.log(new Date().toISOString());
-      console.log(response);
 
       // Return events and set Loading to false
       setIsLoading(false);
@@ -209,7 +205,9 @@ const UpEvents = () => {
                 items={[eventItems[0].title]}
               />
             ) : (
-              <p>Loading...</p>
+              <div className="flex flex-col justify-center w-screen h-[194px]">
+                <span className="mx-auto loading loading-dots bg-black w-24 h-28"></span>
+              </div>
             )}
             {!isLoading
               ? eventItems
@@ -232,7 +230,7 @@ const UpEvents = () => {
           <h1 className="flex mx-auto text-4xl pb-1">Upcoming Events</h1>
         </div>
         {/* Events Carousel */}
-        <div className="flex items-center justify-start overflow-x-scroll overflow-y-hidden ">
+        <div className="flex items-center justify-start overflow-x-scroll overflow-y-hidden">
           <div className="py-4 flex items-center justify-start">
             {!isLoading ? (
               <BigEventsCard
@@ -241,7 +239,9 @@ const UpEvents = () => {
                 items={[eventItems[0].title]}
               />
             ) : (
-              <p>Loading...</p>
+              <div className="flex flex-col justify-center w-screen h-[346px] ">
+                <span className="mx-auto loading loading-dots bg-black w-32 h-36"></span>
+              </div>
             )}
             {!isLoading
               ? eventItems
