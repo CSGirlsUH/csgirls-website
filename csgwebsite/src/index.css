@@ -1,12 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html,
-body {
-  background-color: white;
-  height: 100% !important;
-  width: 100% !important;
-  margin: 0;
-  padding: 0;
+.btn {
+  @apply rounded-xl;
 }

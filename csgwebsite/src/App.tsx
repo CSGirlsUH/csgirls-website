@@ -1,30 +1,24 @@
-import react from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "./App.css";
+import "./index.css";
+import Home from "./pages/Home.tsx";
+import About from "./pages/About.tsx";
+import Officers from "./pages/Officers.tsx";
 
 function App() {
-  const [count, setCount] = react.useState(0);
-
   return (
-    <>
-      <div className="font-sans">
-        <section>
-          <Navbar />
-        </section>
-
-        <section>
-          <Hero />
-        </section>
-
-        {/* <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-        </div> */}
-      </div>
-    </>
+    <div>
+      <Router>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/officers" element={<Officers />} />
+          <Route path="/events" element={<Home event={true} />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
