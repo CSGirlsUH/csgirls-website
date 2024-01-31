@@ -35,11 +35,11 @@ const Hero = () => {
 
         {/* Hero Image */}
         <div className=" hidden md:flex justify-center w-[1200px] h-[500px] bg-purple-300 mx-auto md:mr-6 md:ml-10 rounded-xl">
-          <p className=" md:flex md:items-center ">HERO IMAGE</p>
-          {/* <img
-            src="./Photos/Random_Meeting.jpg"
-            className="w-[1000px] h-[500px]"
-          /> */}
+          {/* <p className=" md:flex md:items-center ">HERO IMAGE</p> */}
+          <img
+            src="./Photos/CSG_Meeting_Wide.jpg"
+            className="flex flex-auto mx-auto object-cover rounded-xl"
+          />
         </div>
       </div>
     </>

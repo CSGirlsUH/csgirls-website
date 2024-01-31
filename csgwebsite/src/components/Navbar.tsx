@@ -1,7 +1,5 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Home from "../pages/Home";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -104,6 +102,11 @@ const Navbar = () => {
         >
           {/* <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] my-4 ml-32" /> */}
           <ul className="flex flex-col pt-24 uppercase">
+            <li>
+              <a href="/home" className="m-4">
+                Home
+              </a>
+            </li>
             <li>
               <a href="/about" className="m-4">
                 About
