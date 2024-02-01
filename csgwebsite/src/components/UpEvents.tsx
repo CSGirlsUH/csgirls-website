@@ -7,8 +7,11 @@ const UpEvents = () => {
   // ? Integration with Google Calendar API to auto generate this list
 
   // Google Calendar API variables
+  // const TESTING_CLIENT_ID =
+  //   "53214709315-vck1iacpi8ueojlula6gq7f480a352ek.apps.googleusercontent.com";
+  // const TESTING_API_KEY = "AIzaSyDz3SG5Wx_AxMGtrMpRWRjfKkqEzwdzmXI";
   const CLIENT_ID =
-    "53214709315-vck1iacpi8ueojlula6gq7f480a352ek.apps.googleusercontent.com";
+    "53214709315-mmp03qqkg4b6h00o618voigc8rko5lb5.apps.googleusercontent.com";
   const API_KEY = "AIzaSyDz3SG5Wx_AxMGtrMpRWRjfKkqEzwdzmXI";
   const CALENDAR_ID =
     "csgirls.org_qnctmv1tm3sh26b9reci44gcf8@group.calendar.google.com";
