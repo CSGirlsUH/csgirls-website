@@ -2,17 +2,17 @@ import OfficerCard from "./OfficerCard";
 
 // All pictures used on the page are stored in this object
 const PICLINKS = {
-  BANNER: "./Photos/CSG_Officers_Together.jpg",
-  PRESIDENT: "./Photos/OfficerPics/Becky_Pres.JPG",
+  BANNER: "./Photos/OfficersHeart.jpg",
+  PRESIDENT: "./Photos/OfficerPics/Becky_Pres.jpg",
   VP_EXT: "./Photos/OfficerPics/Caro_VPExternal.jpg",
-  VP_INT: "./Photos/OfficerPics/Chelsea_VPInternal.png",
+  VP_INT: "./Photos/OfficerPics/Chelsea_VPInternal.jpg",
   MARKETING_DIR: "./Photos/OfficerPics/Kaitlin_MarkDir.jpg",
   PROF_DEV_CHAIR1: "./Photos/OfficerPics/Daisy_ProfDevChair.jpg",
   PROF_DEV_CHAIR2: "./Photos/OfficerPics/Maria_ProfDevChair.jpg",
   MENT_CHAIR1: "./Photos/OfficerPics/Reem_MentorChair.jpg",
-  MENT_CHAIR2: "./Photos/OfficerPics/nick_haha.jpg",
-  SECY: "./Photos/OfficerPics/Neha_Secy.jpeg",
-  WEBMASTER: "./Photos/OfficerPics/Sage_WebM.jpeg",
+  MENT_CHAIR2: "./Photos/OfficerPics/Lisa_MentorChair.jpg",
+  SECY: "./Photos/OfficerPics/Neha_Secy.jpg",
+  WEBMASTER: "./Photos/OfficerPics/Sage_WebM_Alt.jpg",
 };
 
 // All officer information is stored in this object
