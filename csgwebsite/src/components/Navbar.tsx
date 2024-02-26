@@ -24,21 +24,21 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Variant */}
-      <div className="flex justify-between items-center border-b border-bordergray md:border-0 md:pr-6 md:mr-[118px] ">
+      <div className="flex items-center justify-between border-b border-bordergray md:mr-[118px] md:border-0 md:pr-6 ">
         {/* CSG Logo (Purple) */}
         <a href="/home">
           <img
             src="./icons/Purp_WhiteBG_Logo.png"
-            className="w-14 h-14 m-4 md:w-[113px] md:h-auto md:my-4 md:ml-32"
+            className="m-4 h-14 w-14 md:my-4 md:ml-32 md:h-auto md:w-[113px]"
           />
         </a>
         <ul className="hidden md:flex">
           {/* Nav Bar Links */}
-          <div className=" my-7 text-lg flex flex-row ">
+          <div className=" my-7 flex flex-row text-lg ">
             <li>
               <a
                 href="/home"
-                className="flex flex-column text-black p-4 hover:text-gray-500"
+                className="flex-column flex p-4 text-black hover:text-gray-500"
               >
                 Home
               </a>
@@ -46,7 +46,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/about"
-                className="flex flex-column text-black p-4 hover:text-gray-500"
+                className="flex-column flex p-4 text-black hover:text-gray-500"
               >
                 About
               </a>
@@ -55,7 +55,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/officers"
-                className="flex flex-column text-black p-4 hover:text-gray-500"
+                className="flex-column flex p-4 text-black hover:text-gray-500"
               >
                 Officers
               </a>
@@ -65,28 +65,28 @@ const Navbar = () => {
               <a
                 href="#"
                 onClick={scrollToBottom}
-                className="flex flex-column text-black p-4 hover:text-gray-500"
+                className="flex-column flex p-4 text-black hover:text-gray-500"
               >
                 Events
               </a>
             </li>
 
-            <li className="min-w-[144px] max-h-[60px]">
+            <li className="max-h-[60px] min-w-[144px]">
               <a
                 href={WEBLINKS.CONTACT}
-                className="flex flex-column text-black p-4 pr-7 hover:text-gray-500"
+                className="flex-column flex p-4 pr-7 text-black hover:text-gray-500"
               >
                 Contact Us
               </a>
             </li>
-            <button className="btn btn-primary normal-case mt-1">
+            <button className="btn btn-primary mt-1 normal-case">
               <a href={WEBLINKS.REGISTER}>Register</a>
             </button>
           </div>
         </ul>
 
         {/* Mobile Variant */}
-        <div onClick={handleNav} className="display block mr-8 md:hidden">
+        <div onClick={handleNav} className="display mr-8 block md:hidden">
           {!nav ? (
             <AiOutlineClose size={30} onClick={handleNav} />
           ) : (
@@ -96,8 +96,8 @@ const Navbar = () => {
         <div
           className={
             !nav
-              ? "fixed left-0 top-0 w-[60%] z-2 h-full bg-bggray ease-in-out duration-500"
-              : "fixed left-[-100%] top-0 w-[60%] h-full bg-bggray z-2 ease-in-out duration-500"
+              ? "z-2 fixed left-0 top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out"
+              : "z-2 fixed left-[-100%] top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out"
           }
         >
           {/* <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] my-4 ml-32" /> */}
