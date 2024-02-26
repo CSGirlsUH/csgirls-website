@@ -7,16 +7,16 @@ interface CardProps {
 
 function SmallActions(props: CardProps) {
   return (
-    <div className="flex flex-col justify-between items-center align-top w-[195px] h-[194px] mr-[14px] bg-bggray rounded-[30px]">
-      <h1 className="flex text-xl min-w-[160px] font-medium self-start pl-3 mt-3 mb-1">
+    <div className="mr-[14px] flex h-[194px] w-[195px] flex-col items-center justify-between rounded-[30px] bg-bggray align-top">
+      <h1 className="mb-1 mt-3 flex min-w-[160px] self-start pl-3 text-xl font-medium">
         {props.title}
       </h1>
-      <p className="flex pl-3 text-sm max-h-[60px] min-w-[30px] self-start">
+      <p className="flex max-h-[60px] min-w-[30px] self-start pl-3 text-sm">
         {props.pText}
       </p>
       <button
         className={
-          "btn btn-primary normal-case text-xl font-medium mb-3" +
+          "btn btn-primary mb-3 text-xl font-medium normal-case" +
           " " +
           props.optional
         }
