@@ -13,12 +13,12 @@ function BigEventsCard(props: CardProps) {
       {
         <div
           className={
-            "flex flex-col min-w-[269px] min-h-[346px] mr-[51px] bg-bggray rounded-[20px]" +
+            "mr-[51px] flex min-h-[346px] min-w-[269px] flex-col rounded-[20px] bg-bggray" +
             " " +
             props.optional
           }
         >
-          <h1 className="flex flex-col text-center text-[36px] py-6">
+          <h1 className="flex flex-col py-6 text-center text-[36px]">
             {props.date}
           </h1>
           <ol className="list-group list-disc pl-6">

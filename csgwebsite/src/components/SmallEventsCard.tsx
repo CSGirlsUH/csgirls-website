@@ -8,13 +8,13 @@ function SmallEventsCard(props: CardProps) {
   return (
     <div
       className={
-        "flex flex-col justify-start items-center align-top min-w-[195px] h-[194px] mr-[14px] bg-bggray rounded-[30px]" +
+        "mr-[14px] flex h-[194px] min-w-[195px] flex-col items-center justify-start rounded-[30px] bg-bggray align-top" +
         " " +
         props.optional
       }
     >
-      <h1 className="flex text-2xl self-center px-3 pt-3 pb-1">{props.date}</h1>
-      <ol className="flex flex-col text-base gap-1 list-disc">
+      <h1 className="flex self-center px-3 pb-1 pt-3 text-2xl">{props.date}</h1>
+      <ol className="flex list-disc flex-col gap-1 text-base">
         {props.items.map((item, index) => (
           <li key={index} className="ml-6">
             {item}
