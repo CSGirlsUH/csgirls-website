@@ -16,7 +16,7 @@ function AboutMain() {
         <img src={PICLINKS.BANNERPIC} className="w-screen" />
 
         {/* Title Text */}
-        <h1 className="flex flex-row font-poppins text-2xl pt-4 pb-2 justify-center ">
+        <h1 className="flex flex-row justify-center pb-2 pt-4 font-poppins text-2xl ">
           About Us!
         </h1>
 
@@ -58,7 +58,7 @@ function AboutMain() {
 
         {/* Small Cards for information */}
         <section>
-          <div className="flex flex-row flex-wrap gap-5 justify-center py-5">
+          <div className="flex flex-row flex-wrap justify-center gap-5 py-5">
             <div className="">
               <MobileAboutCard
                 title="Gain Hands on Experience!"
@@ -92,23 +92,23 @@ function AboutMain() {
       </div>
 
       {/* Desktop Variant */}
-      <div className="hidden md:flex flex-col overflow-y-auto md:visible">
-        <div className="flex flex-row justify-between mx-20 pt-16">
+      <div className="hidden flex-col overflow-y-auto md:visible md:flex">
+        <div className="mx-20 flex flex-row justify-between pt-16">
           <div className="flex flex-col">
             {/* Title Text */}
-            <h1 className="flex flex-row font-poppins text-left text-6xl justify-left">
+            <h1 className="justify-left mb-1 flex flex-row text-left font-poppins text-6xl">
               About Us!
             </h1>
             {/* Main Text */}
-            <div className="flex flex-col w-[730px] h-[450px] justify-center text-[20px]">
-              <p className="pb-6">
+            <div className="text-left text-sm md:text-xl">
+              <p className="flex pb-5 md:max-w-[677px] md:pb-9">
                 In August 2013, Computer Science Girls (CSGirls) was created as
                 a platform for students to meet, discuss, and celebrate their
                 love for computer science. Today, CSGirls is known for
                 cultivating bright, talented professionals and upholding
                 relationships with top employers in the country.
               </p>
-              <p className="pb-6">
+              <p className="flex pb-3 md:min-h-[82px] md:w-[659px] md:pb-[22px]">
                 CSGirls was founded on the principles of promoting a safe
                 environment for students and recognizing excellence within the
                 technology community at the University of Houston. Our main
@@ -120,20 +120,27 @@ function AboutMain() {
             </div>
           </div>
           {/* Hero Image */}
-          <img
-            src={PICLINKS.BANNERPIC}
-            className="flex justify-between w-[944px] h-[477px] rounded-[20px]"
-          />
+          {/* <img
+            
+            className="sm:h-[25rem] sm:w-[40rem] mr-16 hidden justify-between rounded-[20px] object-cover md:flex md:h-[477px] md:w-[944px]"
+          /> */}
+          <div className=" mx-auto hidden h-[500px] w-[1200px] justify-center rounded-xl md:ml-10 md:mr-0 md:flex">
+            {/* <p className=" md:flex md:items-center ">HERO IMAGE</p> */}
+            <img
+              src={PICLINKS.BANNERPIC}
+              className="mx-auto flex flex-auto rounded-xl object-cover"
+            />
+          </div>
         </div>
         {/* Why Join CSGirls? */}
-        <h1 className="flex flex-row justify-center text-6xl pt-20">
+        <h1 className="flex flex-row justify-center pt-20 text-6xl">
           Why Should You Join CSGirls?
         </h1>
         {/* Big Cards for information */}
         <section className="flex flex-col gap-20 py-14">
           {/* TOP CARDS */}
           {/* T-shirt Information */}
-          <div className="flex flex-row justify-around mx-40">
+          <div className="mx-40 flex flex-row flex-wrap justify-around gap-5">
             <BigCard
               title="Free T-Shirt for Yearly Members!"
               pText="$18 dollars for non-members. Semester members can always upgrade to a yearly membership to get the free shirt for only $10 additional dollars."
@@ -147,7 +154,7 @@ function AboutMain() {
             />
           </div>
           {/* BOTTOM CARDS */}
-          <div className="flex flex-row justify-around mx-40">
+          <div className="mx-40 flex flex-row flex-wrap justify-around gap-5">
             <BigCard
               title="Huge Networking Opportunities!"
               pText="Attend our socials with food and snacks provided.*Connect with recruiters and get valuable career advice from professionals."

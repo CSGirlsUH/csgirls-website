@@ -14,12 +14,12 @@ const MobileAboutCard = (props: CardProps) => {
       {props.elongated ? (
         // Elognated Card
 
-        <div className="w-[372px] h-[312px] bg-bggray rounded-[30px]">
+        <div className="h-[312px] w-[372px] rounded-[30px] bg-bggray">
           <div className="">
-            <h1 className="flex flex-row text-[20px] font-poppins justify-center pt-2">
+            <h1 className="flex flex-row justify-center pt-2 font-poppins text-[20px]">
               {props.title}
             </h1>
-            <p className="flex flex-row text-sm text-center font-poppins justify-center pt-2">
+            <p className="flex flex-row justify-center pt-2 text-center font-poppins text-sm">
               {props.pText}
             </p>
             <div className="flex flex-row justify-around pt-3">
@@ -28,12 +28,12 @@ const MobileAboutCard = (props: CardProps) => {
               {/* <div className="bg-buttonpurple w-[157px] h-[170px] rounded-[20px]" /> */}
               <img
                 src={props.image1}
-                className="w-[157px] h-[170px] rounded-[20px]"
+                className="h-[170px] w-[157px] rounded-[20px]"
                 alt="2023 T-Shirt Front"
               />
               <img
                 src={props.image2}
-                className="w-[157px] h-[170px] rounded-[20px]"
+                className="h-[170px] w-[157px] rounded-[20px]"
                 alt="2023 T-Shirt Front"
               />
             </div>
@@ -41,17 +41,17 @@ const MobileAboutCard = (props: CardProps) => {
         </div>
       ) : // If Small Card empty use placeholder div
       props.title === "" && props.pText === "" ? (
-        <div className="w-44 h-44 bg-bggray rounded-[30px]">
-          <div className="flex flex-row  shrink-0 w-32">
+        <div className="h-44 w-44 rounded-[30px] bg-bggray">
+          <div className="flex w-32  shrink-0 flex-row">
             <img src="./heart-svgrepo.svg" className=" opacity-25" />
           </div>
         </div>
       ) : (
-        <div className="w-44 h-44 bg-bggray rounded-[30px]">
-          <h1 className="text-[20px] text-left font-medium font-poppins justify-center pt-2 ml-4">
+        <div className="h-44 w-44 rounded-[30px] bg-bggray">
+          <h1 className="ml-4 justify-center pt-2 text-left font-poppins text-[20px] font-medium">
             {props.title}
           </h1>
-          <p className="ml-4 mr-1 text-sm text-left">{props.pText}</p>
+          <p className="ml-4 mr-1 text-left text-sm">{props.pText}</p>
         </div>
       )}
     </>
