@@ -4,7 +4,7 @@ interface CardProps {
   pic: string;
   discord: string;
   linkedin: string;
-  email: string;
+  // email: string;
 }
 
 const OfficerCard = (props: CardProps) => {
@@ -44,13 +44,6 @@ const OfficerCard = (props: CardProps) => {
               className="h-[35px] w-[35px] mr-4"
             />
           </a>
-          {/* Email */}
-          <a href={"mailto:" + props.email}>
-            <img
-              src="./icons/email_icon_officer_M.svg"
-              className="h-[35px] w-[35px] mr-4"
-            />
-          </a>
         </div>
       </div>
 
@@ -87,13 +80,6 @@ const OfficerCard = (props: CardProps) => {
           <a href={props.linkedin}>
             <img
               src="./icons/linkedin_icon_officer_D.svg"
-              className="h-[70px] w-[55px] mr-4"
-            />
-          </a>
-          {/* Email */}
-          <a href={"mailto:" + props.email}>
-            <img
-              src="./icons/email_icon_officer_D.svg"
               className="h-[70px] w-[55px] mr-4"
             />
           </a>

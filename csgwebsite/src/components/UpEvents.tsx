@@ -195,11 +195,11 @@ const UpEvents = () => {
       {/* Mobile Variant */}
       {/* Upcoming Events Text */}
       <div className="flex flex-col md:hidden">
-        <h1 className="flex mx-auto text-2xl py-2">Upcoming Events</h1>
+        <h1 className="mx-auto flex py-2 text-2xl">Upcoming Events</h1>
         {/* Events Carousel */}
-        <div className="flex md:hidden items-center justify-start overflow-x-scroll overflow-y-hidden">
+        <div className="flex items-center justify-start overflow-y-hidden overflow-x-scroll md:hidden">
           {/* TESTING GOOGLE MAPS CALLS */}
-          <div className="py-4 flex items-center justify-start">
+          <div className="flex items-center justify-start py-4">
             {!isLoading ? (
               <SmallEventsCard
                 optional="ml-6"
@@ -207,8 +207,8 @@ const UpEvents = () => {
                 items={[eventItems[0].title]}
               />
             ) : (
-              <div className="flex flex-col justify-center w-screen h-[194px]">
-                <span className="mx-auto loading loading-dots bg-black w-24 h-28"></span>
+              <div className="flex h-[194px] w-screen flex-col justify-center">
+                <span className="loading loading-dots mx-auto h-28 w-24 bg-black"></span>
               </div>
             )}
             {!isLoading
@@ -229,11 +229,11 @@ const UpEvents = () => {
       {/* Desktop Variant */}
       <div className="hidden md:flex md:flex-col">
         <div className="flex pt-[23px]">
-          <h1 className="flex mx-auto text-4xl pb-1">Upcoming Events</h1>
+          <h1 className="mx-auto flex pb-1 text-4xl">Upcoming Events</h1>
         </div>
         {/* Events Carousel */}
-        <div className="flex items-center justify-start overflow-x-scroll overflow-y-hidden">
-          <div className="py-4 flex items-center justify-start">
+        <div className="flex items-center justify-start overflow-y-hidden overflow-x-scroll">
+          <div className="flex items-center justify-start py-4">
             {!isLoading ? (
               <BigEventsCard
                 optional="ml-6"
@@ -241,8 +241,8 @@ const UpEvents = () => {
                 items={[eventItems[0].title]}
               />
             ) : (
-              <div className="flex flex-col justify-center w-screen h-[346px] ">
-                <span className="mx-auto loading loading-dots bg-black w-32 h-36"></span>
+              <div className="flex h-[346px] w-screen flex-col justify-center ">
+                <span className="loading loading-dots mx-auto h-36 w-32 bg-black"></span>
               </div>
             )}
             {!isLoading
