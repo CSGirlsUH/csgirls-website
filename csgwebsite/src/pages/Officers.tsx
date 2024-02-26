@@ -5,7 +5,7 @@ import OfficerMain from "../components/OfficerMain";
 const Officers = () => {
   return (
     <>
-      <div className="font-poppins mx-auto my-auto bg-white text-black">
+      <div className="mx-auto my-auto bg-white font-poppins text-black">
         <Navbar />
         <OfficerMain />
         <Footer />

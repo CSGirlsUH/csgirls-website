@@ -9,20 +9,20 @@ const Footer = () => {
 
   return (
     <>
-      <div className="flex flex-col text-[10px] md:text-base place-items-center w-full max-h-[100px] border-t border-bordergray bg-bggray">
-        <div className="flex flex-row justify-items-center justify-evenly">
+      <div className="flex max-h-[100px] w-full flex-col place-items-center border-t border-bordergray bg-bggray text-[10px] md:text-base">
+        <div className="flex flex-row justify-evenly justify-items-center">
           {/* Instagram svg */}
           <a href={WEBLINKS.INSTA}>
             <img
               src="./icons/camera-square-svgrepo.svg"
-              className="h-[30px] w-[30px] mr-8 mt-2"
+              className="mr-8 mt-2 h-[30px] w-[30px]"
             />
           </a>
           {/* Discord svg */}
           <a href={WEBLINKS.DISCORD}>
             <img
               src="./icons/discord-svgrepo.svg"
-              className="h-[35px] w-[35px] mt-2"
+              className="mt-2 h-[35px] w-[35px]"
             />
           </a>
         </div>

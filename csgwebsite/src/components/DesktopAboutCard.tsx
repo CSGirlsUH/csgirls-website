@@ -12,12 +12,12 @@ function DesktopAboutCard(props: CardProps) {
     <>
       <div
         className={
-          "bottom flex flex-col items-center gap-10 w-[796px] h-[643px] bg-bggray rounded-[20px]" +
+          "bottom flex h-[643px] w-[796px] flex-col items-center gap-10 rounded-[20px] bg-bggray" +
           " " +
           props.optional
         }
       >
-        <h1 className="flex text-[36px] text-medium self-center pt-10">
+        <h1 className="text-medium flex self-center pt-10 text-[36px]">
           {props.title}
         </h1>
 
@@ -29,12 +29,12 @@ function DesktopAboutCard(props: CardProps) {
             {/* <div className="bg-buttonpurple w-[157px] h-[170px] rounded-[20px]" /> */}
             <img
               src={props.image1}
-              className="w-[306px] h-[331px] rounded-[20px]"
+              className="h-[331px] w-[306px] rounded-[20px]"
               alt="2023 T-Shirt Front"
             />
             <img
               src={props.image2}
-              className="w-[306px] h-[331px] rounded-[20px]"
+              className="h-[331px] w-[306px] rounded-[20px]"
               alt="2023 T-Shirt Back"
             />
           </div>
@@ -45,14 +45,14 @@ function DesktopAboutCard(props: CardProps) {
             {bulletPoints.map((point, index) => (
               <li
                 key={index}
-                className="text-[20px] text-medium self-center ml-14"
+                className="text-medium ml-14 self-center text-[20px]"
               >
                 {point}
               </li>
             ))}
           </ul>
         ) : (
-          <p className="flex text-[20px] text-medium text-center ">
+          <p className="text-medium flex text-center text-[20px] ">
             {props.pText}
           </p>
         )}

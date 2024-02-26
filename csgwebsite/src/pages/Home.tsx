@@ -23,7 +23,7 @@ function Home({ event }: HomeProps) {
 
   return (
     <>
-      <div className="font-poppins mx-full my-full overflow-hidden bg-white text-black">
+      <div className="mx-full my-full overflow-hidden bg-white font-poppins text-black">
         <Navbar />
         <Hero />
         <OrgActions />
