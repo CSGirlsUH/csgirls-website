@@ -92,9 +92,9 @@ function AboutMain() {
       </div>
 
       {/* Desktop Variant */}
-      <div className="hidden flex-col overflow-y-auto md:visible md:flex">
+      <div className="ml-10 mr-2 hidden flex-col justify-center overflow-x-auto overflow-y-auto pb-5 md:visible md:mr-10 md:flex md:pb-[70px] md:pl-0 md:pt-28">
         <div className="mx-20 flex flex-row justify-between pt-16">
-          <div className="flex flex-col">
+          <div className="flex flex-col md:mx-5">
             {/* Title Text */}
             <h1 className="justify-left mb-1 flex flex-row text-left font-poppins text-6xl">
               About Us!
