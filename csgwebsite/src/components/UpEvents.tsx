@@ -10,14 +10,24 @@ const UpEvents = () => {
   // const TESTING_CLIENT_ID =
   //   "53214709315-vck1iacpi8ueojlula6gq7f480a352ek.apps.googleusercontent.com";
   // const TESTING_API_KEY = "AIzaSyDz3SG5Wx_AxMGtrMpRWRjfKkqEzwdzmXI";
+
   const CLIENT_ID =
     "53214709315-mmp03qqkg4b6h00o618voigc8rko5lb5.apps.googleusercontent.com";
   const API_KEY = "AIzaSyDz3SG5Wx_AxMGtrMpRWRjfKkqEzwdzmXI";
   const CALENDAR_ID =
     "csgirls.org_qnctmv1tm3sh26b9reci44gcf8@group.calendar.google.com";
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState<any>([]);
   // Waits for API fetch to complete
   const [isLoading, setIsLoading] = useState(true);
+
+  type eventItem = {
+    id: string;
+    title: string;
+    description: string;
+    date: string;
+    time: string;
+    year: string;
+  };
 
   useEffect(() => {
     gapi.load("client:auth2", async () => {
@@ -163,7 +173,7 @@ const UpEvents = () => {
 
   const eventItems =
     events && events.length > 0
-      ? events.map((event) => {
+      ? events.map((event: any) => {
           let formattedDate = "N/A";
           let formattedTime = "N/A";
           let formattedYear = 0;
@@ -214,7 +224,7 @@ const UpEvents = () => {
             {!isLoading
               ? eventItems
                   .slice(1)
-                  .map((item, index) => (
+                  .map((item: eventItem, index: number) => (
                     <SmallEventsCard
                       key={index}
                       date={item.date}
@@ -248,7 +258,7 @@ const UpEvents = () => {
             {!isLoading
               ? eventItems
                   .slice(1)
-                  .map((item, index) => (
+                  .map((item: eventItem, index: number) => (
                     <BigEventsCard
                       key={index}
                       date={item.date}
