@@ -4,7 +4,6 @@ import OrgActions from "../components/OrgActions";
 import UpcomingEvents from "../components/UpEvents";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-
 interface HomeProps {
   event?: boolean;
 }
@@ -16,7 +15,7 @@ function scrollToBottom() {
 
 function Home({ event }: HomeProps) {
   useEffect(() => {
-    if (event) {
+    if (event !== undefined && event) {
       scrollToBottom();
     }
   }, [event]);
@@ -29,7 +28,6 @@ function Home({ event }: HomeProps) {
         <OrgActions />
         <UpcomingEvents />
         <Footer />
-        {event ? scrollToBottom() : null}
       </div>
     </>
   );
