@@ -1,17 +1,12 @@
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { WEBLINKS } from "./globalVariables";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
 
   const handleNav = () => {
     setNav(!nav);
-  };
-
-  const WEBLINKS = {
-    REGISTER:
-      "https://docs.google.com/forms/d/e/1FAIpQLSfsvsfrx5-yJP8DeRZLvPft3QTZPkXrIRKXis014Aa6iBJkJw/viewform",
-    CONTACT: "https://linktr.ee/csgirls",
   };
 
   function scrollToBottom() {

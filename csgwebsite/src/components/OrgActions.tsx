@@ -5,7 +5,8 @@ const WEBLINKS = {
   REGISTER:
     "https://docs.google.com/forms/d/e/1FAIpQLSdE_W4GMqEJ2l7SzaAbjuUQ-cBt2OkFfM_PQq2wZuInOxCFsA/viewform",
   DONATE: "https://www.paypal.com/paypalme/CSGirls",
-  OFFICERS: "/officers",
+  NEWSLETTER:
+    "https://csgirls.us17.list-manage.com/subscribe?u=076028e0729274943f4c3555a&id=13147ae73f",
 };
 
 const OrgActions = () => {
@@ -18,23 +19,25 @@ const OrgActions = () => {
             title="Subscribe to Our Newsletter!"
             pText="Get monthly updates on what's happening with CSG."
             bText="Subscribe!"
+            bLink={WEBLINKS.NEWSLETTER}
             optional="mt-1"
           />
           <SmallActions
             title="Donate to Our Organization!"
             pText="Donate to help us out and get a warm fuzzy feeling insde."
             bText="Donate!"
+            bLink={WEBLINKS.DONATE}
             optional="mt-1"
           />
           <SmallActions
             title="Meet the Officers!"
             pText="Meet our current officers and committee members."
             bText="Learn More!"
+            bLink="/officers"
             optional="mt-8"
           />
         </div>
       </div>
-      {/* TODO: FIX BUTTON ON DONATE ACTION */}
       {/* Desktop View */}
       <div className="hidden md:flex md:flex-row">
         <div className="flex w-screen flex-1 justify-around bg-bggray py-[45px]">
@@ -47,7 +50,7 @@ const OrgActions = () => {
               </p>
 
               <button className="btn btn-primary mt-2 normal-case">
-                <a href={WEBLINKS.REGISTER}>Subscribe!</a>
+                <a href={WEBLINKS.NEWSLETTER}>Subscribe!</a>
               </button>
             </div>
           </div>
@@ -82,7 +85,7 @@ const OrgActions = () => {
               </p>
 
               <button className="btn btn-primary mt-1 normal-case md:mt-2">
-                <a href={WEBLINKS.OFFICERS}>Learn More!</a>
+                <a href="/officers">Learn More!</a>
               </button>
             </div>
           </div>

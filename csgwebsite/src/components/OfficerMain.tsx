@@ -1,19 +1,19 @@
 import OfficerCard from "./OfficerCard";
+import { PICLINKS } from "./globalVariables.js";
 
-// All pictures used on the page are stored in this object
-const PICLINKS = {
-  BANNER: "./Photos/OfficersHeart.jpg",
-  PRESIDENT: "./Photos/OfficerPics/Becky_Pres.jpg",
-  VP_EXT: "./Photos/OfficerPics/Caro_VPExternal.jpg",
-  VP_INT: "./Photos/OfficerPics/Chelsea_VPInternal.jpg",
-  MARKETING_DIR: "./Photos/OfficerPics/Kaitlin_MarkDir.jpg",
-  PROF_DEV_CHAIR1: "./Photos/OfficerPics/Daisy_ProfDevChair.jpg",
-  PROF_DEV_CHAIR2: "./Photos/OfficerPics/Maria_ProfDevChair.jpg",
-  MENT_CHAIR1: "./Photos/OfficerPics/Reem_MentorChair.jpg",
-  MENT_CHAIR2: "./Photos/OfficerPics/Lisa_MentorChair.jpg",
-  SECY: "./Photos/OfficerPics/Neha_Secy.jpg",
-  WEBMASTER: "./Photos/OfficerPics/Sage_WebM_Alt.jpg",
-};
+// const PICLINKS = {
+//   BANNER: "./Photos/OfficersHeart.jpg",
+//   PRESIDENT: "./Photos/OfficerPics/Becky_Pres.jpg",
+//   VP_EXT: "./Photos/OfficerPics/Caro_VPExternal.jpg",
+//   VP_INT: "./Photos/OfficerPics/Chelsea_VPInternal.jpg",
+//   MARKETING_DIR: "./Photos/OfficerPics/Kaitlin_MarkDir.jpg",
+//   PROF_DEV_CHAIR1: "./Photos/OfficerPics/Daisy_ProfDevChair.jpg",
+//   PROF_DEV_CHAIR2: "./Photos/OfficerPics/Maria_ProfDevChair.jpg",
+//   MENT_CHAIR1: "./Photos/OfficerPics/Reem_MentorChair.jpg",
+//   MENT_CHAIR2: "./Photos/OfficerPics/Lisa_MentorChair.jpg",
+//   SECY: "./Photos/OfficerPics/Neha_Secy.jpg",
+//   WEBMASTER: "./Photos/OfficerPics/Sage_WebM_Alt.jpg",
+// };
 
 // All officer information is stored in this object
 const OFFICERS = {
@@ -83,13 +83,13 @@ function OfficerMain() {
   return (
     <>
       {/* Mobile Variant */}
-      <div className="visible md:hidden flex flex-col overflow-y-auto">
+      <div className="visible flex flex-col overflow-y-auto md:hidden">
         <img
           src={PICLINKS.BANNER}
-          className="w-full h-[200px] object-cover"
+          className="h-[200px] w-full object-cover"
           alt="2023-2024 Officer Team at First General Meeting"
         />
-        <h1 className="font-poppins flex flex-row justify-center py-6 text-2xl">
+        <h1 className="flex flex-row justify-center py-6 font-poppins text-2xl">
           Meet The 2023-2024 Officers!
         </h1>
 
@@ -169,14 +169,14 @@ function OfficerMain() {
       </div>
 
       {/* Desktop Officer Cards */}
-      <div className="hidden md:flex flex-col overflow-y-auto">
-        <h1 className="text-center font-normal text-6xl py-6">
+      <div className="hidden flex-col overflow-y-auto md:flex">
+        <h1 className="py-6 text-center text-6xl font-normal">
           Meet The 2023-2024 Officers!
         </h1>
         <img
           src={PICLINKS.BANNER}
           alt="Fall 2023 Officers"
-          className="w-[1573px] h-[524px] mx-auto object-cover rounded-[20px]"
+          className="mx-auto h-[524px] w-[1573px] rounded-[20px] object-cover"
         ></img>
         {/* Desktop Officer Cards */}
         <section className="flex flex-row flex-wrap justify-center gap-10 py-10">

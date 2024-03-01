@@ -2,6 +2,7 @@ interface CardProps {
   title: string;
   pText: string;
   bText: string;
+  bLink: string;
   optional?: string;
 }
 
@@ -21,7 +22,7 @@ function SmallActions(props: CardProps) {
           props.optional
         }
       >
-        <a href="#">{props.bText}</a>
+        <a href={props.bLink}>{props.bText}</a>
       </button>
     </div>
   );
