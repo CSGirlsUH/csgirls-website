@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="flex max-h-[100px] w-full flex-col place-items-center border-t border-bordergray bg-bggray text-[10px] md:text-base">
+      <div className="flex max-h-[100px] w-full flex-col place-items-center border-t border-bordergray bg-bggray py-3 text-[10px] md:text-base">
         <div className="flex flex-row justify-evenly justify-items-center">
           {/* Instagram svg */}
           <a href={WEBLINKS.INSTA}>
