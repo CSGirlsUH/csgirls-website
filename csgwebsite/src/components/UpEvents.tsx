@@ -7,9 +7,8 @@ const UpEvents = () => {
   // ? Integration with Google Calendar API to auto generate this list
 
   // Google Calendar API variables
-  const CLIENT_ID =
-    "578033622643-069n1forqh4dga2vb0huho05nor85gg5.apps.googleusercontent.com";
-  const API_KEY = "AIzaSyBLJMqo8sdEB-8qhpdDOqm1i3amy39ES30";
+  const CLIENT_ID = process.env.REACT_APP_GAPI_CLIENT_ID;
+  const API_KEY = process.env.REACT_APP_GAPI_API_KEY;
   const CALENDAR_ID =
     "csgirls.org_qnctmv1tm3sh26b9reci44gcf8@group.calendar.google.com";
   const [events, setEvents] = useState<any>([]);
