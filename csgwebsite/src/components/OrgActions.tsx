@@ -16,15 +16,15 @@ const OrgActions = () => {
         <div className="flex flex-auto flex-row justify-around py-5 md:mx-5">
           <SmallActions
             title="Subscribe to Our Newsletter!"
-            pText="Words words words about the newsletter that IDK yet."
+            pText="Get monthly updates on what's happening with CSG."
             bText="Subscribe!"
             optional="mt-1"
           />
           <SmallActions
             title="Donate to Our Organization!"
-            pText="Words words words about donating that IDK yet."
+            pText="Donate to help us out and get a warm fuzzy feeling insde."
             bText="Donate!"
-            optional="mt-6"
+            optional="mt-1"
           />
           <SmallActions
             title="Meet the Officers!"
@@ -39,10 +39,10 @@ const OrgActions = () => {
       <div className="hidden md:flex md:flex-row">
         <div className="flex w-screen flex-1 justify-around bg-bggray py-[45px]">
           {/* Subscribe to Our Newsletter */}
-          <div className="ml-10 flex flex-col justify-between">
+          <div className="ml-10 flex flex-col content-center">
             <h1 className="text-left text-4xl">Subscribe to Our Newsletter!</h1>
             <div>
-              <p className="mt-1 max-w-[370px] text-left text-xl">
+              <p className="max-h-[121px] max-w-[370px] pt-1 text-left text-xl">
                 Get monthly updates on what's happening with CSG.
               </p>
 
