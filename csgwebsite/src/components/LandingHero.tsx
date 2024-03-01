@@ -1,3 +1,8 @@
+const WEBLINKS = {
+  REGISTER:
+    "https://docs.google.com/forms/d/e/1FAIpQLSfsvsfrx5-yJP8DeRZLvPft3QTZPkXrIRKXis014Aa6iBJkJw/viewform",
+};
+
 const Hero = () => {
   return (
     <>
@@ -27,7 +32,7 @@ const Hero = () => {
             </p>
             <div>
               <button className="btn btn-primary normal-case">
-                <a href="/register">Become a member!</a>
+                <a href={WEBLINKS.REGISTER}>Become a member!</a>
               </button>
             </div>
           </div>
