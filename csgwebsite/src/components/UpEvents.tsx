@@ -7,13 +7,9 @@ const UpEvents = () => {
   // ? Integration with Google Calendar API to auto generate this list
 
   // Google Calendar API variables
-  // const TESTING_CLIENT_ID =
-  //   "53214709315-vck1iacpi8ueojlula6gq7f480a352ek.apps.googleusercontent.com";
-  // const TESTING_API_KEY = "AIzaSyDz3SG5Wx_AxMGtrMpRWRjfKkqEzwdzmXI";
-
   const CLIENT_ID =
-    "53214709315-mmp03qqkg4b6h00o618voigc8rko5lb5.apps.googleusercontent.com";
-  const API_KEY = "AIzaSyDz3SG5Wx_AxMGtrMpRWRjfKkqEzwdzmXI";
+    "578033622643-069n1forqh4dga2vb0huho05nor85gg5.apps.googleusercontent.com";
+  const API_KEY = "AIzaSyBLJMqo8sdEB-8qhpdDOqm1i3amy39ES30";
   const CALENDAR_ID =
     "csgirls.org_qnctmv1tm3sh26b9reci44gcf8@group.calendar.google.com";
   const [events, setEvents] = useState<any>([]);
@@ -237,7 +233,7 @@ const UpEvents = () => {
       </div>
 
       {/* Desktop Variant */}
-      <div className="hidden md:flex md:flex-col">
+      <div className="hidden pb-12 md:flex md:flex-col">
         <div className="flex pt-[23px]">
           <h1 className="mx-auto flex pb-1 text-4xl">Upcoming Events</h1>
         </div>

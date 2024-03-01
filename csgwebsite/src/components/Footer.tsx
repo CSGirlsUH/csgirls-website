@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
         <div>
           <p>
-            {"© 2023-2024 Computer Science Girls" +
+            {"© 2024 Computer Science Girls" +
               " | " +
               "Built and Designed By: "}
             <a href={WEBLINKS.SCT_GITHUB}>
