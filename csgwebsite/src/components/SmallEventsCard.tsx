@@ -8,7 +8,7 @@ function SmallEventsCard(props: CardProps) {
   return (
     <div
       className={
-        "mr-[14px] flex h-[194px] min-w-[195px] flex-col items-center justify-start rounded-[30px] bg-bggray align-top" +
+        "mr-[14px] flex h-[194px] min-w-[195px] flex-col justify-start rounded-[30px] bg-bggray pl-3 align-top" +
         " " +
         props.optional
       }
