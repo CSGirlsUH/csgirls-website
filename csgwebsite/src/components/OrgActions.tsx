@@ -5,7 +5,8 @@ const WEBLINKS = {
   REGISTER:
     "https://docs.google.com/forms/d/e/1FAIpQLSdE_W4GMqEJ2l7SzaAbjuUQ-cBt2OkFfM_PQq2wZuInOxCFsA/viewform",
   DONATE: "https://www.paypal.com/paypalme/CSGirls",
-  OFFICERS: "/officers",
+  NEWSLETTER:
+    "https://csgirls.us17.list-manage.com/subscribe?u=076028e0729274943f4c3555a&id=13147ae73f",
 };
 
 const OrgActions = () => {
@@ -47,7 +48,7 @@ const OrgActions = () => {
               </p>
 
               <button className="btn btn-primary mt-2 normal-case">
-                <a href={WEBLINKS.REGISTER}>Subscribe!</a>
+                <a href={WEBLINKS.NEWSLETTER}>Subscribe!</a>
               </button>
             </div>
           </div>
@@ -82,7 +83,7 @@ const OrgActions = () => {
               </p>
 
               <button className="btn btn-primary mt-1 normal-case md:mt-2">
-                <a href={WEBLINKS.OFFICERS}>Learn More!</a>
+                <a href="/officers">Learn More!</a>
               </button>
             </div>
           </div>
