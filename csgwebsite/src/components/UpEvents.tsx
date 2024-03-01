@@ -233,7 +233,7 @@ const UpEvents = () => {
       </div>
 
       {/* Desktop Variant */}
-      <div className="hidden pb-12 md:flex md:flex-col">
+      <div className="hidden pb-6 md:flex md:flex-col">
         <div className="flex pt-[23px]">
           <h1 className="mx-auto flex pb-1 text-4xl">Upcoming Events</h1>
         </div>
