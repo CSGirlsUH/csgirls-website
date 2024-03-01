@@ -19,23 +19,25 @@ const OrgActions = () => {
             title="Subscribe to Our Newsletter!"
             pText="Get monthly updates on what's happening with CSG."
             bText="Subscribe!"
+            bLink={WEBLINKS.NEWSLETTER}
             optional="mt-1"
           />
           <SmallActions
             title="Donate to Our Organization!"
             pText="Donate to help us out and get a warm fuzzy feeling insde."
             bText="Donate!"
+            bLink={WEBLINKS.DONATE}
             optional="mt-1"
           />
           <SmallActions
             title="Meet the Officers!"
             pText="Meet our current officers and committee members."
             bText="Learn More!"
+            bLink="/officers"
             optional="mt-8"
           />
         </div>
       </div>
-      {/* TODO: FIX BUTTON ON DONATE ACTION */}
       {/* Desktop View */}
       <div className="hidden md:flex md:flex-row">
         <div className="flex w-screen flex-1 justify-around bg-bggray py-[45px]">
