@@ -6,7 +6,6 @@ const WEBLINKS = {
 const Hero = () => {
   return (
     <>
-      {/* TODO: Add sm: breakpiont to have padding on left */}
       <div className="ml-10 mr-2 flex flex-row justify-center overflow-x-auto pb-5 md:mr-10 md:pb-[70px] md:pl-0 md:pt-28">
         <div className="flex flex-col md:px-5">
           {/* Title Text */}
