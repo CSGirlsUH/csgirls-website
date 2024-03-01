@@ -208,7 +208,7 @@ const UpEvents = () => {
           <div className="flex items-center justify-start py-4">
             {!isLoading ? (
               <SmallEventsCard
-                optional="ml-6"
+                optional="ml-4"
                 date={eventItems[0].date}
                 items={[eventItems[0].title]}
               />
