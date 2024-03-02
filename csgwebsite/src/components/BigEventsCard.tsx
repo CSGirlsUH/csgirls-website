@@ -13,7 +13,7 @@ function BigEventsCard(props: CardProps) {
       {
         <div
           className={
-            "mr-[51px] flex min-h-[20rem] min-w-[16rem] flex-col rounded-[20px] bg-bggray" +
+            "mr-[51px] flex min-h-[20rem] w-[16rem] flex-col rounded-[20px] bg-bggray" +
             " " +
             props.optional
           }
