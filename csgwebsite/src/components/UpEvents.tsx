@@ -238,7 +238,7 @@ const UpEvents = () => {
         </div>
         {/* Events Carousel */}
         <div className="flex items-center justify-start overflow-y-hidden overflow-x-scroll">
-          <div className="flex items-center justify-start py-4">
+          <div className="flex justify-between py-4">
             {!isLoading ? (
               <BigEventsCard
                 optional="ml-6"
