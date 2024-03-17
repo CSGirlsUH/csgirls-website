@@ -1,17 +1,31 @@
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+
 const WEBLINKS = {
   REGISTER:
     "https://docs.google.com/forms/d/e/1FAIpQLSfsvsfrx5-yJP8DeRZLvPft3QTZPkXrIRKXis014Aa6iBJkJw/viewform",
 };
 
 const Hero = () => {
+  const [message] = useTypewriter({
+    words: ["Hello World!"],
+    loop: 1,
+  });
+
   return (
     <>
       <div className="ml-10 mr-2 flex flex-row justify-center overflow-x-auto pb-5 md:mr-10 md:pb-[70px] md:pl-0 md:pt-28">
         <div className="flex flex-col md:px-5">
           {/* Title Text */}
           <div className="ml-0 pb-2 pt-5 text-left font-firacode text-2xl md:pb-5 md:text-6xl ">
-            <h1 className="inline-block text-logopurple">{">_"}</h1>
-            <h1 className="inline-block text-black">Hello World!</h1>
+            <h1 className="inline-block text-logopurple">{">\u00A0"}</h1>
+            <h1 className="inline-block text-black">
+              {message}
+              <Cursor
+                cursorColor="#663072"
+                cursorStyle="_"
+                cursorBlinking={false}
+              />
+            </h1>
           </div>
           {/* Description Text */}
           <div className="text-left text-sm md:text-xl">
