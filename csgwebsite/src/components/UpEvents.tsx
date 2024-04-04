@@ -64,106 +64,6 @@ const UpEvents = () => {
     }
   };
 
-  function convertTime(dateTime: string) {
-    const date = new Date(dateTime);
-    let hours = date.getHours();
-    const minutes = date.getMinutes();
-    const dayPeriod = hours >= 12 ? "PM" : "AM";
-
-    // Convert to 12-hour format
-    hours = hours % 12;
-    // Convert '0' to '12'
-    hours = hours ? hours : 12;
-    // Add leading zero to single digit minutes
-    const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-
-    // ? If the API returns a date-time format (dateTime: '2024-01-16T10:00:00-06:00')
-    // ? convert it into a string of time with AM/PM here
-
-    return `${hours}:${formattedMinutes} ${dayPeriod}`;
-  }
-
-  // function convertDate(dateTime: string, isDateTime = false) {
-  //   const MONTHS: { [key: number]: string } = {
-  //     0: "Jan",
-  //     1: "Feb",
-  //     2: "Mar",
-  //     3: "Apr",
-  //     4: "May",
-  //     5: "June",
-  //     6: "July",
-  //     7: "Aug",
-  //     8: "Sept",
-  //     9: "Oct",
-  //     10: "Nov",
-  //     11: "Dec",
-  //   };
-
-  //   // ? If the API returns a date-time format (dateTime: '2024-01-16T10:00:00-06:00')
-  //   // ? convert it into a string of month and day here
-  //   if (isDateTime) {
-  //     const date = new Date(dateTime);
-  //     let month = MONTHS[date.getMonth()];
-  //     let day = date.getDate();
-
-  //     return `${month} ${day}`;
-  //   }
-
-  //   // ? If the API returns a date format (date: '2024-01-16')
-  //   // ? convert it into a string of month and day here
-  //   let slicedDate = dateTime.split("-");
-  //   let month = MONTHS[parseInt(slicedDate[1]) - 1];
-  //   let day = parseInt(slicedDate[2]);
-
-  //   return `${month} ${day}`;
-  // }
-
-  // function convertYear(date: string | Date): number {
-  //   let year = 0;
-  //   if (typeof date === "string") {
-  //     let slicedDate = date.split("-");
-  //     year = parseInt(slicedDate[0]);
-
-  //     return year;
-  //   }
-  //   if (date instanceof Date) year = date.getFullYear();
-  //   return year;
-  // }
-
-  // function sort(toSort: any[]) {
-  //   const MONTHS: { [key: string]: number } = {
-  //     Jan: 0,
-  //     Feb: 1,
-  //     Mar: 2,
-  //     Apr: 3,
-  //     May: 4,
-  //     Jun: 5,
-  //     Jul: 6,
-  //     Aug: 7,
-  //     Sep: 8,
-  //     Oct: 9,
-  //     Nov: 10,
-  //     Dec: 11,
-  //   };
-  //   return toSort.sort((a, b) => {
-  //     if (a.year < b.year) return -1;
-  //     else if (a.year > b.year) return 1;
-  //     else if (a.year == b.year) {
-  //       // If years are the same compare months
-  //       if (MONTHS[a.date.slice(0, 3)] < MONTHS[b.date.slice(0, 3)]) return -1;
-  //       else if (MONTHS[a.date.slice(0, 3)] > MONTHS[b.date.slice(0, 3)])
-  //         return 1;
-  //       else if (MONTHS[a.date.slice(0, 3)] == MONTHS[b.date.slice(0, 3)]) {
-  //         // If months are the same compare days
-  //         if (parseInt(a.date.slice(4)) < parseInt(b.date.slice(4))) return -1;
-  //         else if (parseInt(a.date.slice(4)) > parseInt(b.date.slice(4)))
-  //           return 1;
-  //       }
-  //     }
-  //     return 0;
-  //   });
-  // }
-
   const eventItems: eventItem[] =
     events && events.length > 0
       ? events.map((event: any) => {
@@ -197,7 +97,6 @@ const UpEvents = () => {
                 optional="ml-4"
                 date={eventItems[0].date.toLocaleDateString("en-US", {
                   month: "short",
-
                   day: "numeric",
                 })}
                 items={[eventItems[0].title]}
@@ -213,7 +112,6 @@ const UpEvents = () => {
                     key={index}
                     date={item.date.toLocaleDateString("en-US", {
                       month: "short",
-
                       day: "numeric",
                     })}
                     items={[item.title]}
@@ -237,7 +135,6 @@ const UpEvents = () => {
                 optional="ml-6"
                 date={eventItems[0].date.toLocaleDateString("en-US", {
                   month: "short",
-
                   day: "numeric",
                 })}
                 items={[eventItems[0].title]}
@@ -253,7 +150,6 @@ const UpEvents = () => {
                     key={index}
                     date={item.date.toLocaleDateString("en-US", {
                       month: "short",
-
                       day: "numeric",
                     })}
                     items={[item.title]}
