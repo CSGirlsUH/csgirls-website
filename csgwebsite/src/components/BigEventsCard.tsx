@@ -2,7 +2,8 @@
 
 interface CardProps {
   date: string;
-  time: string;
+  startTime: string;
+  endTime: string;
   items: string[];
   optional?: string;
 }
@@ -22,7 +23,13 @@ function BigEventsCard(props: CardProps) {
       <ol className="list-group list-disc pl-0 pt-2">
         {props.items.map((item, index) => (
           <li className="list-none pl-5 text-left text-xl" key={index}>
-            <h3 className="text-left text-2xl text-logopurple">{props.time}</h3>
+            <h3 className="text-left text-2xl text-logopurple">
+              {props.startTime == 'N/A'
+                ? 'TBA'
+                : props.startTime != props.endTime
+                  ? props.startTime + ' - ' + props.endTime
+                  : props.startTime}
+            </h3>
             {item}
           </li>
         ))}
