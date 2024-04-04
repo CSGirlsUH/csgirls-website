@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { gapi } from 'gapi-script';
+import { parseISO } from 'date-fns';
 import BigEventsCard from './BigEventsCard';
 import SmallEventsCard from './SmallEventsCard';
+import { parse } from 'path';
 
 const UpEvents = () => {
   // ? Integration with Google Calendar API to auto generate this list
@@ -19,6 +21,8 @@ const UpEvents = () => {
     id: string;
     title: string;
     description: string;
+    startTime: string;
+    endTime: string;
     date: Date;
   };
 
@@ -71,7 +75,19 @@ const UpEvents = () => {
             id: event.id,
             title: event.summary,
             description: event.description || 'N/A',
-            date: new Date(event.start.dateTime || event.start.date),
+            date: parseISO(event.start.dateTime || event.start.date),
+            startTime: new Date(
+              event.start.dateTime || event.start.date
+            ).toLocaleTimeString('en-US', {
+              hour: 'numeric',
+              minute: 'numeric',
+            }),
+            endTime: new Date(
+              event.end.dateTime || event.end.date
+            ).toLocaleTimeString('en-US', {
+              hour: 'numeric',
+              minute: 'numeric',
+            }),
           };
         })
       : [];
@@ -99,12 +115,14 @@ const UpEvents = () => {
                   month: 'short',
                   day: 'numeric',
                 })}
-                time={
+                startTime={
                   eventItems[0].date.getTime() !== 0
-                    ? eventItems[0].date.toLocaleTimeString('en-US', {
-                        hour: 'numeric',
-                        minute: 'numeric',
-                      })
+                    ? eventItems[0].startTime
+                    : 'N/A'
+                }
+                endTime={
+                  eventItems[0].date.getTime() !== 0
+                    ? eventItems[0].endTime
                     : 'N/A'
                 }
                 items={[eventItems[0].title]}
@@ -122,14 +140,10 @@ const UpEvents = () => {
                       month: 'short',
                       day: 'numeric',
                     })}
-                    time={
-                      item.date.getTime() !== 0
-                        ? item.date.toLocaleTimeString('en-US', {
-                            hour: 'numeric',
-                            minute: 'numeric',
-                          })
-                        : 'N/A'
+                    startTime={
+                      item.date.getTime() !== 0 ? item.startTime : 'N/A'
                     }
+                    endTime={item.date.getTime() !== 0 ? item.endTime : 'N/A'}
                     items={[item.title]}
                   />
                 ))
@@ -154,10 +168,16 @@ const UpEvents = () => {
                   day: 'numeric',
                 })}
                 items={[eventItems[0].title]}
-                time={eventItems[0].date.toLocaleTimeString('en-US', {
-                  hour: 'numeric',
-                  minute: 'numeric',
-                })}
+                startTime={
+                  eventItems[0].date.getTime() !== 0
+                    ? eventItems[0].startTime
+                    : 'N/A'
+                }
+                endTime={
+                  eventItems[0].date.getTime() !== 0
+                    ? eventItems[0].endTime
+                    : 'N/A'
+                }
               />
             ) : (
               <div className="flex h-[346px] w-screen flex-col justify-center ">
@@ -173,10 +193,10 @@ const UpEvents = () => {
                       day: 'numeric',
                     })}
                     items={[item.title]}
-                    time={item.date.toLocaleTimeString('en-US', {
-                      hour: 'numeric',
-                      minute: 'numeric',
-                    })}
+                    startTime={
+                      item.date.getTime() !== 0 ? item.startTime : 'N/A'
+                    }
+                    endTime={item.date.getTime() !== 0 ? item.endTime : 'N/A'}
                   />
                 ))
               : null}
