@@ -3,7 +3,6 @@ import { gapi } from 'gapi-script';
 import { parseISO } from 'date-fns';
 import BigEventsCard from './BigEventsCard';
 import SmallEventsCard from './SmallEventsCard';
-import { parse } from 'path';
 
 const UpEvents = () => {
   // ? Integration with Google Calendar API to auto generate this list
