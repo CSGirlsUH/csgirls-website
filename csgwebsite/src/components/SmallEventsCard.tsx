@@ -1,6 +1,6 @@
 interface CardProps {
   date: string;
-  time?: string;
+  time: string;
   items: string[];
   optional?: string;
 }

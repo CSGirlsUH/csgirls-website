@@ -99,7 +99,6 @@ const UpEvents = () => {
                   month: 'short',
                   day: 'numeric',
                 })}
-                items={[eventItems[0].title]}
                 time={
                   eventItems[0].date.getTime() !== 0
                     ? eventItems[0].date.toLocaleTimeString('en-US', {
@@ -108,6 +107,7 @@ const UpEvents = () => {
                       })
                     : 'N/A'
                 }
+                items={[eventItems[0].title]}
               />
             ) : (
               <div className="flex h-[194px] w-screen flex-col justify-center">
@@ -122,7 +122,6 @@ const UpEvents = () => {
                       month: 'short',
                       day: 'numeric',
                     })}
-                    items={[item.title]}
                     time={
                       item.date.getTime() !== 0
                         ? item.date.toLocaleTimeString('en-US', {
@@ -131,6 +130,7 @@ const UpEvents = () => {
                           })
                         : 'N/A'
                     }
+                    items={[item.title]}
                   />
                 ))
               : null}
@@ -154,6 +154,10 @@ const UpEvents = () => {
                   day: 'numeric',
                 })}
                 items={[eventItems[0].title]}
+                time={eventItems[0].date.toLocaleTimeString('en-US', {
+                  hour: 'numeric',
+                  minute: 'numeric',
+                })}
               />
             ) : (
               <div className="flex h-[346px] w-screen flex-col justify-center ">
@@ -169,6 +173,10 @@ const UpEvents = () => {
                       day: 'numeric',
                     })}
                     items={[item.title]}
+                    time={item.date.toLocaleTimeString('en-US', {
+                      hour: 'numeric',
+                      minute: 'numeric',
+                    })}
                   />
                 ))
               : null}
