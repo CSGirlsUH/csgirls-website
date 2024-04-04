@@ -16,7 +16,7 @@ function SmallEventsCard(props: CardProps) {
       }
     >
       <h1 className="flex self-center pb-1 pt-3 text-2xl">{props.date}</h1>
-      <ol className="flex list-none flex-col gap-1 text-base">
+      <ol className="flex list-disc flex-col gap-1 text-left text-base">
         {props.items.map((item, index) => (
           <>
             <h3 className="font-poppins text-lg text-logopurple">
@@ -26,7 +26,7 @@ function SmallEventsCard(props: CardProps) {
                   ? props.startTime + ' - ' + props.endTime
                   : props.startTime}
             </h3>
-            <li key={index} className="ml-0">
+            <li key={index} className="ml-5">
               {item}
             </li>
           </>
