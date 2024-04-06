@@ -95,8 +95,6 @@ const UpEvents = () => {
     return new Date(a.date).getTime() - new Date(b.date).getTime();
   });
 
-  console.log(eventItems);
-
   return (
     <>
       {/* Mobile Variant */}
