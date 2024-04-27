@@ -22,7 +22,7 @@ function BigEventsCard(props: CardProps) {
       </h1>
       <ol className="list-group list-disc pl-5 pt-2">
         {props.items.map((item, index) => (
-          <>
+          <div key={index}>
             <h3 className="text-left text-2xl text-logopurple">
               {props.startTime == 'N/A'
                 ? 'TBA'
@@ -30,10 +30,8 @@ function BigEventsCard(props: CardProps) {
                   ? props.startTime + ' - ' + props.endTime
                   : props.startTime}
             </h3>
-            <li className="ml-6 list-disc text-left text-xl" key={index}>
-              {item}
-            </li>
-          </>
+            <li className="ml-6 list-disc text-left text-xl">{item}</li>
+          </div>
         ))}
       </ol>
     </div>
