@@ -45,7 +45,7 @@ const UpEvents = () => {
           fetchEvents();
         });
     });
-  }, []);
+  }, [API_KEY, CLIENT_ID]);
 
   const getEvents = async (calendarID: string): Promise<any[]> => {
     try {
