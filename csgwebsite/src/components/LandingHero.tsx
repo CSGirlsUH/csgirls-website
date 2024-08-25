@@ -1,13 +1,10 @@
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
-const WEBLINKS = {
-  REGISTER:
-    "https://docs.google.com/forms/d/e/1FAIpQLSfsvsfrx5-yJP8DeRZLvPft3QTZPkXrIRKXis014Aa6iBJkJw/viewform",
-};
+import { WEBLINKS } from '../components/globalVariables';
 
 const Hero = () => {
   const [message] = useTypewriter({
-    words: ["Hello World!"],
+    words: ['Hello World!'],
     loop: 1,
   });
 
@@ -17,7 +14,7 @@ const Hero = () => {
         <div className="flex flex-col md:px-5">
           {/* Title Text */}
           <div className="ml-0 pb-2 pt-5 text-left font-firacode text-2xl md:pb-5 md:text-6xl ">
-            <h1 className="inline-block text-logopurple">{">\u00A0"}</h1>
+            <h1 className="inline-block text-logopurple">{'>\u00A0'}</h1>
             <h1 className="inline-block text-black">
               {message}
               <Cursor
