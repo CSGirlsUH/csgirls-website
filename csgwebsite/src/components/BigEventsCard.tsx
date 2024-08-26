@@ -1,5 +1,3 @@
-// import React from "react";
-
 interface CardProps {
   date: string;
   startTime: string;
@@ -12,7 +10,7 @@ function BigEventsCard(props: CardProps) {
   return (
     <div
       className={
-        'mr-[51px] flex min-h-[20rem] w-[16rem] flex-col rounded-[20px] bg-bggray' +
+        'mr-[51px] min-h-[20rem] w-[16rem] flex-none flex-col rounded-[20px] bg-bggray' +
         ' ' +
         props.optional
       }

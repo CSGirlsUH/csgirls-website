@@ -106,7 +106,7 @@ const UpEvents = () => {
           {/* TESTING GOOGLE MAPS CALLS */}
           <div className="flex items-center justify-start py-4">
             {!isLoading ? (
-              false ? (
+              events && events.length == 0 ? (
                 <SmallEventsCard
                   optional="ml-4"
                   date={eventItems[0].date.toLocaleDateString('en-US', {
