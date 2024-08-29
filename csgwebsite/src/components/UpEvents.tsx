@@ -95,6 +95,8 @@ const UpEvents = () => {
     return new Date(a.date).getTime() - new Date(b.date).getTime();
   });
 
+  console.log(eventItems);
+
   return (
     <>
       {/* Mobile Variant */}
@@ -103,10 +105,9 @@ const UpEvents = () => {
         <h1 className="mx-auto flex py-2 text-2xl">Upcoming Events</h1>
         {/* Events Carousel */}
         <div className="flex items-center justify-start overflow-y-hidden overflow-x-scroll md:hidden">
-          {/* TESTING GOOGLE MAPS CALLS */}
           <div className="flex items-center justify-start py-4">
             {!isLoading ? (
-              events && events.length == 0 ? (
+              eventItems.length > 0 && !isLoading ? (
                 <SmallEventsCard
                   optional="ml-4"
                   date={eventItems[0].date.toLocaleDateString('en-US', {
@@ -137,7 +138,7 @@ const UpEvents = () => {
                 <span className="loading loading-dots mx-auto h-28 w-24 bg-black"></span>
               </div>
             )}
-            {!isLoading
+            {!isLoading && eventItems.length > 1
               ? eventItems.slice(1).map((item: eventItem, index: number) => (
                   <SmallEventsCard
                     key={index}
