@@ -95,6 +95,8 @@ const UpEvents = () => {
     return new Date(a.date).getTime() - new Date(b.date).getTime();
   });
 
+  console.log(eventItems);
+
   return (
     <>
       {/* Mobile Variant */}
@@ -103,33 +105,40 @@ const UpEvents = () => {
         <h1 className="mx-auto flex py-2 text-2xl">Upcoming Events</h1>
         {/* Events Carousel */}
         <div className="flex items-center justify-start overflow-y-hidden overflow-x-scroll md:hidden">
-          {/* TESTING GOOGLE MAPS CALLS */}
           <div className="flex items-center justify-start py-4">
             {!isLoading ? (
-              <SmallEventsCard
-                optional="ml-4"
-                date={eventItems[0].date.toLocaleDateString('en-US', {
-                  month: 'short',
-                  day: 'numeric',
-                })}
-                startTime={
-                  eventItems[0].date.getTime() !== 0
-                    ? eventItems[0].startTime
-                    : 'N/A'
-                }
-                endTime={
-                  eventItems[0].date.getTime() !== 0
-                    ? eventItems[0].endTime
-                    : 'N/A'
-                }
-                items={[eventItems[0].title]}
-              />
+              eventItems.length > 0 && !isLoading ? (
+                <SmallEventsCard
+                  optional="ml-4"
+                  date={eventItems[0].date.toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                  })}
+                  startTime={
+                    eventItems[0].date.getTime() !== 0
+                      ? eventItems[0].startTime
+                      : 'N/A'
+                  }
+                  endTime={
+                    eventItems[0].date.getTime() !== 0
+                      ? eventItems[0].endTime
+                      : 'N/A'
+                  }
+                  items={[eventItems[0].title]}
+                />
+              ) : (
+                <div className="flex h-[190px] w-screen flex-col justify-center">
+                  <h1 className="mx-auto text-center text-2xl">
+                    No Upcoming Events, Check Back Soon!
+                  </h1>
+                </div>
+              )
             ) : (
               <div className="flex h-[194px] w-screen flex-col justify-center">
                 <span className="loading loading-dots mx-auto h-28 w-24 bg-black"></span>
               </div>
             )}
-            {!isLoading
+            {!isLoading && eventItems.length > 1
               ? eventItems.slice(1).map((item: eventItem, index: number) => (
                   <SmallEventsCard
                     key={index}
@@ -156,26 +165,34 @@ const UpEvents = () => {
         </div>
         {/* Events Carousel */}
         <div className="flex items-center justify-start overflow-y-hidden overflow-x-scroll">
-          <div className="flex justify-between py-4">
+          <div className="flex w-full flex-row justify-between py-4">
             {!isLoading ? (
-              <BigEventsCard
-                optional="ml-6"
-                date={eventItems[0].date.toLocaleDateString('en-US', {
-                  month: 'short',
-                  day: 'numeric',
-                })}
-                items={[eventItems[0].title]}
-                startTime={
-                  eventItems[0].date.getTime() !== 0
-                    ? eventItems[0].startTime
-                    : 'N/A'
-                }
-                endTime={
-                  eventItems[0].date.getTime() !== 0
-                    ? eventItems[0].endTime
-                    : 'N/A'
-                }
-              />
+              eventItems.length > 0 ? (
+                <BigEventsCard
+                  optional="ml-6"
+                  date={eventItems[0].date.toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                  })}
+                  items={[eventItems[0].title]}
+                  startTime={
+                    eventItems[0].date.getTime() !== 0
+                      ? eventItems[0].startTime
+                      : 'N/A'
+                  }
+                  endTime={
+                    eventItems[0].date.getTime() !== 0
+                      ? eventItems[0].endTime
+                      : 'N/A'
+                  }
+                />
+              ) : (
+                <div className="flex h-[346px] w-screen flex-col justify-center ">
+                  <h1 className="mx-auto text-center text-3xl">
+                    No Upcoming Events, Check Back Soon!
+                  </h1>
+                </div>
+              )
             ) : (
               <div className="flex h-[346px] w-screen flex-col justify-center ">
                 <span className="loading loading-dots mx-auto h-36 w-32 bg-black"></span>

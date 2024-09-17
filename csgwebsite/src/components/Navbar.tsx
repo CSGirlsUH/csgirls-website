@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { WEBLINKS } from "./globalVariables";
+import { useState } from 'react';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { WEBLINKS } from './globalVariables';
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -11,9 +11,9 @@ const Navbar = () => {
 
   function scrollToBottom() {
     // Check if page is on home page
-    if (window.location.pathname === "/home")
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-    else window.location.href = "/events";
+    if (window.location.pathname === '/home')
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    else window.location.href = '/events';
   }
 
   return (
@@ -66,6 +66,16 @@ const Navbar = () => {
               </a>
             </li>
 
+            <li>
+              <a
+                href="/sponsors"
+                onClick={scrollToBottom}
+                className="flex-column flex p-4 text-black hover:text-gray-500"
+              >
+                Sponsors
+              </a>
+            </li>
+
             <li className="max-h-[60px] min-w-[144px]">
               <a
                 href={WEBLINKS.CONTACT}
@@ -91,8 +101,8 @@ const Navbar = () => {
         <div
           className={
             !nav
-              ? "z-2 fixed left-0 top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out"
-              : "z-2 fixed left-[-100%] top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out"
+              ? 'z-2 fixed left-0 top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
+              : 'z-2 fixed left-[-100%] top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
           }
         >
           {/* <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] my-4 ml-32" /> */}

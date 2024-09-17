@@ -1,5 +1,3 @@
-// import React from "react";
-
 interface CardProps {
   date: string;
   startTime: string;
@@ -12,7 +10,7 @@ function BigEventsCard(props: CardProps) {
   return (
     <div
       className={
-        'mr-[51px] flex min-h-[20rem] w-[16rem] flex-col rounded-[20px] bg-bggray' +
+        'mr-[51px] min-h-[20rem] w-[16rem] flex-none flex-col rounded-[20px] bg-bggray' +
         ' ' +
         props.optional
       }
@@ -22,7 +20,7 @@ function BigEventsCard(props: CardProps) {
       </h1>
       <ol className="list-group list-disc pl-5 pt-2">
         {props.items.map((item, index) => (
-          <>
+          <div key={index}>
             <h3 className="text-left text-2xl text-logopurple">
               {props.startTime == 'N/A'
                 ? 'TBA'
@@ -30,10 +28,8 @@ function BigEventsCard(props: CardProps) {
                   ? props.startTime + ' - ' + props.endTime
                   : props.startTime}
             </h3>
-            <li className="ml-6 list-disc text-left text-xl" key={index}>
-              {item}
-            </li>
-          </>
+            <li className="ml-6 list-disc text-left text-xl">{item}</li>
+          </div>
         ))}
       </ol>
     </div>
