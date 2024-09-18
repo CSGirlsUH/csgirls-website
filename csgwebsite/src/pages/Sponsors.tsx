@@ -30,55 +30,61 @@ const Sponsors = () => {
                 />
               </div>
               {/* Sponsor Platinum Logo Section */}
-              <div className="flex h-[200px] w-[10rem] justify-center bg-sponsorplatinum"></div>
+              <div className="bg-sponsorplatinum mb-8 flex h-[200px] w-screen justify-center"></div>
             </div>
             {/* Our Gold Sponsors */}
-            <div className="flex flex-row justify-center gap-3">
-              <img
-                src="/icons/gold_val.png"
-                alt="Platinum Icon"
-                className="max-h-10 max-w-10"
-              />
-              <h1 className="">Gold Sponsors</h1>
-              <img
-                src="/icons/gold_val.png"
-                alt="Platinum Icon"
-                className="max-h-10 max-w-10"
-              />
+            <div className="flex flex-col justify-center gap-3">
+              <div className="flex flex-row justify-center gap-3">
+                <img
+                  src="/icons/gold_val.png"
+                  alt="Gold Icon"
+                  className="max-h-10 max-w-10"
+                />
+                <h1 className="">Gold Sponsors</h1>
+                <img
+                  src="/icons/gold_val.png"
+                  alt="Gold Icon"
+                  className="max-h-10 max-w-10"
+                />
+              </div>
               {/* Sponsor Gold Logo Section */}
-              <div className=""></div>
+              <div className="bg-sponsorgold mb-8 flex h-[200px] w-screen justify-center"></div>
             </div>
             {/* Our Silver Sponsors */}
-            <div className="flex flex-row justify-center gap-3">
-              <img
-                src="/icons/silver_val.png"
-                alt="Platinum Icon"
-                className="max-h-10 max-w-10"
-              />
-              <h1 className="">Silver Sponsors</h1>
-              <img
-                src="/icons/silver_val.png"
-                alt="Platinum Icon"
-                className="max-h-10 max-w-10"
-              />
-              {/* Sponsor Silver Logo Section */}
-              <div className=""></div>
+            <div className="flex flex-col justify-center gap-3">
+              <div className="flex flex-row justify-center gap-3">
+                <img
+                  src="/icons/silver_val.png"
+                  alt="Silver Icon"
+                  className="max-h-10 max-w-10"
+                />
+                <h1 className="">Silver Sponsors</h1>
+                <img
+                  src="/icons/silver_val.png"
+                  alt="Silver Icon"
+                  className="max-h-10 max-w-10"
+                />
+              </div>
+              {/* Sponsor Platinum Logo Section */}
+              <div className="bg-sponsorsilver mb-8 flex h-[200px] w-screen justify-center"></div>
             </div>
             {/* Our Bronze Sponsors */}
-            <div className="flex flex-row justify-center gap-3">
-              <img
-                src="/icons/bronze_val.png"
-                alt="Platinum Icon"
-                className="max-h-10 max-w-10"
-              />
-              <h1 className="">Bronze Sponsors</h1>
-              <img
-                src="/icons/bronze_val.png"
-                alt="Platinum Icon"
-                className="max-h-10 max-w-10"
-              />
-              {/* Sponsor Bronze Logo Section */}
-              <div className=""></div>
+            <div className="flex flex-col justify-center gap-3">
+              <div className="flex flex-row justify-center gap-3">
+                <img
+                  src="/icons/bronze_val.png"
+                  alt="Bronze Icon"
+                  className="max-h-10 max-w-10"
+                />
+                <h1 className="">Bronze Sponsors</h1>
+                <img
+                  src="/icons/bronze_val.png"
+                  alt="Bronze Icon"
+                  className="max-h-10 max-w-10"
+                />
+              </div>
+              {/* Sponsor Platinum Logo Section */}
+              <div className="bg-sponsorbronze mb-8 flex h-[200px] w-screen justify-center"></div>
             </div>
 
             {/* Jobs Combobox Dropdown Menu */}
