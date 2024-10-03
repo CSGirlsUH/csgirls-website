@@ -42,10 +42,10 @@ const Sponsors = () => {
   return (
     <>
       {/* Desktop View */}
-      <div className="mx-auto my-auto bg-white font-poppins text-black">
-        <Navbar />
+      <div className="mx-auto my-auto hidden bg-white font-poppins text-black md:visible md:flex">
         {/* Content for page */}
         <div className="min-h-screen bg-white">
+          <Navbar />
           <h1 className="mx-auto py-16 text-center text-5xl">
             Special Thanks to All of Our 2025 Sponsors!
           </h1>
@@ -68,7 +68,7 @@ const Sponsors = () => {
                   />
                 </div>
                 {/* Sponsor Platinum Logo Section */}
-                <div className="mb-8 flex h-[200px] w-screen justify-center bg-sponsorplatinum"></div>
+                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorplatinum"></div>
               </div>
             )}
             {/* Our Gold Sponsors */}
@@ -88,7 +88,7 @@ const Sponsors = () => {
                   />
                 </div>
                 {/* Sponsor Gold Logo Section */}
-                <div className="mb-8 flex h-[200px] w-screen justify-center bg-sponsorgold"></div>
+                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorgold"></div>
               </div>
             )}
             {/* Our Silver Sponsors */}
@@ -108,7 +108,7 @@ const Sponsors = () => {
                   />
                 </div>
                 {/* Sponsor Silver Logo Section */}
-                <div className="mb-8 flex h-[200px] w-screen justify-center bg-sponsorsilver"></div>
+                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorsilver"></div>
               </div>
             )}
             {/* Our Bronze Sponsors */}
@@ -128,7 +128,7 @@ const Sponsors = () => {
                   />
                 </div>
                 {/* Bronze Logo Section */}
-                <div className="mb-8 flex h-[200px] w-screen justify-center bg-sponsorbronze"></div>
+                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorbronze"></div>
               </div>
             )}
             {/* Partners Section */}
@@ -153,12 +153,119 @@ const Sponsors = () => {
                 Want a Job Working for One of Our Sponsors?
               </h1>
             </div>
-            {/* <div className="text-xl">Apply Here!</div> */}
-            {/* IMPORT SHADCN COMBOBOX DROPDOWN */}
           </div>
+          <Footer />
         </div>
-        {/* Mobile View */}
-        <Footer />
+      </div>
+
+      {/* Mobile View */}
+      <div className="flex bg-white font-poppins text-black md:hidden">
+        <div className="flex w-full flex-col text-center">
+          <Navbar />
+          <h1 className="py-4 text-center text-xl">
+            Special Thanks to All of Our 2025 Sponsors!
+          </h1>
+          <div className="flex flex-col">
+            {/* Platinum Sponsors */}
+            {platinum && (
+              <div className="flex flex-col">
+                <div className="flex flex-row justify-center gap-3 pb-2">
+                  <img
+                    src="/icons/platinum_val.png"
+                    alt="Platinum Icon"
+                    className="max-h-10 max-w-10"
+                  />
+                  <h1 className="flex self-center">Platinum Sponsors</h1>
+                  <img
+                    src="/icons/platinum_val.png"
+                    alt="Platinum Icon"
+                    className="max-h-10 max-w-10"
+                  />
+                </div>
+                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorplatinum"></div>
+              </div>
+            )}
+            {/* Gold Sponsors */}
+            {gold && (
+              <div className="flex flex-col">
+                <div className="flex flex-row justify-center gap-3 pb-2">
+                  <img
+                    src="/icons/gold_val.png"
+                    alt="Gold Icon"
+                    className="max-h-10 max-w-10"
+                  />
+                  <h1 className="flex self-center">Gold Sponsors</h1>
+                  <img
+                    src="/icons/gold_val.png"
+                    alt="Gold Icon"
+                    className="max-h-10 max-w-10"
+                  />
+                </div>
+                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorgold"></div>
+              </div>
+            )}
+            {/* Silver Sponsors */}
+            {silver && (
+              <div className="flex flex-col">
+                <div className="flex flex-row justify-center gap-3 pb-2">
+                  <img
+                    src="/icons/silver_val.png"
+                    alt="Silver Icon"
+                    className="max-h-10 max-w-10"
+                  />
+                  <h1 className="flex self-center">Silver Sponsors</h1>
+                  <img
+                    src="/icons/silver_val.png"
+                    alt="Silver Icon"
+                    className="max-h-10 max-w-10"
+                  />
+                </div>
+                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorsilver"></div>
+              </div>
+            )}
+            {/* Bronze Sponsors */}
+            {bronze && (
+              <div className="flex flex-col">
+                <div className="flex flex-row justify-center gap-3 pb-2">
+                  <img
+                    src="/icons/bronze_val.png"
+                    alt="Bronze Icon"
+                    className="max-h-10 max-w-10"
+                  />
+                  <h1 className="flex self-center">Bronze Sponsors</h1>
+                  <img
+                    src="/icons/bronze_val.png"
+                    alt="Bronze Icon"
+                    className="max-h-10 max-w-10"
+                  />
+                </div>
+                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorbronze"></div>
+              </div>
+            )}
+            {/* Partners Section */}
+            {partners && (
+              <div>
+                <h1 className="pb-2">Thanks to All of Our Partners!</h1>
+                <div className="max-w-screen mx-10 flex flex-col self-center rounded-xl bg-[#E8E9FF] py-10">
+                  <div className="flex h-full w-1/2 flex-col flex-wrap gap-5 self-center text-center">
+                    {PARTNERS.map((partner, index) => (
+                      <h1 key={index} className="text-xl">
+                        {partner.name}
+                      </h1>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+            {/* Jobs Combobox Dropdown Menu */}
+            <div className="">
+              <h1 className="pt-10 text-center text-2xl">
+                Want a Job Working for One of Our Sponsors?
+              </h1>
+            </div>
+          </div>
+          <Footer />
+        </div>
       </div>
     </>
   )

@@ -101,8 +101,8 @@ const Navbar = () => {
         <div
           className={
             !nav
-              ? 'z-2 fixed left-0 top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
-              : 'z-2 fixed left-[-100%] top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
+              ? 'z-5 fixed left-0 top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
+              : 'z-5 fixed left-[-100%] top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
           }
         >
           {/* <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] my-4 ml-32" /> */}
