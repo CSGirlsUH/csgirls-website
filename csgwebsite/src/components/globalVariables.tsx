@@ -58,17 +58,17 @@ export const SPONSORS: Sponsor[] = [
 export const PARTNERS = [
   {
     name: 'Chevron',
-    link: 'https://careers.chevron.com/internship',
     logo: './sponsors/chevron_logo.svg',
+    link: 'https://careers.chevron.com/internship',
   },
   {
     name: 'Paycom',
-    link: 'https://www.paycom.com/careers/job-categories/internships/',
     logo: './sponsors/paycom_logo.svg',
+    link: 'https://www.paycom.com/careers/job-categories/internships/',
   },
   {
     name: 'SLB',
-    link: 'https://careers.slb.com/fojoblist/it-intern',
     logo: './sponsors/slb_logo.svg',
+    link: 'https://careers.slb.com/fojoblist/it-intern',
   },
 ]
