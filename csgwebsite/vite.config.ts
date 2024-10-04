@@ -13,10 +13,9 @@ export default defineConfig(({ mode }) => {
         env.REACT_APP_GAPI_CLIENT_ID
       ),
     },
-    compilerOptions: {
-      baseUrl: '.',
-      paths: {
-        '@/*': ['./src/*'],
+    resolve: {
+      alias: {
+        '@': '/src',
       },
     },
     plugins: [react()],

@@ -1,9 +1,40 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+// import {
+//   Form,
+//   FormControl,
+//   FormDescription,
+//   FormField,
+//   FormItem,
+//   FormLabel,
+//   FormMessage,
+// } from '@/components/ui/form'
+
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from '../../src/components/ui/command.tsx'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover'
 
 import { useState, useEffect } from 'react'
 import { SPONSORS } from '../components/globalVariables'
 import { PARTNERS } from '../components/globalVariables'
+
+// import { zodResolver } from '@hookform/resolvers/zod'
+// import { useForm } from 'react-hook-form'
+// import { z } from 'zod'
+
+import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
 
 const Sponsors = () => {
   // Check the sections that need to be displayed
@@ -12,6 +43,16 @@ const Sponsors = () => {
   const [silver, setSilver] = useState(false)
   const [bronze, setBronze] = useState(false)
   const [partners, setPartners] = useState(false)
+
+  // Combobox variables
+  const [open, setOpen] = useState(false)
+  const [value, setValue] = useState('')
+
+  // let organizations: any = []
+  // for (let i = 0; i < SPONSORS.length; i++)
+  //   organizations.push({ label: SPONSORS[i].name, value: SPONSORS[i].link })
+  // for (let i = 0; i < PARTNERS.length; i++)
+  //   organizations.push({ label: PARTNERS[i].name, value: PARTNERS[i].link })
 
   // useEffect hook to update the states based on the sponsors
   useEffect(() => {
@@ -37,7 +78,7 @@ const Sponsors = () => {
     if (PARTNERS.length > 0) {
       setPartners(true)
     }
-  }, []) // The empty dependency array ensures this only runs once after the initial render
+  }, [])
 
   return (
     <>
@@ -152,6 +193,57 @@ const Sponsors = () => {
               <h1 className="pt-10 text-center text-2xl">
                 Want a Job Working for One of Our Sponsors?
               </h1>
+              {/* Jobs Combobox Dropdown Menu */}
+              <Popover open={open} onOpenChange={setOpen}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    role="combobox"
+                    aria-expanded={open}
+                    className="w-[200px] justify-between"
+                  >
+                    {value
+                      ? SPONSORS.find((sponsor) => sponsor.name === value)?.name
+                      : 'Select Sponsor...'}
+                    <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[200px] p-0">
+                  <Command>
+                    <CommandInput
+                      placeholder="Search Sponsors..."
+                      className="h-9"
+                    />
+                    <CommandList>
+                      <CommandEmpty>No Sponsor found.</CommandEmpty>
+                      <CommandGroup>
+                        {SPONSORS.map((sponsor) => (
+                          <CommandItem
+                            key={sponsor.name}
+                            value={sponsor.name}
+                            onSelect={(currentValue) => {
+                              setValue(
+                                currentValue === value ? '' : currentValue
+                              )
+                              setOpen(false)
+                            }}
+                          >
+                            {sponsor.name}
+                            <CheckIcon
+                              className={cn(
+                                'ml-auto h-4 w-4',
+                                value === sponsor.name
+                                  ? 'opacity-100'
+                                  : 'opacity-0'
+                              )}
+                            />
+                          </CommandItem>
+                        ))}
+                      </CommandGroup>
+                    </CommandList>
+                  </Command>
+                </PopoverContent>
+              </Popover>
             </div>
           </div>
           <Footer />
@@ -257,11 +349,12 @@ const Sponsors = () => {
                 </div>
               </div>
             )}
-            {/* Jobs Combobox Dropdown Menu */}
             <div className="">
               <h1 className="pt-10 text-center text-2xl">
                 Want a Job Working for One of Our Sponsors?
               </h1>
+              {/* Jobs Combobox Dropdown Menu */}
+              {/* <Form {...form}></Form> */}
             </div>
           </div>
           <Footer />

@@ -1,6 +1,6 @@
 import { useTypewriter } from 'react-simple-typewriter'
 
-import { WEBLINKS } from '../components/globalVariables'
+import { WEBLINKS } from '@/components/globalVariables'
 
 const Hero = () => {
   const [message] = useTypewriter({
