@@ -62,6 +62,11 @@ export const PARTNERS = [
     link: 'https://careers.chevron.com/internship',
   },
   {
+    name: 'Deloitte',
+    logo: './sponsors/deloitte_logo.svg',
+    link: 'https://www2.deloitte.com/us/en/pages/careers/articles/join-deloitte-internships.html',
+  },
+  {
     name: 'Paycom',
     logo: './sponsors/paycom_logo.svg',
     link: 'https://www.paycom.com/careers/job-categories/internships/',
@@ -71,4 +76,4 @@ export const PARTNERS = [
     logo: './sponsors/slb_logo.svg',
     link: 'https://careers.slb.com/fojoblist/it-intern',
   },
-]
+].sort((a, b) => a.name.localeCompare(b.name))
