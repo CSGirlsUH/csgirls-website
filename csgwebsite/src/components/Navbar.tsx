@@ -106,7 +106,7 @@ const Navbar = () => {
           }
         >
           {/* <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] my-4 ml-32" /> */}
-          <ul className="flex flex-col pt-24 uppercase">
+          <ul className="flex flex-col pt-24 text-left uppercase">
             <li>
               <a href="/home" className="m-4">
                 Home

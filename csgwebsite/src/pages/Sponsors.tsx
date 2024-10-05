@@ -44,6 +44,7 @@ const Sponsors = () => {
   // Combobox variables
   const [open, setOpen] = useState(false)
   const [value, setValue] = useState('')
+  const [openM, setOpenM] = useState(false)
 
   // useEffect hook to update the states based on the sponsors
   useEffect(() => {
@@ -102,9 +103,8 @@ const Sponsors = () => {
                 {/* Sponsor Platinum Logo Section */}
                 <div className="mb-8 flex h-auto min-h-[200px] w-full flex-row flex-wrap items-center justify-center gap-10 bg-sponsorplatinum">
                   {matchingRank('Platinum').map((sponsor, index) => (
-                    <a href={sponsor.link}>
+                    <a href={sponsor.link} key={index}>
                       <img
-                        key={index}
                         src={sponsor.logo}
                         alt={sponsor.name}
                         className="h-auto w-64"
@@ -133,9 +133,8 @@ const Sponsors = () => {
                 {/* Sponsor Gold Logo Section */}
                 <div className="mb-8 flex h-auto min-h-[200px] w-full flex-row flex-wrap items-center justify-center gap-10 bg-sponsorgold">
                   {matchingRank('Gold').map((sponsor, index) => (
-                    <a href={sponsor.link}>
+                    <a href={sponsor.link} key={index}>
                       <img
-                        key={index}
                         src={sponsor.logo}
                         alt={sponsor.name}
                         className="h-auto w-64"
@@ -164,9 +163,8 @@ const Sponsors = () => {
                 {/* Sponsor Silver Logo Section */}
                 <div className="mb-8 flex h-auto min-h-[200px] w-full flex-row flex-wrap items-center justify-center gap-10 bg-sponsorsilver">
                   {matchingRank('Silver').map((sponsor, index) => (
-                    <a href={sponsor.link}>
+                    <a href={sponsor.link} key={index}>
                       <img
-                        key={index}
                         src={sponsor.logo}
                         alt={sponsor.name}
                         className="h-auto w-64"
@@ -195,9 +193,8 @@ const Sponsors = () => {
                 {/* Bronze Logo Section */}
                 <div className="mb-8 flex h-auto min-h-[200px] w-full flex-row flex-wrap items-center justify-center gap-10 bg-sponsorbronze">
                   {matchingRank('Bronze').map((sponsor, index) => (
-                    <a href={sponsor.link}>
+                    <a href={sponsor.link} key={index}>
                       <img
-                        key={index}
                         src={sponsor.logo}
                         alt={sponsor.name}
                         className="h-auto w-64"
@@ -294,7 +291,7 @@ const Sponsors = () => {
       <div className="flex bg-white font-poppins text-black md:hidden">
         <div className="flex w-full flex-col text-center">
           <Navbar />
-          <h1 className="py-4 text-center text-xl">
+          <h1 className="py-5 text-center text-lg">
             Special Thanks to All of Our 2025 Sponsors!
           </h1>
           <div className="flex flex-col">
@@ -305,7 +302,7 @@ const Sponsors = () => {
                   <img
                     src="/icons/platinum_val.png"
                     alt="Platinum Icon"
-                    className="max-h-10 max-w-10"
+                    className="h-auto w-10"
                   />
                   <h1 className="flex self-center">Platinum Sponsors</h1>
                   <img
@@ -314,7 +311,17 @@ const Sponsors = () => {
                     className="max-h-10 max-w-10"
                   />
                 </div>
-                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorplatinum"></div>
+                <div className="mb-8 flex h-auto min-h-[150px] w-full flex-row flex-wrap items-center justify-center gap-10 bg-sponsorplatinum">
+                  {matchingRank('Platinum').map((sponsor, index) => (
+                    <a href={sponsor.link} key={index}>
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="h-auto w-32"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             )}
             {/* Gold Sponsors */}
@@ -333,7 +340,17 @@ const Sponsors = () => {
                     className="max-h-10 max-w-10"
                   />
                 </div>
-                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorgold"></div>
+                <div className="mb-8 flex h-auto min-h-[150px] w-full flex-row flex-wrap items-center justify-center gap-10 bg-sponsorgold">
+                  {matchingRank('Gold').map((sponsor, index) => (
+                    <a href={sponsor.link} key={index}>
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="h-auto w-32"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             )}
             {/* Silver Sponsors */}
@@ -352,7 +369,17 @@ const Sponsors = () => {
                     className="max-h-10 max-w-10"
                   />
                 </div>
-                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorsilver"></div>
+                <div className="mb-8 flex h-auto min-h-[150px] w-full flex-row flex-wrap items-center justify-center gap-10 bg-sponsorsilver">
+                  {matchingRank('Silver').map((sponsor, index) => (
+                    <a href={sponsor.link} key={index}>
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="h-auto w-32"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             )}
             {/* Bronze Sponsors */}
@@ -371,7 +398,17 @@ const Sponsors = () => {
                     className="max-h-10 max-w-10"
                   />
                 </div>
-                <div className="mb-8 flex h-[200px] w-full justify-center bg-sponsorbronze"></div>
+                <div className="mb-8 flex h-auto min-h-[150px] w-full flex-row flex-wrap items-center justify-center gap-10 bg-sponsorbronze">
+                  {matchingRank('Bronze').map((sponsor, index) => (
+                    <a href={sponsor.link} key={index}>
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="h-auto w-32"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             )}
             {/* Partners Section */}
@@ -389,12 +426,68 @@ const Sponsors = () => {
                 </div>
               </div>
             )}
-            <div className="">
-              <h1 className="pt-10 text-center text-2xl">
+            <div className="pb-10">
+              <h1 className="pt-10 text-center text-lg">
                 Want a Job Working for One of Our Sponsors?
               </h1>
               {/* Jobs Combobox Dropdown Menu */}
-              {/* <Form {...form}></Form> */}
+              <Popover open={openM} onOpenChange={setOpenM}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    role="combobox"
+                    aria-expanded={openM}
+                    className="w-[200px] justify-between"
+                  >
+                    {value
+                      ? SPONSORS.find((sponsor) => sponsor.name === value)?.name
+                      : 'Select Sponsor...'}
+                    <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[200px] p-0">
+                  <Command>
+                    <CommandInput
+                      placeholder="Search Sponsors..."
+                      className="h-9"
+                    />
+                    <CommandList>
+                      <CommandEmpty>Sponsor not found.</CommandEmpty>
+                      <CommandGroup>
+                        {SPONSORS.map((sponsor) => (
+                          <CommandItem
+                            key={sponsor.name}
+                            value={sponsor.name}
+                            onSelect={(currentValue) => {
+                              setValue(
+                                currentValue === value ? '' : currentValue
+                              )
+                              setOpen(false)
+                            }}
+                          >
+                            {sponsor.name}
+                            <CheckIcon
+                              className={cn(
+                                'ml-auto h-4 w-4',
+                                value === sponsor.name
+                                  ? 'opacity-100'
+                                  : 'opacity-0'
+                              )}
+                            />
+                          </CommandItem>
+                        ))}
+                      </CommandGroup>
+                    </CommandList>
+                  </Command>
+                </PopoverContent>
+              </Popover>
+              {
+                <button className="btn btn-primary my-1 ml-6 mt-1 normal-case">
+                  <a href={matchingSponsor(value)?.link || '#'}>
+                    See Opportunities
+                  </a>
+                </button>
+              }
             </div>
           </div>
           <Footer />
