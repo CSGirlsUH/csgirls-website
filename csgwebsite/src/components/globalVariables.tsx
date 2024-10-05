@@ -14,7 +14,7 @@ export const WEBLINKS = {
     'https://csgirls.us17.list-manage.com/subscribe?u=076028e0729274943f4c3555a&id=13147ae73f',
 }
 
-// Pictures used in OfficerMain.tsx
+// * Pictures used in OfficerMain.tsx
 export const PICLINKS = {
   BANNER: './Photos/OfficersHeart.jpg',
   PRESIDENT: './Photos/OfficerPics/Becky_Pres.jpg',
@@ -27,6 +27,71 @@ export const PICLINKS = {
   MENT_CHAIR2: './Photos/OfficerPics/Lisa_MentorChair.jpg',
   SECY: './Photos/OfficerPics/Neha_Secy.jpg',
   WEBMASTER: './Photos/OfficerPics/Sage_WebM_Alt.jpg',
+}
+
+// * Officer Information
+//* Last Updated Spring 2023
+export const OFFICERS = {
+  president: {
+    name: 'Rebecca Santos',
+    discord: 'https://discord.com/users/eckybae',
+    linkedin: 'https://www.linkedin.com/in/rebeccasantos106/',
+    pic: PICLINKS.PRESIDENT,
+  },
+  vp_ext: {
+    name: 'Carolyn Heron',
+    discord: 'https://discord.com/users/carisimo',
+    linkedin: 'https://www.linkedin.com/in/ana-c-heron/',
+    pic: PICLINKS.VP_EXT,
+  },
+  vp_int: {
+    name: 'Chelsea Nguyen',
+    discord: 'https://discord.com/users/sheepsgardenn',
+    linkedin: 'https://www.linkedin.com/in/cngu/',
+    pic: PICLINKS.VP_INT,
+  },
+  marketing_dir: {
+    name: 'Kaitlin Wood',
+    discord: 'https://discord.com/users/kaminji',
+    linkedin: 'https://www.linkedin.com/in/kaitlinwood03/',
+    pic: PICLINKS.MARKETING_DIR,
+  },
+  prof_dev_chair1: {
+    name: 'Daisy Gonzalez',
+    discord: 'https://discord.com/users/flowerspasms',
+    linkedin: 'https://www.linkedin.com/in/daigza09/',
+    pic: PICLINKS.PROF_DEV_CHAIR1,
+  },
+  prof_dev_chair2: {
+    name: 'Maria Thomas',
+    discord: 'https://discord.com/users/straw6286',
+    linkedin: 'https://www.linkedin.com/in/maria-le-thomas/',
+    pic: PICLINKS.PROF_DEV_CHAIR2,
+  },
+  ment_chair1: {
+    name: 'Reem Alkhalily',
+    discord: 'https://discord.com/users/jynxae',
+    linkedin: 'https://www.linkedin.com/in/reem-alkhalily-9a9152250/',
+    pic: PICLINKS.MENT_CHAIR1,
+  },
+  ment_chair2: {
+    name: 'Lisa Zuniga',
+    discord: 'https://discord.com/users/zuuni#8270',
+    linkedin: 'https://www.linkedin.com/in/lisa-zuniga/',
+    pic: PICLINKS.MENT_CHAIR2,
+  },
+  secy: {
+    name: 'Neha Joshi',
+    discord: 'https://discord.com/users/neyhuh',
+    linkedin: 'https://www.linkedin.com/in/nehakjoshi/',
+    pic: PICLINKS.SECY,
+  },
+  webmaster: {
+    name: 'Sage Turner',
+    discord: 'https://discord.com/users/sayj',
+    linkedin: 'https://www.linkedin.com/in/sageturn01/',
+    pic: PICLINKS.WEBMASTER,
+  },
 }
 
 export const SPONSORS: Sponsor[] = [
