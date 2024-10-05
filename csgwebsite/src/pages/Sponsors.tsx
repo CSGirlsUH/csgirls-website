@@ -468,7 +468,7 @@ const Sponsors = () => {
                               setValue(
                                 currentValue === value ? '' : currentValue
                               )
-                              setOpen(false)
+                              setOpenM(false)
                             }}
                           >
                             {sponsor.name}
