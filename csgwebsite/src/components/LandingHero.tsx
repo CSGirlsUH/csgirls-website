@@ -1,12 +1,12 @@
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { useTypewriter } from 'react-simple-typewriter'
 
-import { WEBLINKS } from '../components/globalVariables';
+import { WEBLINKS } from '@/components/globalVariables'
 
 const Hero = () => {
   const [message] = useTypewriter({
     words: ['Hello World!'],
     loop: 1,
-  });
+  })
 
   return (
     <>
@@ -15,14 +15,12 @@ const Hero = () => {
           {/* Title Text */}
           <div className="ml-0 pb-2 pt-5 text-left font-firacode text-2xl md:pb-5 md:text-6xl ">
             <h1 className="inline-block text-logopurple">{'>\u00A0'}</h1>
-            <h1 className="inline-block text-black">
-              {message}
-              <Cursor
-                cursorColor="#663072"
-                cursorStyle="_"
-                cursorBlinking={false}
-              />
-            </h1>
+            <div className="inline-block">
+              <h1 className="inline-block text-black">
+                {message}
+                <span className="text-[#663072]">_</span>
+              </h1>
+            </div>
           </div>
           {/* Description Text */}
           <div className="text-left text-sm md:text-xl">
@@ -58,7 +56,7 @@ const Hero = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

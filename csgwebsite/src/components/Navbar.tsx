@@ -1,25 +1,25 @@
-import { useState } from 'react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { WEBLINKS } from './globalVariables';
+import { useState } from 'react'
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import { WEBLINKS } from './globalVariables'
 
 const Navbar = () => {
-  const [nav, setNav] = useState(true);
+  const [nav, setNav] = useState(true)
 
   const handleNav = () => {
-    setNav(!nav);
-  };
+    setNav(!nav)
+  }
 
   function scrollToBottom() {
     // Check if page is on home page
     if (window.location.pathname === '/home')
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    else window.location.href = '/events';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+    else window.location.href = '/events'
   }
 
   return (
     <>
       {/* Desktop Variant */}
-      <div className="flex items-center justify-between border-b border-bordergray md:mr-[118px] md:border-0 md:pr-6 ">
+      <div className="flex items-center justify-between gap-24 border-b border-bordergray md:mr-[118px] md:border-0 md:pr-6 ">
         {/* CSG Logo (Purple) */}
         <a href="/home">
           <img
@@ -101,8 +101,8 @@ const Navbar = () => {
         <div
           className={
             !nav
-              ? 'z-2 fixed left-0 top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
-              : 'z-2 fixed left-[-100%] top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
+              ? 'z-5 fixed left-0 top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
+              : 'z-5 fixed left-[-100%] top-0 h-full w-[60%] bg-bggray duration-500 ease-in-out'
           }
         >
           {/* <img src="./Purp_WhiteBG_Logo.png" className="w-[113px] my-4 ml-32" /> */}
@@ -128,6 +128,11 @@ const Navbar = () => {
               </a>
             </li>
             <li>
+              <a href="/sponsors" className="m-4">
+                Sponsors
+              </a>
+            </li>
+            <li>
               <a href={WEBLINKS.CONTACT} className="m-4">
                 Contact Us
               </a>
@@ -141,7 +146,7 @@ const Navbar = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
