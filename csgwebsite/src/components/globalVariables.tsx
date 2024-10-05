@@ -9,6 +9,9 @@ export const WEBLINKS = {
   REGISTER:
     'https://docs.google.com/forms/d/e/1FAIpQLSff7H7m7n_37ksRhXXJfl3RzKySWsXFHTY-t_5-9YkZThOvgw/viewform',
   CONTACT: 'https://linktr.ee/csgirls',
+  DONATE: 'https://www.paypal.com/paypalme/CSGirls',
+  NEWSLETTER:
+    'https://csgirls.us17.list-manage.com/subscribe?u=076028e0729274943f4c3555a&id=13147ae73f',
 }
 
 // Pictures used in OfficerMain.tsx
