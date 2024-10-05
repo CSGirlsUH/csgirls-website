@@ -276,11 +276,17 @@ const Sponsors = () => {
                   </Command>
                 </PopoverContent>
               </Popover>
-              <button className="btn btn-primary my-1 ml-6 mt-1 normal-case">
-                <a href={matchingSponsor(value)?.link || '#'}>
+              {value == '' ? (
+                <button className="btn btn-disabled my-1 ml-6 mt-1 normal-case">
                   See Opportunities
+                </button>
+              ) : (
+                <a href={matchingSponsor(value)?.link || '#'}>
+                  <button className="btn btn-primary my-1 ml-6 mt-1 normal-case">
+                    See Opportunities
+                  </button>
                 </a>
-              </button>
+              )}
             </div>
           </div>
           <Footer />
@@ -426,7 +432,7 @@ const Sponsors = () => {
                 </div>
               </div>
             )}
-            <div className="pb-10">
+            <div className="mx-2 flex flex-shrink flex-col pb-10">
               <h1 className="pt-10 text-center text-lg">
                 Want a Job Working for One of Our Sponsors?
               </h1>
@@ -437,7 +443,7 @@ const Sponsors = () => {
                     variant="outline"
                     role="combobox"
                     aria-expanded={openM}
-                    className="w-[200px] justify-between"
+                    className="w-full justify-between"
                   >
                     {value
                       ? SPONSORS.find((sponsor) => sponsor.name === value)?.name
@@ -481,13 +487,17 @@ const Sponsors = () => {
                   </Command>
                 </PopoverContent>
               </Popover>
-              {
-                <button className="btn btn-primary my-1 ml-6 mt-1 normal-case">
-                  <a href={matchingSponsor(value)?.link || '#'}>
-                    See Opportunities
-                  </a>
+              {value == '' ? (
+                <button className="btn btn-disabled my-2 w-full normal-case">
+                  See Opportunities
                 </button>
-              }
+              ) : (
+                <a href={matchingSponsor(value)?.link || '#'}>
+                  <button className="btn btn-primary my-2 w-full normal-case">
+                    See Opportunities
+                  </button>
+                </a>
+              )}
             </div>
           </div>
           <Footer />
