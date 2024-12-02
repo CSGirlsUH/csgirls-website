@@ -16,7 +16,7 @@ export const WEBLINKS = {
 
 // * Pictures used in OfficerMain.tsx
 export const PICLINKS = {
-  BANNER: './Photos/OfficersHeart.jpg',
+  BANNER: './Photos/Officers_Fall_2024.jpg',
   PRESIDENT: './Photos/OfficerPics_Fall_2024/Reem_Pres.jpg',
   VP_EXT: './Photos/OfficerPics_Fall_2024/Neha_VPExternal.jpg',
   VP_INT: './Photos/OfficerPics_Fall_2024/Lisa_VPInternal.jpg',
@@ -30,7 +30,7 @@ export const PICLINKS = {
 }
 
 // * Officer Information
-//* Last Updated Spring 2023
+//* Last Updated Fall 2024
 export const OFFICERS = {
   president: {
     name: 'Reem Alkhalily',
@@ -94,6 +94,8 @@ export const OFFICERS = {
   },
 }
 
+// * Sponsor Information
+// * Last Updated Fall 2024
 export const SPONSORS: Sponsor[] = [
   // * PLATINUM SPONSORS
   {
