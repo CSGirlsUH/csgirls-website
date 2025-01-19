@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './index.css';
-import Home from './pages/Home.tsx';
-import About from './pages/About.tsx';
-import Officers from './pages/Officers.tsx';
-import Sponsors from './pages/Sponsors.tsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './index.css'
+import Home from './pages/Home.tsx'
+import About from './pages/About.tsx'
+import Officers from './pages/Officers.tsx'
+import Sponsors from './pages/Sponsors.tsx'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         </Routes>
       </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
