@@ -63,6 +63,7 @@ const Officers = () => {
               linkedin={OFFICERS.ment_chair1.linkedin}
               pic={PICLINKS.MENT_CHAIR1}
             />
+
             {/* <OfficerCard
               position="Mentorship Chair"
               name={OFFICERS.ment_chair2.name}
@@ -70,6 +71,7 @@ const Officers = () => {
               linkedin={OFFICERS.ment_chair2.linkedin}
               pic={PICLINKS.MENT_CHAIR2}
             /> */}
+
             <OfficerCard
               position="Secretary"
               name={OFFICERS.secy.name}
@@ -148,13 +150,13 @@ const Officers = () => {
               linkedin={OFFICERS.ment_chair1.linkedin}
               pic={PICLINKS.MENT_CHAIR1}
             />
-            {/* <OfficerCard
+      {/* <OfficerCard
+
               position="Mentorship Chair"
               name={OFFICERS.ment_chair2.name}
               discord={OFFICERS.ment_chair2.discord}
               linkedin={OFFICERS.ment_chair2.linkedin}
-              pic={PICLINKS.MENT_CHAIR2}
-            /> */}
+              pic={PICLINKS.MENT_CHAIR2} /> */}
             <OfficerCard
               position="Secretary"
               name={OFFICERS.secy.name}

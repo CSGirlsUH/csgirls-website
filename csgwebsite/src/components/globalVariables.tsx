@@ -7,7 +7,7 @@ export type Sponsor = {
 
 export const WEBLINKS = {
   REGISTER:
-    'https://docs.google.com/forms/d/e/1FAIpQLSff7H7m7n_37ksRhXXJfl3RzKySWsXFHTY-t_5-9YkZThOvgw/viewform',
+    'https://docs.google.com/forms/d/e/1FAIpQLSe98Ijb0UZk8DWfQW4YZttEiyHBtRyasaA-fDMFjwzeQN_F7Q/viewform',
   CONTACT: 'https://linktr.ee/csgirls',
   DONATE: 'https://www.paypal.com/paypalme/CSGirls',
   NEWSLETTER:
@@ -30,7 +30,7 @@ export const PICLINKS = {
 }
 
 // * Officer Information
-//* Last Updated Fall 2024
+// * Last Updated Fall 2024
 export const OFFICERS = {
   president: {
     name: 'Reem Alkhalily',
@@ -84,15 +84,18 @@ export const OFFICERS = {
     name: 'Emma Pham',
     discord: '_progoat',
     linkedin: 'https://www.linkedin.com/in/emma-pham-28802b255/',
+
     pic: PICLINKS.SECY,
   },
   webmaster: {
     name: 'Sage Turner',
+
     discord: 'sayj',
     linkedin: 'https://www.linkedin.com/in/sageturn01/',
     pic: PICLINKS.WEBMASTER,
   },
 }
+
 
 // * Sponsor Information
 // * Last Updated Fall 2024
