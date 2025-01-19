@@ -7,7 +7,7 @@ export type Sponsor = {
 
 export const WEBLINKS = {
   REGISTER:
-    'https://docs.google.com/forms/d/e/1FAIpQLSff7H7m7n_37ksRhXXJfl3RzKySWsXFHTY-t_5-9YkZThOvgw/viewform',
+    'https://docs.google.com/forms/d/e/1FAIpQLSe98Ijb0UZk8DWfQW4YZttEiyHBtRyasaA-fDMFjwzeQN_F7Q/viewform',
   CONTACT: 'https://linktr.ee/csgirls',
   DONATE: 'https://www.paypal.com/paypalme/CSGirls',
   NEWSLETTER:
