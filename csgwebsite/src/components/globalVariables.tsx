@@ -2,7 +2,6 @@ export type Sponsor = {
   name: string
   logo: string
   link: string
-  rank: string
 }
 
 export const WEBLINKS = {
@@ -98,55 +97,45 @@ export const OFFICERS = {
 
 
 // * Sponsor Information
-// * Last Updated Fall 2024
+// * Last Updated Fall 2025
 export const SPONSORS: Sponsor[] = [
-  // * PLATINUM SPONSORS
   {
-    name: 'Google',
-    logo: './sponsors/google_logo.svg',
-    link: 'https://www.google.com/about/careers/applications/students/',
-    rank: 'Platinum',
+    name: 'Sysco',
+    logo: './sponsors/sysco.png',
+    link: 'https://careers.sysco.com/en',
   },
 
   {
-    name: 'Adobe',
-    logo: './sponsors/adobe_logo.svg',
-    link: 'https://www.adobe.com/careers/university.html',
-    rank: 'Platinum',
+    name: 'HPE',
+    logo: './sponsors/hpe.png',
+    link: 'https://careers.hpe.com/us/en/students',
   },
 
-  // * GOLD SPONSORS
-
-  // * SILVER SPONSORS
+  
   {
     name: 'LyondellBasell',
     logo: './sponsors/lyondellbasell_logo.svg',
     link: 'https://www.lyondellbasell.com/en/careers/university-recruiting/',
-    rank: 'Silver',
   },
 
-  // * BRONZE SPONSORS
-]
-
-export const PARTNERS = [
   {
-    name: 'Chevron',
-    logo: './sponsors/chevron_logo.svg',
-    link: 'https://careers.chevron.com/internship',
+    name: 'Credera',
+    logo: './sponsors/credera.png',
+    link: 'https://www.credera.com/en-us/careers',
   },
+
   {
     name: 'Deloitte',
     logo: './sponsors/deloitte_logo.svg',
     link: 'https://www2.deloitte.com/us/en/pages/careers/articles/join-deloitte-internships.html',
   },
+
   {
     name: 'Paycom',
-    logo: './sponsors/paycom_logo.svg',
+    logo: './sponsors/paycom.png',
     link: 'https://www.paycom.com/careers/job-categories/internships/',
   },
-  {
-    name: 'SLB',
-    logo: './sponsors/slb_logo.svg',
-    link: 'https://careers.slb.com/fojoblist/it-intern',
-  },
-].sort((a, b) => a.name.localeCompare(b.name))
+
+]
+
+.sort((a, b) => a.name.localeCompare(b.name))
