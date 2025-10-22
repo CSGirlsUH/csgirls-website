@@ -1,7 +1,8 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import OfficerCard from '@/components/OfficerCard'
-import { PICLINKS, OFFICERS } from '@/components/globalVariables'
+import { OFFICERS } from '@/components/globalVariables'
+
 
 const Officers = () => {
   return (
