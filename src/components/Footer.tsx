@@ -7,7 +7,7 @@ const Footer = () => {
     DISCORD: "https://discord.com/invite/KG3Eze4bQU",
     LINKEDIN: "https://www.linkedin.com/company/csgirls-university-of-houston/",
     SCT_GITHUB: "https://github.com/SageCT",
-    ZAINAB_LINKEDIN: "https://www.linkedin.com/in/zainabb-qureshi",
+    ZAINAB_LINKEDIN: "https://github.com/zainabqureshi1",
   };
 
   return (
