@@ -167,7 +167,7 @@ function Home({ event }: HomeProps) {
           <div className=" mx-auto hidden h-[500px] w-[1200px] justify-center rounded-xl bg-purple-300 md:ml-10 md:mr-6 md:flex">
             {/* <p className=" md:flex md:items-center ">HERO IMAGE</p> */}
             <img
-              src="./Photos/CSG_Meeting_Wide.jpg"
+              src="./Photos/Bannerpicnew.jpg"
               className="mx-auto flex flex-auto rounded-xl object-cover"
             />
           </div>

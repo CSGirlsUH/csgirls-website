@@ -7,7 +7,7 @@ import BigCard from '@/components/DesktopAboutCard'
 const PICLINKS = {
   SHIRTF: './Photos/front_shirt.png',
   SHIRTB: './Photos/back_shirt.png',
-  BANNERPIC: './Photos/CSG_FGM1.jpg',
+  BANNERPIC: './Photos/CSG_FGM1new.jpg',
 }
 
 function About() {
