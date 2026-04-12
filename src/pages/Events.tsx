@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import { gapi } from 'gapi-script'
-import { parseISO } from 'date-fns'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -13,8 +11,6 @@ type EventItem = {
 }
 
 function Events() {
-  const CLIENT_ID = process.env.REACT_APP_GAPI_CLIENT_ID
-  const API_KEY = process.env.REACT_APP_GAPI_API_KEY
   const CALENDAR_ID =
     'csgirls.org_qnctmv1tm3sh26b9reci44gcf8@group.calendar.google.com'
 
@@ -23,44 +19,30 @@ function Events() {
   const [currentDate, setCurrentDate] = useState(new Date())
 
   useEffect(() => {
-    gapi.load('client:auth2', () => {
-      gapi.client
-        .init({
-          apiKey: API_KEY,
-          clientId: CLIENT_ID,
-          discoveryDocs: [
-            'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest',
-          ],
-          scope: 'https://www.googleapis.com/auth/calendar.events',
-        })
-        .then(() => {
-          getEvents(CALENDAR_ID).then((fetched) => setEvents(fetched))
-        })
-    })
-  }, [API_KEY, CLIENT_ID])
-
-  const getEvents = async (calendarID: string): Promise<any[]> => {
-    try {
-      const response = await gapi.client.calendar.events.list({
-        calendarId: calendarID,
-        showDeleted: false,
-        maxResults: 50,
-      })
-      setIsLoading(false)
-      return response.result.items
-    } catch (error) {
-      console.log('Failed to fetch events', error)
-      setIsLoading(false)
-      return []
+    const fetchEvents = async () => {
+      try {
+        const apiKey = import.meta.env.VITE_GAPI_API_KEY
+        const calendarId = encodeURIComponent(CALENDAR_ID)
+        const response = await fetch(
+          `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&showDeleted=false&maxResults=50&orderBy=startTime&singleEvents=true`
+        )
+        const data = await response.json()
+        setEvents(data.items || [])
+        setIsLoading(false)
+      } catch (error) {
+        console.log('Failed to fetch events', error)
+        setIsLoading(false)
+      }
     }
-  }
+    fetchEvents()
+  }, [])
 
   const eventItems: EventItem[] =
     events && events.length > 0
       ? events.map((event: any) => ({
           id: event.id,
           title: event.summary,
-          date: parseISO(event.start.dateTime || event.start.date),
+          date: new Date(event.start.dateTime || event.start.date),
           startTime: new Date(
             event.start.dateTime || event.start.date
           ).toLocaleTimeString('en-US', {
@@ -105,7 +87,6 @@ function Events() {
   const monthName = currentDate.toLocaleString('default', { month: 'long' })
   const year = currentDate.getFullYear()
   const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-
   const today = new Date()
 
   return (
@@ -113,12 +94,10 @@ function Events() {
       <Navbar />
       <div className="mx-auto max-w-6xl px-4 py-10">
 
-        {/* Title */}
         <h1 className="mb-6 text-center text-4xl text-logopurple md:text-5xl">
-          Mark Your Calendar!
+          Upcoming Events
         </h1>
 
-        {/* Month navigation */}
         <div className="mb-4 flex items-center justify-between">
           <button
             onClick={() =>
@@ -148,14 +127,12 @@ function Events() {
           </button>
         </div>
 
-        {/* Loading */}
         {isLoading && (
           <div className="flex h-64 items-center justify-center">
             <span className="loading loading-dots h-28 w-24 bg-black"></span>
           </div>
         )}
 
-        {/* Calendar */}
         {!isLoading && (
           <div className="overflow-x-auto">
             <table className="w-full border-collapse border border-gray-300">
@@ -227,6 +204,7 @@ function Events() {
             </table>
           </div>
         )}
+
       </div>
       <Footer />
     </div>
