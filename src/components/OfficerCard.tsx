@@ -13,7 +13,6 @@ const OfficerCard = (props: CardProps) => {
     navigator.clipboard
       .writeText(props.discord)
       .then(() => {
-        // alert(`Copied Discord username: ${props.discord}`)
         toast.success(`Discord username copied to clipboard!`)
       })
       .catch((err) => {
@@ -22,83 +21,45 @@ const OfficerCard = (props: CardProps) => {
   }
 
   return (
-    <>
-      {/* Mobile/Desktop Variant */}
-      <div className="flex h-[335px] w-[269px] flex-col self-center rounded-[20px] bg-bggray md:hidden ">
-        {/* Name */}
-        <div className="text-center">
-          <h1 className="inline-block text-2xl text-logopurple">{'>'}</h1>{' '}
-          <h1 className="inline-block justify-center pt-2 font-firacode text-xl">
-            {props.name}
-          </h1>
-        </div>
+    <div className="flex w-[240px] flex-col items-center rounded-[20px] bg-bggray py-6 px-4 md:w-[280px]">
+      {/* Photo */}
+      <img
+        src={props.pic}
+        className="h-[180px] w-[180px] rounded-[16px] object-cover md:h-[220px] md:w-[220px]"
+        alt={props.name}
+      />
 
-        {/* Image */}
-        <img
-          src={props.pic}
-          className="mx-auto mt-4 h-[177px] w-[174px] rounded-[20px] object-cover"
-          alt={'Officer_Pics_' + ' ' + props.position + ' ' + props.name}
-        />
-        {/* Title */}
-        <h1 className="pt-2 text-center font-medium">{props.position}</h1>
-        {/* Contact Information */}
-        <div className="flex flex-row justify-center gap-8 pl-5 pt-4">
-          {/* Discord */}
-          <button onClick={handleDiscordClick}>
-            <img
-              src="./icons/discord_icon_officer_M.svg"
-              className="mr-4 h-[35px] w-[35px]"
-            />
-          </button>
-          {/* LinkedIn */}
-          <a href={props.linkedin}>
+      {/* Name */}
+      <h2 className="mt-4 text-center text-lg font-semibold text-black md:text-xl">
+        {props.name}
+      </h2>
+
+      {/* Role */}
+      <p className="mt-1 text-center text-sm font-medium text-logopurple md:text-base">
+        {props.position}
+      </p>
+
+      {/* Contact icons */}
+      <div className="mt-4 flex flex-row justify-center gap-6">
+        <button
+          onClick={handleDiscordClick}
+          title="Copy Discord username"
+        >
+          <img
+            src="./icons/discord_icon_officer_M.svg"
+            className="h-[32px] w-[32px] hover:opacity-70 transition"
+          />
+        </button>
+        {props.linkedin && (
+          <a href={props.linkedin} target="_blank" rel="noopener noreferrer">
             <img
               src="./icons/linkedin_icon_officer_M.svg"
-              className="mr-4 h-[35px] w-[35px]"
+              className="h-[32px] w-[32px] hover:opacity-70 transition"
             />
           </a>
-        </div>
+        )}
       </div>
-
-      {/* Desktop Variant */}
-      <div className="hidden h-[587px] w-[437px] flex-col self-center rounded-[20px] bg-bggray md:flex ">
-        {/* Name */}
-        <div className="pt-5 text-center">
-          <h1 className="inline-block text-2xl text-logopurple">{'>'}</h1>{' '}
-          <h1 className="inline-block justify-center pt-2 font-firacode text-3xl">
-            {props.name}
-          </h1>
-        </div>
-
-        {/* Image */}
-        <img
-          src={props.pic}
-          className="mx-auto mt-4 h-[300px] w-[295px] rounded-[20px] object-cover"
-          alt={'OfficerPics_' + ' ' + props.position + ' ' + props.name}
-        />
-        {/* Title */}
-        <h1 className="pt-2 text-center text-2xl font-medium">
-          {props.position}
-        </h1>
-        {/* Contact Information */}
-        <div className="flex flex-row justify-center gap-8 pl-5 pt-12">
-          {/* Discord */}
-          <button onClick={handleDiscordClick}>
-            <img
-              src="./icons/discord_icon_officer_D.svg"
-              className="mr-4 h-[70px] w-[55px]"
-            />
-          </button>
-          {/* LinkedIn */}
-          <a href={props.linkedin}>
-            <img
-              src="./icons/linkedin_icon_officer_D.svg"
-              className="mr-4 h-[70px] w-[55px]"
-            />
-          </a>
-        </div>
-      </div>
-    </>
+    </div>
   )
 }
 

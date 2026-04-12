@@ -12,21 +12,17 @@ function DesktopAboutCard(props: CardProps) {
     <>
       <div
         className={
-          "bottom flex h-[643px] w-[796px] flex-col items-center gap-10 rounded-[20px] bg-bggray" +
+          "flex w-[796px] flex-col items-center gap-6 rounded-[20px] bg-white border border-gray-100 py-8 px-10" +
           " " +
           props.optional
         }
       >
-        <h1 className="text-medium flex self-center pt-10 text-[36px]">
+        <h1 className="flex self-center text-center text-[28px] font-medium text-logopurple">
           {props.title}
         </h1>
 
-        {/* Check if there are images passed through props */}
         {props.image1 && props.image2 && (
-          <div className="flex flex-row gap-12 pt-3">
-            {/* Placeholders for shirt images */}
-            {/* <div className="bg-buttonpurple w-[157px] h-[170px] rounded-[20px]" /> */}
-            {/* <div className="bg-buttonpurple w-[157px] h-[170px] rounded-[20px]" /> */}
+          <div className="flex flex-row gap-12">
             <img
               src={props.image1}
               className="h-[331px] w-[306px] rounded-[20px]"
@@ -41,18 +37,18 @@ function DesktopAboutCard(props: CardProps) {
         )}
 
         {bulletPoints.length > 1 ? (
-          <ul className="list-disc">
+          <ul className="list-disc self-start pl-6">
             {bulletPoints.map((point, index) => (
               <li
                 key={index}
-                className="text-medium ml-14 self-center text-[20px]"
+                className="pb-2 text-[18px] text-gray-700 leading-relaxed"
               >
                 {point}
               </li>
             ))}
           </ul>
         ) : (
-          <p className="text-medium flex text-center text-[20px] ">
+          <p className="flex text-center text-[18px] text-gray-700">
             {props.pText}
           </p>
         )}
@@ -60,4 +56,5 @@ function DesktopAboutCard(props: CardProps) {
     </>
   );
 }
+
 export default DesktopAboutCard;

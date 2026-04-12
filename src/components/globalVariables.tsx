@@ -29,19 +29,19 @@ export const PICLINKS = {
 }
 
 // * Officer Information
-// * Last Updated Fall 2025
+// * Last Updated Spring 2026
 export const OFFICERS = {
   president: {
-    name: 'Naumi Aparanji',
-    discord: 'naumi5693',
-    linkedin: 'https://www.linkedin.com/in/naumi-aparanji-364a12214/',
-    pic: PICLINKS.PRESIDENT,
+    name: 'Joice Nasr Mikhael',
+    discord: 'joicem naumi5693',
+    linkedin: 'https://www.linkedin.com/in/joice-mikhael/',
+    pic: PICLINKS.VP_INT
   },
   vp_int: {
-    name: 'Joice Nasr Mikhael',
-    discord: 'joicem',
-    linkedin: 'https://www.linkedin.com/in/joice-mikhael/',
-    pic: PICLINKS.VP_INT,
+    name: 'Shruti Yenamagandla',
+    discord: 'shruthi9663 joicem',
+    linkedin: 'https://www.linkedin.com/in/shruthi-yenamagandla-23883428b/ https://www.linkedin.com/in/joice-mikhael/',
+    pic: PICLINKS.PROF_DEV_CHAIR_BEHAV,
   },
   vp_ext: {
     name: 'Kat Rodriguez',
@@ -55,17 +55,17 @@ export const OFFICERS = {
     linkedin: 'https://www.linkedin.com/in/dominic-mcdonald-uh/',
     pic: PICLINKS.PROF_DEV_CHAIR_TECH,
   },
-  prof_dev_behav: {
-    name: 'Shruti Yenamagandla',
-    discord: 'shruthi9663',
-    linkedin: 'https://www.linkedin.com/in/shruthi-yenamagandla-23883428b/',
-    pic: PICLINKS.PROF_DEV_CHAIR_BEHAV,
+  prof_dev_behav: { // need to finish this up once lesley replies
+  name: 'Lesley Bernal',
+  discord: 'bmforjk',
+  linkedin: 'www.linkedin.com/in/lesbernal',
+    //pic: 
   },
-  ment_chair: {
-    name: 'Sylvia Ephraim',
-    discord: 'mayberrysomething',
-    linkedin: '',
-    pic: PICLINKS.MENT_CHAIR,
+  advisor: {
+    name: 'Naumi Aparanji',
+    discord: 'naumi5693',
+    linkedin: 'https://www.linkedin.com/in/naumi-aparanji-364a12214/',
+    pic: PICLINKS.PRESIDENT,
   },
   kattis_chair: {
     name: 'Nathalye Gonzalez',
@@ -87,7 +87,7 @@ export const OFFICERS = {
   },
   webmaster: {
     name: 'Zainab Qureshi',
-    discord: 'zq_2003',
+    discord: 'k1402071',
     linkedin: 'https://www.linkedin.com/in/zainabb-qureshi/',
     pic: PICLINKS.WEBMASTER,
   },

@@ -40,7 +40,7 @@ const Sponsors = () => {
         <div className="min-h-screen min-w-full bg-white">
           <Navbar />
           <h1 className="mx-auto py-16 text-center text-5xl">
-            Special Thanks to All of Our 2025 Sponsors!
+            Special Thanks to All of Our 2026 Sponsors!
           </h1>
 
           {/* Sponsors Section */}
@@ -137,7 +137,7 @@ const Sponsors = () => {
         <div className="flex w-full flex-col text-center">
           <Navbar />
           <h1 className="py-5 text-center text-lg">
-            Special Thanks to All of Our 2025 Sponsors!
+            Special Thanks to All of Our 2026 Sponsors!
           </h1>
 
           {/* Sponsors Section */}

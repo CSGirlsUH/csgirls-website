@@ -4,6 +4,7 @@ import Home from './pages/Home.tsx'
 import About from './pages/About.tsx'
 import Officers from './pages/Officers.tsx'
 import Sponsors from './pages/Sponsors.tsx'
+import Events from './pages/Events.tsx'
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/officers" element={<Officers />} />
           <Route path="/sponsors" element={<Sponsors />} />
-          <Route path="/events" element={<Home event={true} />} />
+          <Route path="/events" element={<Events />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </Router>
