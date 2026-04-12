@@ -21,7 +21,7 @@ function Events() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const apiKey = import.meta.env.VITE_GAPI_API_KEY
+        const apiKey = process.env.REACT_APP_GAPI_API_KEY
         const calendarId = encodeURIComponent(CALENDAR_ID)
         const response = await fetch(
           `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&showDeleted=false&maxResults=50&orderBy=startTime&singleEvents=true`
