@@ -59,7 +59,7 @@ export const OFFICERS = {
   name: 'Lesley Bernal',
   discord: 'bmforjk',
   linkedin: 'www.linkedin.com/in/lesbernal',
-    //pic: 
+  pic: ' ',
   },
   advisor: {
     name: 'Naumi Aparanji',
