@@ -21,7 +21,7 @@ const Footer = () => {
           © 2024 Computer Science Girls | Built and Designed By: <a href={WEBLINKS.SCT_GITHUB} target="_blank" rel="noopener noreferrer"><u>{DEVNAME}</u></a>
         </p>
         <p>
-          Edited & Updated By: <a href={WEBLINKS.ZAINAB_LINKEDIN} target="_blank" rel="noopener noreferrer"><u>{UPDATEDBY}</u></a>
+          Redesigned & Updated By: <a href={WEBLINKS.ZAINAB_LINKEDIN} target="_blank" rel="noopener noreferrer"><u>{UPDATEDBY}</u></a>
         </p>
       </div>
     </div>

@@ -14,10 +14,13 @@ export const WEBLINKS = {
 }
 
 // * Pictures used in OfficerMain.tsx
+// Updated Spring 2026 as some officers from Fall 2025 moved around
+
 export const PICLINKS = {
-  PRESIDENT: './Photos/OfficerPics_Fall_2025/President.png',
-  VP_INT: './Photos/OfficerPics_Fall_2025/VP_Internal.png',
+  PRESIDENT: './Photos/OfficerPics_Fall_2025/JOICE_PRES.png',
+  VP_INT: './Photos/OfficerPics_Fall_2025/SHRUTI_VP.png',
   VP_EXT: './Photos/OfficerPics_Fall_2025/VP_External.png',
+  ADVISOR: './Photos/OfficerPics_Fall_2025/NAUMI_ADVISOR.png',
   PROF_DEV_CHAIR_TECH: './Photos/OfficerPics_Fall_2025/Prof_Dev_Chair_Technical.png',
   PROF_DEV_CHAIR_BEHAV: './Photos/OfficerPics_Fall_2025/Prof_Dev_Chair_Behavioral.png',
   MENT_CHAIR: './Photos/OfficerPics_Fall_2025/Mentorship_Chair.png',
@@ -33,15 +36,15 @@ export const PICLINKS = {
 export const OFFICERS = {
   president: {
     name: 'Joice Nasr Mikhael',
-    discord: 'joicem naumi5693',
+    discord: 'joicem',
     linkedin: 'https://www.linkedin.com/in/joice-mikhael/',
-    pic: PICLINKS.VP_INT
+    pic: PICLINKS.PRESIDENT,
   },
   vp_int: {
     name: 'Shruti Yenamagandla',
-    discord: 'shruthi9663 joicem',
+    discord: 'shruthi9663',
     linkedin: 'https://www.linkedin.com/in/shruthi-yenamagandla-23883428b/ https://www.linkedin.com/in/joice-mikhael/',
-    pic: PICLINKS.PROF_DEV_CHAIR_BEHAV,
+    pic: PICLINKS.VP_INT,
   },
   vp_ext: {
     name: 'Kat Rodriguez',
@@ -58,14 +61,14 @@ export const OFFICERS = {
   prof_dev_behav: { // need to finish this up once lesley replies
   name: 'Lesley Bernal',
   discord: 'bmforjk',
-  linkedin: 'www.linkedin.com/in/lesbernal',
-  pic: ' ',
+  linkedin: 'https://www.linkedin.com/in/lesbernal',
+  pic: PICLINKS.PROF_DEV_CHAIR_BEHAV,
   },
   advisor: {
     name: 'Naumi Aparanji',
     discord: 'naumi5693',
     linkedin: 'https://www.linkedin.com/in/naumi-aparanji-364a12214/',
-    pic: PICLINKS.PRESIDENT,
+    pic: PICLINKS.ADVISOR,
   },
   kattis_chair: {
     name: 'Nathalye Gonzalez',
